@@ -6,36 +6,46 @@ import OrderHistory from "../pages/OrderHistory";
 import PointCollection from "../pages/PointCollection";
 import FoodOffer from "../pages/FoodOffer";
 import DiningChoice from "../pages/diningChoice";
+import CardPayment from "../pages/CardPayment";
+import PaymentSelect from "../pages/PaymentSelect";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Start />
+    element: <Start />,
   },
   {
     path: "/menus",
-    element: <TotalMenus />
+    element: <TotalMenus />,
   },
   {
     path: "/menu-select",
-    element: <MenuSelect />
+    element: <MenuSelect />,
   },
   {
-    path: 'dining-choice',
-    element: <DiningChoice />
+    path: "dining-choice",
+    element: <DiningChoice />,
   },
   {
     path: "/order-history",
-    element: <OrderHistory />
+    element: <OrderHistory />,
   },
   {
     path: "/point-collection",
-    element: <PointCollection />
+    element: <PointCollection />,
   },
   {
     path: "/food-offer",
-    element: <FoodOffer />
-  }
+    element: <FoodOffer />,
+  },
+  {
+    path: "/payment-select",
+    element: <PaymentSelect />,
+  },
+  {
+    path: "/card-payment",
+    element: <CardPayment />,
+  },
 ]);
 
 export default routes;
