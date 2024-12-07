@@ -1,0 +1,237 @@
+{
+  "menu_items": [
+    {
+      "id": "f50cdd10-206b-4ec8-bf1a-9c7b3f3f0b5d",
+      "name": "빅맥",
+      "description": "100% 순쇠고기 패티 두 장, 특별 소스, 양상추, 치즈, 피클, 양파를 곁들인 참깨빵.",
+      "price": 7790,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["2b3c4d5e"],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "12c01d36-7c94-44fc-b5e4-3e7896b3c313",
+      "name": "치즈버거",
+      "description": "치즈, 양파, 피클이 포함된 육즙 가득한 버거.",
+      "price": 3890,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["2b3c4d5e"],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "ab12ef34-5678-4c90-babc-d123ef4567ab",
+      "name": "더블 쿼터파운더 치즈버거",
+      "description": "치즈와 100% 쇠고기 패티 두 장이 들어간 든든한 버거.",
+      "price": 9090,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["2b3c4d5e"],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "cd56ef78-90ab-4cde-bbcd-e6789f12cd45",
+      "name": "베이컨 치즈버거",
+      "description": "바삭한 베이컨과 치즈가 들어간 풍미 가득한 버거.",
+      "price": 7140,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["2b3c4d5e"],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "ef12cd34-5678-4cde-aabc-d456ef7890cd",
+      "name": "불고기 버거",
+      "description": "달콤하고 짭짤한 불고기 소스로 맛을 낸 한국식 버거.",
+      "price": 4540,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["1a2b3c4d", "2b3c4d5e"],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "2458c6ed-2b34-4ff1-9203-4b587c229ea8",
+      "name": "트리플 치즈버거",
+      "description": "치즈 세 장과 패티 세 장으로 구성된 풍부한 맛의 버거.",
+      "price": 10600,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["2b3c4d5e"],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "7c8f5e1d-98b7-4bd1-ae78-2c1473e1eabe",
+      "name": "더블 불고기 버거",
+      "description": "불고기 소스가 듬뿍 들어간 패티 두 장 버거.",
+      "price": 6890,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["1a2b3c4d", "2b3c4d5e"],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "1dbf2734-5ba7-4e12-90b5-ec92e9ae3eb8",
+      "name": "스파이시 치킨버거",
+      "description": "매콤한 소스로 맛을 낸 바삭한 치킨 버거.",
+      "price": 5250,
+      "category_id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "bc1372d6-79b4-43fa-91e7-e4d34e25738f",
+      "name": "크리스피 치킨버거",
+      "description": "바삭한 치킨 패티와 신선한 양상추가 들어간 버거.",
+      "price": 6190,
+      "category_id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "7f6b3d7b-f013-41cf-b7e2-5fbab5e8d31f",
+      "name": "핫 스파이시 너겟",
+      "description": "매콤한 소스로 코팅된 바삭한 치킨 너겟.",
+      "price": 4890,
+      "category_id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "8ebf3274-cfa9-44cd-81de-5e7c8b672a27",
+      "name": "맥너겟 (6조각)",
+      "description": "바삭하고 촉촉한 닭가슴살 너겟.",
+      "price": 3290,
+      "category_id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "e60348ec-934f-442e-9af9-3ecf8928ce5e",
+      "name": "해시브라운",
+      "description": "바삭한 강판 감자 해시브라운.",
+      "price": 1990,
+      "category_id": "e6034d80-d89f-463e-85a9-4c31e5af6ad4",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "f8437de9-48c6-46a7-97ed-5ebce48e7aef",
+      "name": "치즈스틱",
+      "description": "고소한 치즈가 들어간 바삭한 치즈스틱.",
+      "price": 2990,
+      "category_id": "e6034d80-d89f-463e-85a9-4c31e5af6ad4",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "9832fae7-c86b-4e3b-b27a-37be2ebd2d5f",
+      "name": "감자튀김 (라지)",
+      "description": "고소하고 바삭한 감자튀김, 대형 사이즈.",
+      "price": 3490,
+      "category_id": "e6034d80-d89f-463e-85a9-4c31e5af6ad4",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "016db05c-d548-4f5f-bb2f-73c8e0c2b5da",
+      "name": "코카콜라",
+      "description": "고전적인 상쾌한 코카콜라.",
+      "price": 2590,
+      "category_id": "2a117e63-ecfd-4d59-b320-8772f61b4db8",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "4fb2c8e9-6f0e-4c8d-95ba-8febe7b6c2a4",
+      "name": "제로 코카콜라",
+      "description": "칼로리를 줄인 코카콜라.",
+      "price": 2590,
+      "category_id": "2a117e63-ecfd-4d59-b320-8772f61b4db8",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "c48fbea9-932f-4f86-8f36-932be4bdf9ae",
+      "name": "아이스티",
+      "description": "상쾌한 맛의 달콤한 아이스티.",
+      "price": 3290,
+      "category_id": "2a117e63-ecfd-4d59-b320-8772f61b4db8",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "49d7e6c3-38cf-4b82-97f2-937e8fb2a3cd",
+      "name": "맥플러리 오레오",
+      "description": "달콤한 아이스크림과 바삭한 오레오 조각의 조합.",
+      "price": 4590,
+      "category_id": "8aef483e-4b7e-4a9c-8c87-dfbf54564299",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "9a8e3f6c-18d9-467d-b27e-37c8e9b274a7",
+      "name": "초코 브라우니",
+      "description": "달콤하고 진한 초코 브라우니.",
+      "price": 3290,
+      "category_id": "8aef483e-4b7e-4a9c-8c87-dfbf54564299",
+      "taste_ids": [],
+      "image_url": "https://via.placeholder.com/150"
+    }
+  ],
+  "meals": [
+    {
+      "id": "6a5fb3f6-fae3-4922-87b2-b0e4382f6386",
+      "name": "빅맥 세트",
+      "description": "빅맥 버거, 중간 사이즈 감자튀김, 중간 사이즈 음료 포함.",
+      "price": 11670,
+      "items": [
+        "f50cdd10-206b-4ec8-bf1a-9c7b3f3f0b5d",
+        "92df95e8-cddf-4b97-a453-8ad742d9dd5f",
+        "016db05c-d548-4f5f-bb2f-73c8e0c2b5da"
+      ],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "92e5c39a-3424-45ea-85ed-5bc3eb193c43",
+      "name": "맥치킨 세트",
+      "description": "맥치킨 샌드위치, 작은 감자튀김, 작은 음료 포함.",
+      "price": 9730,
+      "items": [
+        "e29df882-8c71-49a3-9d7c-541c62976b78",
+        "92df95e8-cddf-4b97-a453-8ad742d9dd5f",
+        "016db05c-d548-4f5f-bb2f-73c8e0c2b5da"
+      ],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "73e0a17e-3e23-4042-8a60-9d21281cc3e3",
+      "name": "치킨 너겟 세트",
+      "description": "치킨 너겟 10조각, 감자튀김, 음료 포함.",
+      "price": 11040,
+      "items": [
+        "3e22e544-cd3c-4ec8-8baf-dfedec9e1074",
+        "92df95e8-cddf-4b97-a453-8ad742d9dd5f",
+        "016db05c-d548-4f5f-bb2f-73c8e0c2b5da"
+      ],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "ab12bc34-cdef-5678-ghij-klmn9012op34",
+      "name": "더블 쿼터파운더 세트",
+      "description": "더블 쿼터파운더 치즈버거, 중간 사이즈 감자튀김, 중간 사이즈 음료 포함.",
+      "price": 13670,
+      "items": [
+        "ab12ef34-5678-4c90-babc-d123ef4567ab",
+        "92df95e8-cddf-4b97-a453-8ad742d9dd5f",
+        "016db05c-d548-4f5f-bb2f-73c8e0c2b5da"
+      ],
+      "image_url": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "cd45ef67-ghij-7890-klmn-opqr1234st56",
+      "name": "불고기 버거 세트",
+      "description": "불고기 버거, 작은 감자튀김, 작은 음료 포함.",
+      "price": 8430,
+      "items": [
+        "ef12cd34-5678-4cde-aabc-d456ef7890cd",
+        "92df95e8-cddf-4b97-a453-8ad742d9dd5f",
+        "gh23ij45-kl67-4mno-pqrs-uv89wx123yza"
+      ],
+      "image_url": "https://via.placeholder.com/150"
+    }
+  ]
+}
