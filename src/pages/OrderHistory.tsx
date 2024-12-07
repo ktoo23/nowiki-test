@@ -39,7 +39,7 @@ const OrderHistory = () => {
                         alt="메뉴"
                         className="w-20 h-20 rounded-lg"
                     />
-                    <div className="flex-1">
+                    <div className="flex">
                         <p className="text-lg font-bold">세트</p>
                         <p className="text-sm">
                             {data.menu_items.map((item) => item.name)[0]}
