@@ -1,18 +1,18 @@
 import { createBrowserRouter } from "react-router-dom";
-import Start from "../pages/StartPage";
 import TotalMenus from "../pages/totalMenus";
 import MenuSelect from "../pages/MenuSelect";
 import OrderHistory from "../pages/OrderHistory";
 import PointCollection from "../pages/PointCollection";
 import FoodOffer from "../pages/FoodOffer";
-import DiningChoice from "../pages/DiningChoice";
 import CardPayment from "../pages/CardPayment";
 import PaymentSelect from "../pages/PaymentSelect";
+import MainPage from "@/pages/MainPage";
+import DiningSelection from "@/pages/DiningSelection";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Start />,
+    element: <MainPage />,
   },
   {
     path: "/menus",
@@ -24,7 +24,7 @@ const routes = createBrowserRouter([
   },
   {
     path: "dining-choice",
-    element: <DiningChoice />,
+    element: <DiningSelection />,
   },
   {
     path: "/order-history",

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { setOrderInfo } from "../feat/order";
 import { Button } from "@/components/ui/button";
 
-const DiningChoice: React.FC = () => {
+const DiningSelection: React.FC = () => {
   const naviate = useNavigate();
 
   const confirmDiningType = (dineType: boolean) => {
@@ -36,4 +36,4 @@ const DiningChoice: React.FC = () => {
   );
 };
 
-export default DiningChoice;
+export default DiningSelection;
