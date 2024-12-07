@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import Start from "../pages/start";
+import Start from "../pages/Start";
 import TotalMenus from "../pages/totalMenus";
 import MenuSelect from "../pages/MenuSelect";
 import OrderHistory from "../pages/OrderHistory";
 import PointCollection from "../pages/PointCollection";
 import FoodOffer from "../pages/FoodOffer";
-import DiningChoice from "../pages/diningChoice";
+import DiningChoice from "../pages/DiningChoice";
 import CardPayment from "../pages/CardPayment";
 import PaymentSelect from "../pages/PaymentSelect";
 
