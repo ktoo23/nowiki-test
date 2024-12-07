@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 type CustomerType = "regular" | "newbie";
 
-const Start: React.FC = () => {
+const MainPage: React.FC = () => {
   const naviate = useNavigate();
 
   const navigateToDiningChoice = (type: CustomerType = "regular") => {
@@ -40,4 +40,4 @@ const Start: React.FC = () => {
   );
 };
 
-export default Start;
+export default MainPage;
