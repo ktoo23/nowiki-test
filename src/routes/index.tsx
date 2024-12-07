@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Start from "../pages/Start";
+import Start from "../pages/StartPage";
 import TotalMenus from "../pages/totalMenus";
 import MenuSelect from "../pages/MenuSelect";
 import OrderHistory from "../pages/OrderHistory";
