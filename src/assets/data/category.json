@@ -1,48 +1,48 @@
 {
-  "menu_categories": [
-    {
-      "id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
-      "name": "버거",
-      "description": "다양한 맛있는 버거",
-      "image_url": "https://via.placeholder.com/150"
-    },
-    {
-      "id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
-      "name": "치킨",
-      "description": "바삭하고 부드러운 치킨 메뉴",
-      "image_url": "https://via.placeholder.com/150"
-    },
-    {
-      "id": "e6034d80-d89f-463e-85a9-4c31e5af6ad4",
-      "name": "사이드",
-      "description": "식사를 완성시켜줄 사이드 메뉴",
-      "image_url": "https://via.placeholder.com/150"
-    },
-    {
-      "id": "2a117e63-ecfd-4d59-b320-8772f61b4db8",
-      "name": "음료",
-      "description": "상쾌한 음료",
-      "image_url": "https://via.placeholder.com/150"
-    },
-    {
-      "id": "8aef483e-4b7e-4a9c-8c87-dfbf54564299",
-      "name": "디저트",
-      "description": "식사를 마무리하는 달콤한 디저트",
-      "image_url": "https://via.placeholder.com/150"
-    }
-  ],
-  "tastes": [
-    {
-      "id": "1a2b3c4d",
-      "name": "sweet"
-    },
-    {
-      "id": "2b3c4d5e",
-      "name": "savory"
-    },
-    {
-      "id": "3c4d5e6f",
-      "name": "spicy"
-    }
-  ]
+    "menu_categories": [
+        {
+            "id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+            "name": "버거",
+            "description": "다양한 맛있는 버거",
+            "image_url": "https://via.placeholder.co/150"
+        },
+        {
+            "id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
+            "name": "치킨",
+            "description": "바삭하고 부드러운 치킨 메뉴",
+            "image_url": "https://via.placeholder.com/150"
+        },
+        {
+            "id": "e6034d80-d89f-463e-85a9-4c31e5af6ad4",
+            "name": "사이드",
+            "description": "식사를 완성시켜줄 사이드 메뉴",
+            "image_url": "https://via.placeholder.com/150"
+        },
+        {
+            "id": "2a117e63-ecfd-4d59-b320-8772f61b4db8",
+            "name": "음료",
+            "description": "상쾌한 음료",
+            "image_url": "https://via.placeholder.com/150"
+        },
+        {
+            "id": "8aef483e-4b7e-4a9c-8c87-dfbf54564299",
+            "name": "디저트",
+            "description": "식사를 마무리하는 달콤한 디저트",
+            "image_url": "https://via.placeholder.com/150"
+        }
+    ],
+    "tastes": [
+        {
+            "id": "1a2b3c4d",
+            "name": "sweet"
+        },
+        {
+            "id": "2b3c4d5e",
+            "name": "savory"
+        },
+        {
+            "id": "3c4d5e6f",
+            "name": "spicy"
+        }
+    ]
 }
