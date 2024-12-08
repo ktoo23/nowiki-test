@@ -44,7 +44,7 @@ const MainPage: React.FC = () => {
                     className='w-[80%] h-20 bg-mc_yellow'
                     onClick={() => naviate('/voice-test')}
                 >
-                    주문 시작하기
+                    음성인식
                 </Button>
             </div>
         </section>
