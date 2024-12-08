@@ -4,11 +4,16 @@ import TooltipDiamond from "./TooltipDiamond"
 
 const TooltipWrapper = () => {
 
-  return (
+  const isTooltipShow = localStorage.getItem("customerType") === "newbie" &&
     <div className="flex flex-col">
       <TooltipDiamond />
       <TooltipBox />
-    </div>
+    </div>;
+
+  return (
+    <>
+      {isTooltipShow}
+    </>
   )
 }
 
