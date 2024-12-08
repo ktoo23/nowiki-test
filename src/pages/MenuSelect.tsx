@@ -17,7 +17,7 @@ const MenuSelect = () => {
     const handleAddShoppingCart = () => {};
 
     const handleViewOrderHistory = () => {
-        navigate("/order-history");
+        navigate("/order-history", { state: menu });
     };
 
     const handleOrderCancel = () => {};
