@@ -19,20 +19,19 @@ const MainPage: React.FC = () => {
   }, []);
 
   return (
-    <section className="container mx-auto">
-      <h1>start</h1>
-
-      <div className="flex flex-col gap-[50px] justify-center items-center">
+    <section className="flex flex-col max-w-[640px] content-center h-dvh bg-main_bg">
+      <div className="grow bg-center bg-no-repeat	bg-contain bg-[url('@/assets/image/kiosk_main.jpg')]"></div>
+      <div className="h-[30%] flex flex-col gap-5 justify-center items-center">
         <Button
           variant="outline"
-          className="w-[400px] h-[100px] bg-mc_yellow"
+          className="w-[80%] h-20 bg-mc_yellow"
           onClick={() => navigateToDiningChoice()}
         >
-          주문시작하기
+          주문 시작하기
         </Button>
         <Button
           variant="outline"
-          className="w-[400px] h-[50px] bg-help_bg"
+          className="w-[80%] h-10 bg-help_bg"
           onClick={() => navigateToDiningChoice("newbie")}
         >
           키오스크가 처음이라면 저를 눌러주세요

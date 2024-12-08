@@ -19,6 +19,7 @@ export default {
 
         help_bg: "#FCD19C",
         help_diamond_bg: "#FFA629",
+        main_bg: "#240701",
 
         // shadcn
         background: "hsl(var(--background))",
