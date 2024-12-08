@@ -39,13 +39,6 @@ const MainPage: React.FC = () => {
                         <AvatarImage src={WIKI_FAIRY_URL} />
                     </Avatar>
                 </Button>
-                <Button
-                    variant='outline'
-                    className='w-[80%] h-20 bg-mc_yellow'
-                    onClick={() => naviate('/voice-test')}
-                >
-                    음성인식
-                </Button>
             </div>
         </section>
     )
