@@ -13,13 +13,13 @@ const PointCollection = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center px-4">
+        <div className="flex flex-col items-center justify-center px-4 mt-4">
             <div className="text-center">
                 <span className="text-4xl block">
                     핸드폰 번호를 입력해주세요.
                 </span>
                 {/* 이 텍스트 크기는 작게 */}
-                <div className="mt-2">또는 이미지를 스캔해주세요.</div>
+                <div className="mt-2 text-xl">또는 이미지를 스캔해주세요.</div>
             </div>
             <input
                 type="number"

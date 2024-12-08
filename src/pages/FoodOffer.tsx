@@ -11,11 +11,20 @@ const FoodOffer = () => {
     return (
         <div className="mt-24 flex flex-col items-center">
             <strong className="text-4xl">음식을 가져다 드릴까요?</strong>
-            <div className="mt-24 space-x-4" onClick={navigatePaymentMethod}>
-                <Button className="bg-[#DA291C]">예</Button>
-                <Button>아니오</Button>
+            <div
+                className="mt-24 flex space-x-2"
+                onClick={navigatePaymentMethod}
+            >
+                <Button className="w-full text-xl px-12 py-4 h-20 bg-mc_yellow">
+                    예
+                </Button>
+                <Button className="w-full text-xl px-12 py-4 h-20 bg-mc_black">
+                    아니오
+                </Button>
             </div>
-            <TooltipWrapper />
+            <div className="fixed bottom-96">
+                <TooltipWrapper />
+            </div>
         </div>
     );
 };
