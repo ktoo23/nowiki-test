@@ -33,14 +33,16 @@ const OrderHistory = () => {
     };
 
     return (
-        <div className="px-4 py-6">
+        <div className="flex flex-col px-4 py-6">
             <div className="flex justify-around">
-                <h3 className="text-lg font-bold mb-6">주문 내역 확인</h3>
-                <Button onClick={handleMenuList}>처음으로</Button>
+                <h1 className="text-5xl font-bold mb-6">주문 내역 확인</h1>
+                <Button className="text-xl" onClick={handleMenuList}>
+                    처음으로
+                </Button>
             </div>
 
             <div className="p-3 rounded-lg mb-4">
-                <div className="flex items-start gap-4">
+                <div className="flex justify-center items-start gap-4">
                     <img
                         src={menuImage}
                         alt="메뉴"
@@ -79,26 +81,29 @@ const OrderHistory = () => {
                 </div>
             </div>
 
-            <div className="fixed bottom-32 left-0 right-0 p-4 bg-white">
+            <div className="fixed bottom-96 left-0 right-0 p-4 bg-white">
                 <div className="flex justify-center gap-4">
                     <div className="flex flex-col space-y-1">
+                        <div className="bg-yellow-100 text-yellow-800 font-semibold text-lg rounded-md text-center absolute left-[33%] top-1 px-4">
+                            결제 전 필수
+                        </div>
                         <Button
                             variant="ghost"
                             onClick={openPointVerificationPage}
-                            className="w-full bg-white text-black border  border-gray-300"
+                            className="w-full px-10 py-8 bg-white text-black border text-xl  border-gray-300"
                         >
                             포인트 받기
                         </Button>
                         <Button
                             onClick={handleMenuList}
-                            className="w-full bg-white text-black border  border-gray-300"
+                            className="w-full px-10 py-8 bg-white text-black border text-xl  border-gray-300"
                         >
                             더 추가하기
                         </Button>
                     </div>
                     <Button
                         onClick={goToFoodOffer}
-                        className="bg-yellow-400 hover:bg-yellow-500 text-black w-32 h-22"
+                        className="bg-yellow-400 hover:bg-yellow-500 text-black text-xl w-32 h-22"
                     >
                         주문완료
                     </Button>
