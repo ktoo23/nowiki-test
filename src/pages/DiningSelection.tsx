@@ -12,27 +12,37 @@ const DiningSelection: React.FC = () => {
   };
 
   return (
-    <>
-      <h1>
-        식사 장소를 <br /> 선택해주세요
-      </h1>
-      <div className="flex gap-[50px] justify-center items-center">
-        <Button
-          variant="outline"
-          className="w-[100px] h-[100px]"
-          onClick={() => confirmDiningType(false)}
-        >
-          매장 식사
-        </Button>
-        <Button
-          variant="outline"
-          className="w-[100px] h-[100px]"
-          onClick={() => confirmDiningType(true)}
-        >
-          포장
-        </Button>
+    <section className="flex flex-col max-w-[640px] content-center h-dvh ">
+      <div className="mt-[10%] h-[30%] content-center">
+        <h1 className="text-5xl">
+          <span className="text-mc_red">식사 장소</span>를 <br /> 선택해주세요
+        </h1>
       </div>
-    </>
+
+      <div className="grow flex justify-center items-center">
+        <div className="w-[50%] eat-in flex flex-col items-center">
+          <div className="w-[40%] h-20 bg-center bg-no-repeat bg-contain bg-[url('@/assets/image/eat-in.png')]"></div>
+          <Button
+            variant="outline"
+            className="w-[80%] h-20 bg-mc_yellow"
+            onClick={() => confirmDiningType(false)}
+          >
+            매장 식사
+          </Button>
+        </div>
+
+        <div className="w-[50%] takeaway flex flex-col items-center">
+          <div className="w-[40%] h-20 bg-center bg-no-repeat bg-contain bg-[url('@/assets/image/takeaway.png')]"></div>
+          <Button
+            variant="outline"
+            className="w-[80%] h-20 bg-mc_yellow"
+            onClick={() => confirmDiningType(true)}
+          >
+            포장
+          </Button>
+        </div>
+      </div>
+    </section>
   );
 };
 
