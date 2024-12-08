@@ -39,6 +39,7 @@ const Voice = () => {
     const onClickVoiceButton = () => {
         toggleListening()
         setSearchResults([])
+        setSelectedMenuItems([])
     }
 
     useEffect(() => {
