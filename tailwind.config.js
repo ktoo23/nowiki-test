@@ -18,6 +18,7 @@ export default {
         mc_black: "#27251F",
 
         help_bg: "#FCD19C",
+        main_bg: "#240701",
 
         // shadcn
         background: "hsl(var(--background))",
