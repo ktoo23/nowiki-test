@@ -11,7 +11,7 @@ const SetSelection = () => {
     const [menu] = menu_items.filter((item) => item.id === id);
 
     const handleNavigate = (path: string) => {
-        navigate(path);
+        navigate(`${path}`);
     };
 
     return (
@@ -66,13 +66,15 @@ const SetSelectButton = ({
     description,
     onNavigate
 }: Props) => {
+    const params = useParams();
+    const id = params.itemId;
     return (
         <Button
             className={cn(
                 "w-[150px] h-full sm:w-[250px] text-mc_black",
                 classname
             )}
-            onClick={() => onNavigate("/menu-select")}
+            onClick={() => onNavigate(`/menu-select/${id}`)}
         >
             <div className="flex flex-col items-center justify-center">
                 <p className="text-[30px] sm:text-[40px]">{icon}</p>
