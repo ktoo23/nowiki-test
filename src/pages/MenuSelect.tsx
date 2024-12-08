@@ -2,7 +2,9 @@ import { useNavigate } from "react-router-dom";
 import data from "../assets/image/data/menu.json";
 import { Fragment } from "react/jsx-runtime";
 import { MenuItem } from "../types/menu.interface";
-import { Button } from "@/components/ui/button";
+import AddShoppingCartButton from "@/component/AddShoppingCartButton";
+import QuickPayButton from "@/component/QuickPayButton";
+import CancelButton from "@/component/CancelButton";
 
 const MenuSelect = () => {
     const navigate = useNavigate();
@@ -32,33 +34,21 @@ const MenuSelect = () => {
                         <img
                             src={meal.image_url}
                             alt="menu-image"
-                            className="rounded-2xl"
+                            className="rounded-2xl cursor-pointer"
                         />
                     </Fragment>
                 ))}
             </div>
             <div className="flex justify-evenly mt-96 ">
                 <div className="flex flex-col space-y-2">
-                    <Button
-                        className="rounded-md p-4"
-                        onClick={handleAddShoppingCart}
-                    >
-                        장바구니에 넣기
-                    </Button>
-                    <Button
-                        className="rounded-md p-4"
-                        onClick={handleOrderCancel}
-                    >
-                        취소
-                    </Button>
+                    <AddShoppingCartButton
+                        handleAddShoppingCart={handleAddShoppingCart}
+                    />
+                    <CancelButton handleOrderCancel={handleOrderCancel} />
                 </div>
-
-                <Button
-                    className="bg-yellow-300 h-20 text-black"
-                    onClick={handleViewOrderHistory}
-                >
-                    바로 결제하기
-                </Button>
+                <QuickPayButton
+                    handleViewOrderHistory={handleViewOrderHistory}
+                />
             </div>
         </div>
     );
