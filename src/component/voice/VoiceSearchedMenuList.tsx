@@ -27,7 +27,8 @@ const VoiceSearchedMenuList = ({ items, onClick, selectedItems }: Props) => {
                             />
                         </div>
                         <strong className='block mb-2 text-md sm:text-lg'>{item.name}</strong>
-                        <p className='mb-2 sm:text-lg'>
+                        <p className='text-sm p-3'>{item.description}</p>
+                        <p className='mb-2 sm:text-lg font-semibold'>
                             {Intl.NumberFormat().format(item.price)}원
                         </p>
                     </li>
