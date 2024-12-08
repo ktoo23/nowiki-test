@@ -73,21 +73,21 @@ const OrderHistory = () => {
             </div>
 
             <div className="fixed bottom-32 left-0 right-0 p-4 bg-white">
-                <div className="flex gap-2">
-                    <div className="flex-1 space-y-2">
+                <div className="flex justify-center gap-4">
+                    <div className="flex flex-col space-y-1">
                         <Button
                             onClick={openPointVerificationPage}
-                            className="w-full bg-white text-black border border-gray-300"
+                            className="w-full bg-white text-black border  border-gray-300"
                         >
                             포인트 받기
                         </Button>
-                        <Button className="w-full bg-white text-black border border-gray-300">
+                        <Button className="w-full bg-white text-black border  border-gray-300">
                             더 추가하기
                         </Button>
                     </div>
                     <Button
                         onClick={goToFoodOffer}
-                        className="bg-yellow-400 hover:bg-yellow-500 text-black px-6"
+                        className="bg-yellow-400 hover:bg-yellow-500 text-black w-32 h-22"
                     >
                         주문완료
                     </Button>
