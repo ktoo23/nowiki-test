@@ -7,7 +7,7 @@ type Props = {
 
 const Header = ({ name, description }: Props) => {
   return (
-    <header>
+    <header className="grow text-left">
     <div className="h-[70px] flex items-center">
       <p className="font-bold text-[30px]">{name}</p>
       <p className="relative top-[-4px] text-[40px]">{getCategoryIcon(name)}</p>
