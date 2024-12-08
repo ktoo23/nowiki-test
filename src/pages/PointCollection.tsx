@@ -9,7 +9,7 @@ const PointCollection = () => {
     };
 
     const handleMenuSelectPage = () => {
-        navigate("/menu-select");
+        navigate(-1);
     };
 
     return (

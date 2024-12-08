@@ -1,6 +1,5 @@
 import { useState } from "react";
-import data from "../assets/data/menu.json";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
     Tooltip,
@@ -10,7 +9,9 @@ import {
 } from "@/components/ui/tooltip";
 
 const OrderHistory = () => {
-    const menuImage = data.menu_items.map((item) => item.image_url)[0];
+    const { state } = useLocation();
+    const { name, price, image_url } = state;
+
     const navigate = useNavigate();
     const [count, setCount] = useState(1);
 
@@ -50,18 +51,14 @@ const OrderHistory = () => {
             <div className="p-3 rounded-lg mb-4">
                 <div className="flex justify-center items-start gap-4">
                     <img
-                        src={menuImage}
+                        src={image_url}
                         alt="메뉴"
                         className="w-20 h-20 rounded-lg"
                     />
                     <div className="flex flex-col w-full">
                         <p className="text-lg font-bold">세트</p>
-                        <p className="text-sm">
-                            {data.menu_items.map((item) => item.name)[0]}
-                        </p>
-                        <p className="font-semibold mb-2">
-                            {data.menu_items.map((item) => item.price)[0]}원
-                        </p>
+                        <p className="text-sm">{name}</p>
+                        <p className="font-semibold mb-2">{price}원</p>
                         <div className="flex justify-center items-center gap-2">
                             <button
                                 onClick={decreaseCount}
