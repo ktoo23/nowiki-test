@@ -1,19 +1,19 @@
 import { createBrowserRouter } from 'react-router-dom'
-import Start from '../pages/start'
 import TotalMenus from '../pages/totalMenus'
 import MenuSelect from '../pages/MenuSelect'
 import OrderHistory from '../pages/OrderHistory'
 import PointCollection from '../pages/PointCollection'
 import FoodOffer from '../pages/FoodOffer'
-import DiningChoice from '../pages/diningChoice'
 import CardPayment from '../pages/CardPayment'
 import PaymentSelect from '../pages/PaymentSelect'
-import VoiceTest from '../pages/VoiceTest'
+import MainPage from '@/pages/MainPage'
+import DiningSelection from '@/pages/DiningSelection'
+import VoiceTest from '@/pages/VoiceTest'
 
 const routes = createBrowserRouter([
     {
         path: '/',
-        element: <Start />,
+        element: <MainPage />,
     },
     {
         path: '/menus',
@@ -25,7 +25,7 @@ const routes = createBrowserRouter([
     },
     {
         path: 'dining-choice',
-        element: <DiningChoice />,
+        element: <DiningSelection />,
     },
     {
         path: '/order-history',
