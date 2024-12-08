@@ -11,6 +11,7 @@ import MainPage from "@/pages/MainPage";
 import DiningSelection from "@/pages/DiningSelection";
 import VoiceTest from "@/pages/VoiceTest";
 import Voice from "@/component/voice/Voice";
+import PaymentResult from "@/pages/PaymentResult";
 
 const routes = createBrowserRouter([
     {
