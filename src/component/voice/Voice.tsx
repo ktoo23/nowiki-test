@@ -5,6 +5,8 @@ import Fuse from 'fuse.js'
 import menuData from '../../assets/data/menu.json'
 import { MenuItem } from '@/types/menu.interface'
 import VoiceSearchedMenuList from './VoiceSearchedMenuList'
+import { Button } from '@/components/ui/button'
+import { useNavigate } from 'react-router-dom'
 
 interface FuzeItem {
     item: MenuItem
@@ -16,6 +18,7 @@ const Voice = () => {
     const [dots, setDots] = useState('')
     const [searchResults, setSearchResults] = useState<FuzeItem[]>([])
     const [selectedMenuItems, setSelectedMenuItems] = useState<MenuItem[]>([])
+    const navigate = useNavigate();
 
     const recommendedMenu = [
         {
@@ -93,6 +96,8 @@ const Voice = () => {
                 padding: '2rem',
                 maxWidth: '600px',
                 margin: '0 auto',
+                paddingBottom: '160px',
+                position: 'relative'
             }}
         >
             <h1 style={{ marginBottom: '1rem', fontWeight: '600' }}>말해서 메뉴 찾기</h1>
@@ -185,6 +190,16 @@ const Voice = () => {
                     )}
                 </div>
             )}
+            {/** 아래부터 새로 추가 */}
+            <div className='max-w-screen-sm fixed bottom-0 left-2/1 p-4 flex w-full h-[150px] justify-around bg-white'>
+                <div className='mr-3 flex flex-col w-[280px]'>
+                    <Button variant="secondary" className='mb-3 h-[70px] text-lg'>장바구니에 넣기</Button>
+                    <Button variant="secondary" className='h-[70px] text-lg' onClick={() => navigate('/menus')}>처음으로</Button>
+                </div>
+                <div className='grow'>
+                    <Button className='w-full h-full bg-mc_yellow hover:bg-mc_yellow text-lg' onClick={() => navigate("/order-history", { state: selectedMenuItems[0] })}>바로 결제하기</Button>
+                </div>
+            </div>
         </div>
     )
 }

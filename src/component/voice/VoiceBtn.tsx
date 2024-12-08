@@ -8,7 +8,7 @@ const VoiceBtn = () => {
 
   return (
     <div className="flex items-center">
-      <Button className="bg-mc_yellow text-black" onClick={() => navigate('/voice-order')}>
+      <Button className="bg-mc_yellow text-black" onClick={() => navigate('/voice-test')}>
         <p>음성으로 주문하기</p>
       </Button>
     </div>
