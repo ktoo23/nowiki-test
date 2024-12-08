@@ -4,7 +4,7 @@ import { OrderInfo } from "../types/order.interface";
 const LOCAL_STORAGE_KEY = "orderInfo";
 
 // 로컬 스토리지에서 데이터 읽기
-const getOrderInfo = (): Partial<OrderInfo> => {
+export const getOrderInfo = (): Partial<OrderInfo> => {
   const storedData = localStorage.getItem(LOCAL_STORAGE_KEY);
   return storedData ? JSON.parse(storedData) : {};
 };
