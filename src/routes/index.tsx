@@ -10,6 +10,7 @@ import PaymentSelect from "../pages/PaymentSelect";
 import MainPage from "@/pages/MainPage";
 import DiningSelection from "@/pages/DiningSelection";
 import VoiceTest from "@/pages/VoiceTest";
+import Voice from "@/component/voice/Voice";
 
 const routes = createBrowserRouter([
     {
@@ -51,6 +52,10 @@ const routes = createBrowserRouter([
     {
         path: "/card-payment",
         element: <CardPayment />
+    },
+    {
+        path: "/voice-order",
+        element: <Voice />
     },
     {
         path: "/voice-test",
