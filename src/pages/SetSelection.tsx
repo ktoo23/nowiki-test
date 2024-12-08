@@ -5,9 +5,14 @@ import { cn } from '@/lib/utils';
 import { menu_items } from '../assets/data/menu.json';
 
 const SetSelection = () => {
+  const navigate = useNavigate();
   const params = useParams();
   const id = params.itemId;
   const [ menu ] = menu_items.filter((item) => item.id === id);
+
+  const handleNavigate = (path: string) => {
+    navigate(path);
+  }
 
   return (
     <div className="p-[30px] pt-[60px] grid grid-rows-[auto_1fr_auto] gap-[20px] max-w-screen-sm relative h-screen sm:m-auto text-mc_black text-center">
@@ -16,10 +21,10 @@ const SetSelection = () => {
         <p className="text-base sm:text-lg">세트 여부를 선택해주세요</p>
       </header>
      <div className="flex h-[230px] sm:h-[350px] justify-around sm:my-auto">
-        <SetSelectButton icon="🍔" title="햄버거만" classname="bg-white border border-solid border-mc_yellow  hover:bg-inherit"/>
-        <SetSelectButton icon="🍔🍟🥤" title="기본 세트" description="(버거 + 사이드 + 음료)" classname="bg-mc_yellow hover:bg-mc_yellow"/>
+        <SetSelectButton icon="🍔" title="햄버거만" classname="bg-white border border-solid border-mc_yellow hover:bg-inherit" onNavigate={handleNavigate}/>
+        <SetSelectButton icon="🍔🍟🥤" title="기본 세트" description="(버거 + 사이드 + 음료)" classname="bg-mc_yellow hover:bg-mc_yellow" onNavigate={handleNavigate}/>
      </div>
-     <Button size='lg' variant='secondary' className="w-full sm:max-w-[450px] m-auto text-lg">취소</Button>
+     <Button size='lg' variant='secondary' className="w-full sm:max-w-[450px] m-auto text-lg" onClick={() => handleNavigate('/menus')}>취소</Button>
     </div>
   )
 }
@@ -31,6 +36,7 @@ type Props = {
   title: string;
   description?: string;
   classname?: string;
+  onNavigate: (path: string) => void;
 }
 
 const SetSelectButton = ({ classname, icon, title, description }: Props) => {
