@@ -1,4 +1,4 @@
-import Voice from '../components/voice/voice'
+import Voice from '../component/voice/voice'
 
 const VoiceTest: React.FC = () => {
     return (
