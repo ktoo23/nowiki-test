@@ -8,7 +8,7 @@ const useSpeechToText = () => {
             SpeechRecognition.stopListening()
         } else {
             resetTranscript()
-            SpeechRecognition.startListening({ language: 'ko-KR', continuous: true })
+            SpeechRecognition.startListening({ language: 'ko-KR' })
         }
     }
 
