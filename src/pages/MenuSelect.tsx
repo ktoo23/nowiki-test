@@ -17,7 +17,7 @@ const MenuSelect = () => {
     const handleAddShoppingCart = () => {};
 
     const handleViewOrderHistory = () => {
-        navigate("/order-history");
+        navigate("/order-history", { state: menu });
     };
 
     const handleOrderCancel = () => {};
@@ -72,8 +72,8 @@ const MenuSelect = () => {
                     <div className="flex justify-center mt-12">
                         <TooltipWrapper />
                     </div>
-                    <div className="flex justify-evenly mt-48">
-                        <div className="flex flex-col space-y-2">
+                    <div className="flex justify-center space-x-4 mt-20">
+                        <div className="flex flex-col space-y-1">
                             <AddShoppingCartButton
                                 handleAddShoppingCart={handleAddShoppingCart}
                             />

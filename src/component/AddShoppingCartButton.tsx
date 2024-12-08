@@ -8,7 +8,10 @@ const AddShoppingCartButton = ({
     handleAddShoppingCart
 }: AddShoppingCartButtonProps) => {
     return (
-        <Button className="rounded-md p-4" onClick={handleAddShoppingCart}>
+        <Button
+            className="rounded-md p-4 w-48 h-20 text-xl"
+            onClick={handleAddShoppingCart}
+        >
             장바구니에 넣기
         </Button>
     );
