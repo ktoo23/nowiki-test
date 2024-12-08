@@ -26,7 +26,7 @@ const routes = createBrowserRouter([
     element: <SetSelection />,
   },
   {
-    path: "/menu-select",
+    path: "/menu-select/:id",
     element: <MenuSelect />,
   },
   {
