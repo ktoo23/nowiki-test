@@ -8,7 +8,7 @@ import Sidebar from '@/component/menu-list/Sidebar';
 import TasteFilter from '@/component/menu-list/TasteFilter';
 import FilteredMenuList from '@/component/menu-list/FilteredMenuList';
 import TooltipWrapper from '@/components/tooltip/TooltipWrapper';
-
+import VoiceBtn from '@/component/voice/VoiceBtn';
 
 const defaultCategoryId = menu_categories[0].id;
 
@@ -57,6 +57,7 @@ const MenuList = () => {
             {/* logo img */}
           </div>
           <Header name={menuCategory.name as "버거" | "사이드" | "치킨" | "음료" | "디저트"} description={menuCategory?.description} />
+          <VoiceBtn />
         </div>
         <div className="flex">
           <Sidebar categories={menu_categories} onCategoryChange={handleCategory} filters={filters} />
