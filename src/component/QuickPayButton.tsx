@@ -7,7 +7,7 @@ interface QuickPayProps {
 const QuickPayButton = ({ handleViewOrderHistory }: QuickPayProps) => {
     return (
         <Button
-            className="bg-yellow-300 h-20 text-black"
+            className="bg-yellow-300 h-20 text-black hover:bg-yellow-400"
             onClick={handleViewOrderHistory}
         >
             바로 결제하기
