@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
-import TotalMenus from '../pages/totalMenus'
 import MenuSelect from '../pages/MenuSelect'
+import MenuList from '@/pages/MenuList'
+import SetSelection from '@/pages/SetSelection'
 import OrderHistory from '../pages/OrderHistory'
 import PointCollection from '../pages/PointCollection'
 import FoodOffer from '../pages/FoodOffer'
@@ -17,7 +18,11 @@ const routes = createBrowserRouter([
     },
     {
         path: '/menus',
-        element: <TotalMenus />,
+        element: <MenuList />,
+    },
+    {
+        path: '/set-choice',
+        element: <SetSelection />
     },
     {
         path: '/menu-select',
