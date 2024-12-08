@@ -21,7 +21,7 @@ const routes = createBrowserRouter([
         element: <MenuList />,
     },
     {
-        path: '/set-choice',
+        path: '/set-choice/:itemId',
         element: <SetSelection />
     },
     {
