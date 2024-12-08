@@ -12,6 +12,7 @@
     "dependencies": {
         "@babel/runtime": "^7.26.0",
         "@radix-ui/react-avatar": "^1.1.1",
+        "@radix-ui/react-popover": "^1.1.2",
         "@radix-ui/react-slot": "^1.1.0",
         "@vitejs/plugin-legacy": "^6.0.0",
         "class-variance-authority": "^0.7.1",
