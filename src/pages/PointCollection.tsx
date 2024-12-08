@@ -7,6 +7,11 @@ const PointCollection = () => {
     const backOrderHistory = () => {
         navigate("/order-history");
     };
+
+    const handleMenuSelectPage = () => {
+        navigate("/menu-select");
+    };
+
     return (
         <div className="flex flex-col items-center justify-center px-4">
             <div className="text-center">
@@ -23,7 +28,10 @@ const PointCollection = () => {
             />
             <div className="fixed bottom-32 w-full max-w-md px-4">
                 <div className="flex justify-around">
-                    <Button className="w-32 h-16 bg-white text-black border border-gray-300">
+                    <Button
+                        onClick={handleMenuSelectPage}
+                        className="w-32 h-16 bg-white text-black border border-gray-300"
+                    >
                         취소
                     </Button>
                     <Button
