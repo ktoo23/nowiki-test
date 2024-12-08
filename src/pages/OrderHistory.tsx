@@ -2,6 +2,12 @@ import { useState } from "react";
 import data from "../assets/data/menu.json";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger
+} from "@/components/ui/tooltip";
 
 const OrderHistory = () => {
     const menuImage = data.menu_items.map((item) => item.image_url)[0];
@@ -84,16 +90,27 @@ const OrderHistory = () => {
             <div className="fixed bottom-96 left-0 right-0 p-4 bg-white">
                 <div className="flex justify-center gap-4">
                     <div className="flex flex-col space-y-1">
-                        <div className="bg-yellow-100 text-yellow-800 font-semibold text-lg rounded-md text-center absolute left-[33%] top-1 px-4">
+                        {/* <div className="bg-yellow-100 text-yellow-800 font-semibold text-lg rounded-md text-center absolute left-[33%] top-1 px-4">
                             결제 전 필수
-                        </div>
-                        <Button
-                            variant="ghost"
-                            onClick={openPointVerificationPage}
-                            className="w-full px-10 py-8 bg-white text-black border text-xl  border-gray-300"
-                        >
-                            포인트 받기
-                        </Button>
+                        </div> */}
+                        <TooltipProvider>
+                            <Tooltip delayDuration={0}>
+                                <TooltipTrigger asChild>
+                                    <Button
+                                        variant="ghost"
+                                        onClick={openPointVerificationPage}
+                                        className="w-full px-10 py-8 bg-white text-black border text-xl border-gray-300"
+                                    >
+                                        포인트 받기
+                                    </Button>
+                                </TooltipTrigger>
+                                <TooltipContent side="top" className="z-50">
+                                    <p className="font-semibold text-lg rounded-md text-center px-4 py-2">
+                                        결제 전 필수
+                                    </p>
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
                         <Button
                             onClick={handleMenuList}
                             className="w-full px-10 py-8 bg-white text-black border text-xl  border-gray-300"
