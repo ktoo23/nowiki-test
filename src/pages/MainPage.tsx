@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { WIKI_FAIRY_URL } from "@/types/constants";
 
 type CustomerType = "regular" | "newbie";
 
@@ -30,10 +32,13 @@ const MainPage: React.FC = () => {
         </Button>
         <Button
           variant="outline"
-          className="w-[400px] h-[50px]"
+          className="w-[400px] h-[50px] bg-help_bg"
           onClick={() => navigateToDiningChoice("newbie")}
         >
           키오스크가 처음이라면 저를 눌러주세요
+          <Avatar>
+            <AvatarImage src={WIKI_FAIRY_URL} />
+          </Avatar>
         </Button>
       </div>
     </section>
