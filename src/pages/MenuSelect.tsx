@@ -11,7 +11,9 @@ const MenuSelect = () => {
     const params = useParams();
     const [menu] = menu_items.filter((item) => item.id === params.id);
 
-    const handleAddShoppingCart = () => {};
+    const handleAddShoppingCart = () => {
+        alert("장바구니에 추가되었습니다.");
+    };
     const handleViewOrderHistory = () => {
         navigate("/order-history", { state: menu });
     };
