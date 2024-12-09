@@ -17,7 +17,7 @@ import { MenuItemWithCount } from "@/types/menu.interface";
 
 const OrderHistory = () => {
   const navigate = useNavigate();
-  const [orderInfoData, setOrderInfoData] = useState(
+  const [orderItemData, setOrderItemData] = useState(
     getOrderInfo().orderItem || []
   );
 
@@ -27,12 +27,12 @@ const OrderHistory = () => {
     } else {
       modifyItemFromOrderInfo(item);
     }
-    setOrderInfoData(getOrderInfo().orderItem || []);
+    setOrderItemData(getOrderInfo().orderItem || []);
   };
 
   const resetMenu = (item: MenuItemWithCount) => {
     deleteItemFromOrderInfo(item);
-    setOrderInfoData(getOrderInfo().orderItem || []);
+    setOrderItemData(getOrderInfo().orderItem || []);
   };
 
   const openPointVerificationPage = () => {
@@ -46,7 +46,11 @@ const OrderHistory = () => {
     //   return navigate("/");
     // }
 
-    navigate("/food-offer");
+    if (orderItemData.length > 0) {
+      navigate("/food-offer");
+    } else {
+      alert("장바구니가 비어있습니다.");
+    }
   };
 
   const handleMenuList = () => {
@@ -63,8 +67,8 @@ const OrderHistory = () => {
       </div>
 
       <div className="p-3 rounded-lg mb-4">
-        {orderInfoData.length === 0 && <div>주문한 메뉴가 없습니다.</div>}
-        {orderInfoData.map((item) => (
+        {orderItemData.length === 0 && <div>주문한 메뉴가 없습니다.</div>}
+        {orderItemData.map((item) => (
           <div key={item.id} className="flex justify-center items-center gap-2">
             <img
               src={item.image_url}
