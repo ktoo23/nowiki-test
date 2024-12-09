@@ -1,4 +1,4 @@
-import { MenuItem } from "@/types/menu.interface";
+import { MenuItem, MenuItemWithCount } from "@/types/menu.interface";
 import { OrderInfo } from "../types/order.interface";
 
 // 로컬 스토리지 키
@@ -34,13 +34,70 @@ export const setItemToOrderInfo = (item: MenuItem) => {
   if (!localInfo) {
     return false;
   }
-  const { orderItem } = JSON.parse(localInfo);
+  const { orderItem } = JSON.parse(localInfo) || [];
 
   if (orderItem) {
-    return setOrderInfo("orderItem", [...orderItem, item]);
+    const newOrderItem = [...orderItem];
+    const existedItem = newOrderItem.find(
+      (i: MenuItemWithCount) => i.id === item.id
+    );
+
+    if (existedItem) {
+      existedItem.count++;
+    } else {
+      newOrderItem.push({ ...item, count: 1 });
+    }
+
+    return setOrderInfo("orderItem", [...newOrderItem]);
   }
 
-  setOrderInfo("orderItem", [item]);
+  setOrderInfo("orderItem", [{ ...item, count: 1 }]);
+  return true;
+};
+
+export const modifyItemFromOrderInfo = (item: MenuItem) => {
+  const localInfo = localStorage.getItem("orderInfo");
+
+  if (!localInfo) {
+    return false;
+  }
+  const { orderItem } = JSON.parse(localInfo) || [];
+
+  if (orderItem) {
+    let newOrderItem = [...orderItem];
+    const existedItem = newOrderItem.find(
+      (i: MenuItemWithCount) => i.id === item.id
+    );
+
+    if (existedItem && existedItem.count > 1) {
+      existedItem.count--;
+    } else {
+      newOrderItem = newOrderItem.filter(
+        (i: MenuItemWithCount) => i.id !== item.id
+      );
+    }
+
+    return setOrderInfo("orderItem", [...newOrderItem]);
+  }
+
+  setOrderInfo("orderItem", [{ ...item, count: 1 }]);
+  return true;
+};
+
+export const deleteItemFromOrderInfo = (item: MenuItem) => {
+  const localInfo = localStorage.getItem("orderInfo");
+
+  if (!localInfo) {
+    return false;
+  }
+  const { orderItem } = JSON.parse(localInfo) || [];
+
+  if (orderItem) {
+    let newOrderItem = orderItem.filter(
+      (i: MenuItemWithCount) => i.id !== item.id
+    );
+    return setOrderInfo("orderItem", [...newOrderItem]);
+  }
 };
 
 // 주문 완료 시 데이터 조합 후 전송
