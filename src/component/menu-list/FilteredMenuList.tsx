@@ -47,7 +47,7 @@ const FilteredMenuList = ({ items }: Props) => {
       {items.map((item) => (
         <li
           key={item.id}
-          className="bg-[#F8F8F8] rounded-[10px] text-center cursor-pointer"
+          className="sm:max-h-[220px] bg-[#F8F8F8] rounded-[10px] text-center cursor-pointer"
           onClick={() => naviate(`/set-choice/${item.id}`)}
         >
           <div className='mb-2'>
