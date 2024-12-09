@@ -89,7 +89,7 @@ const MenuSelect = () => {
           {currentCart.length ? (
             <Button
               variant="secondary"
-              className="bg-yellow-300 w-48 h-42 text-black hover:bg-yellow-400 text-xl"
+              className="bg-yellow-300 w-48 h-44 text-black hover:bg-yellow-400 text-xl"
               onClick={handleViewOrderHistory}
             >
               주문하기
