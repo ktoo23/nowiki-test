@@ -51,16 +51,15 @@ const OrderHistory = () => {
             </div>
 
             <div className="p-3 rounded-lg mb-4">
-                <div className="flex justify-center items-start gap-4">
+                <div className="flex justify-center items-center gap-4">
                     <img
                         src={image_url}
                         alt="메뉴"
-                        className="w-20 h-20 rounded-lg"
+                        className="w-36 h-36 object-cover"
                     />
-                    <div className="flex flex-col w-full">
-                        <p className="text-lg font-bold">세트</p>
-                        <p className="text-sm">{name}</p>
-                        <p className="font-semibold mb-2">{price}원</p>
+                    <div className="w-48">
+                        <p className="text-3xl font-bold">{name}</p>
+                        <p className="font-semibold text-2xl mb-2">{price}원</p>
                         <div className="flex justify-center items-center gap-2">
                             <button
                                 onClick={decreaseCount}
@@ -77,7 +76,7 @@ const OrderHistory = () => {
                             </button>
                             <Button
                                 onClick={resetMenu}
-                                className="text-sm text-gray-500 ml-2 bg-gray-300 px-4 py-2 rounded-md"
+                                className="text-lg text-black ml-2 bg-mc_red px-4 py-2 rounded-md"
                             >
                                 취소
                             </Button>
