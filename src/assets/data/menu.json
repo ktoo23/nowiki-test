@@ -179,6 +179,42 @@
       "category_id": "8aef483e-4b7e-4a9c-8c87-dfbf54564299",
       "taste_ids": [],
       "image_url": "/image/menu/dessert__icecream.png"
+    },
+    {
+      "id": "6a5fb3f6-fae3-4922-87b2-b0e4382f6386",
+      "name": "빅맥 세트",
+      "description": "빅맥 버거, 중간 사이즈 감자튀김, 중간 사이즈 음료 포함.",
+      "price": 11670,
+      "category_id": "",
+      "taste_ids": [],
+      "image_url": "/image/menu/burger__set__bigmac.png"
+    },
+    {
+      "id": "92e5c39a-3424-45ea-85ed-5bc3eb193c43",
+      "name": "맥치킨 세트",
+      "description": "맥치킨 샌드위치, 작은 감자튀김, 작은 음료 포함.",
+      "price": 9730,
+      "category_id": "",
+      "taste_ids": [],
+      "image_url": "/image/menu/burger__set__chicken.png"
+    },
+    {
+      "id": "ab12bc34-cdef-5678-ghij-klmn9012op34",
+      "name": "더블 쿼터파운더 세트",
+      "description": "더블 쿼터파운더 치즈버거, 중간 사이즈 감자튀김, 중간 사이즈 음료 포함.",
+      "price": 13670,
+      "category_id": "",
+      "taste_ids": [],
+      "image_url": "/image/menu/burger__set__double-quarter.png"
+    },
+    {
+      "id": "cd45ef67-ghij-7890-klmn-opqr1234st56",
+      "name": "불고기 버거 세트",
+      "description": "불고기 버거, 작은 감자튀김, 작은 음료 포함.",
+      "price": 8430,
+      "category_id": "",
+      "taste_ids": [],
+      "image_url": "/image/menu/burger__set__bulgogi.png"
     }
   ],
   "meals": [
