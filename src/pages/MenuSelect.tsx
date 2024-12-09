@@ -4,6 +4,8 @@ import QuickPayButton from "@/component/QuickPayButton";
 import CancelButton from "@/component/CancelButton";
 import TooltipWrapper from "@/components/tooltip/TooltipWrapper";
 import { menu_items } from "../assets/data/menu.json";
+
+import { setItemToOrderInfo } from "@/feat/order";
 import { Button } from "@/components/ui/button";
 
 const MenuSelect = () => {
@@ -12,11 +14,14 @@ const MenuSelect = () => {
     const [menu] = menu_items.filter((item) => item.id === params.id);
 
     const handleAddShoppingCart = () => {
-        alert("장바구니에 들어갔습니다.");
+        alert("장바구니에 추가되었습니다.");
+        setItemToOrderInfo(menu);
     };
+
     const handleViewOrderHistory = () => {
         navigate("/order-history", { state: menu });
     };
+
     const handleOrderCancel = () => {
         navigate("/menus");
     };
