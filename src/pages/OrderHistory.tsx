@@ -11,7 +11,9 @@ import { setItemToOrderInfo } from "@/feat/order";
 
 const OrderHistory = () => {
     const { state } = useLocation();
-    const { name, price, image_url } = state;
+    const name = state?.name;
+    const price = state?.price;
+    const image_url = state?.image_url;
 
     const navigate = useNavigate();
     const [count, setCount] = useState(1);
@@ -51,16 +53,15 @@ const OrderHistory = () => {
             </div>
 
             <div className="p-3 rounded-lg mb-4">
-                <div className="flex justify-center items-start gap-4">
+                <div className="flex justify-center items-center gap-4">
                     <img
                         src={image_url}
                         alt="메뉴"
-                        className="w-20 h-20 rounded-lg"
+                        className="w-36 h-36 object-cover"
                     />
-                    <div className="flex flex-col w-full">
-                        <p className="text-lg font-bold">세트</p>
-                        <p className="text-sm">{name}</p>
-                        <p className="font-semibold mb-2">{price}원</p>
+                    <div className="w-48">
+                        <p className="text-3xl font-bold">{name}</p>
+                        <p className="font-semibold text-2xl mb-2">{price}원</p>
                         <div className="flex justify-center items-center gap-2">
                             <button
                                 onClick={decreaseCount}
@@ -77,7 +78,7 @@ const OrderHistory = () => {
                             </button>
                             <Button
                                 onClick={resetMenu}
-                                className="text-sm text-gray-500 ml-2 bg-gray-300 px-4 py-2 rounded-md"
+                                className="text-lg text-black ml-2 bg-mc_red px-4 py-2 rounded-md"
                             >
                                 취소
                             </Button>
@@ -86,7 +87,7 @@ const OrderHistory = () => {
                 </div>
             </div>
 
-            <div className="fixed bottom-96 left-0 right-0 p-4 bg-white">
+            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white">
                 <div className="flex justify-center gap-4">
                     <div className="flex flex-col space-y-1">
                         {/* <div className="bg-yellow-100 text-yellow-800 font-semibold text-lg rounded-md text-center absolute left-[33%] top-1 px-4">

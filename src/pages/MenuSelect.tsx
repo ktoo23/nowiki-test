@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import AddShoppingCartButton from "@/component/AddShoppingCartButton";
 import QuickPayButton from "@/component/QuickPayButton";
 import CancelButton from "@/component/CancelButton";
@@ -11,6 +11,9 @@ import { Button } from "@/components/ui/button";
 const MenuSelect = () => {
     const navigate = useNavigate();
     const params = useParams();
+    const { state } = useLocation();
+    const menuData = state?.menu;
+
     const [menu] = menu_items.filter((item) => item.id === params.id);
 
     const handleAddShoppingCart = () => {
@@ -30,17 +33,16 @@ const MenuSelect = () => {
         <div className="container mx-auto px-4 py-8">
             <section className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
                 <header className="text-center mb-8">
-                    <h1 className="text-4xl font-bold mb-2">세트</h1>
-                    <p className="text-2xl mb-2">{menu.name}</p>
+                    <p className="text-2xl mb-2">{menuData.name}</p>
                     <p className="text-2xl text-primary">
-                        <span className="font-bold">{menu.price}</span>원
+                        <span className="font-bold">{menuData.price}</span>원
                     </p>
                 </header>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                    <div className="flex flex-col items-center">
+                <div className="flex justify-center">
+                    <div>
                         <img
-                            src={menu.image_url}
+                            src={menuData.image_url}
                             alt="메인 메뉴"
                             className="w-48 h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
                         />
