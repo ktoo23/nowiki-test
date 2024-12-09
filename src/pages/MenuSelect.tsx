@@ -37,6 +37,9 @@ const MenuSelect = () => {
   };
 
   const handleOrderCancel = () => {
+    if (currentCart.length > 0) {
+      setItemToOrderInfo(menu);
+    }
     navigate("/menus");
   };
 
