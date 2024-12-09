@@ -11,7 +11,9 @@ import { setItemToOrderInfo } from "@/feat/order";
 
 const OrderHistory = () => {
     const { state } = useLocation();
-    const { name, price, image_url } = state;
+    const name = state?.name;
+    const price = state?.price;
+    const image_url = state?.image_url;
 
     const navigate = useNavigate();
     const [count, setCount] = useState(1);
@@ -85,7 +87,7 @@ const OrderHistory = () => {
                 </div>
             </div>
 
-            <div className="fixed bottom-96 left-0 right-0 p-4 bg-white">
+            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white">
                 <div className="flex justify-center gap-4">
                     <div className="flex flex-col space-y-1">
                         {/* <div className="bg-yellow-100 text-yellow-800 font-semibold text-lg rounded-md text-center absolute left-[33%] top-1 px-4">
