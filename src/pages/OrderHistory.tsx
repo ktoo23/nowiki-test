@@ -35,7 +35,12 @@ const OrderHistory = () => {
     };
 
     const goToFoodOffer = () => {
-        setItemToOrderInfo(state);
+        const setResult = setItemToOrderInfo(state);
+        if (!setResult) {
+            alert("예상치 못한 오류로 인해\n 첫화면으로 넘어갑니다");
+            return navigate('/');
+        }
+
         navigate("/food-offer");
     };
 

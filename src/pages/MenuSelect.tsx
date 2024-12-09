@@ -17,8 +17,11 @@ const MenuSelect = () => {
     const [menu] = menu_items.filter((item) => item.id === params.id);
 
     const handleAddShoppingCart = () => {
+        if (!setItemToOrderInfo(menu)) {
+            alert("예상치 못한 오류로 인해\n 첫화면으로 넘어갑니다");
+            return navigate('/');
+        };
         alert("장바구니에 추가되었습니다.");
-        setItemToOrderInfo(menu);
     };
 
     const handleViewOrderHistory = () => {

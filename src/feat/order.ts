@@ -29,7 +29,12 @@ export const setOrderInfo = <K extends keyof OrderInfo>(
 };
 
 export const setItemToOrderInfo = (item: MenuItem) => {
-  const { orderItem } = JSON.parse(localStorage.getItem("orderInfo") as string);
+  const localInfo = localStorage.getItem("orderInfo");
+
+  if (!localInfo) {
+    return false;
+  }
+  const { orderItem } = JSON.parse(localInfo);
 
   if (orderItem) {
     return setOrderInfo("orderItem", [...orderItem, item]);
