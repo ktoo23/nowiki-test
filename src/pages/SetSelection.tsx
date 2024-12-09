@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 
 import { menu_items, meals } from "../assets/data/menu.json";
 
-const burgerCategoryId = '3fefc837-88f7-4d53-a8b8-5a8c45c06b84';
 const SetSelection = () => {
     const navigate = useNavigate();
     const params = useParams();
