@@ -66,11 +66,11 @@ const MenuList = () => {
               <TasteFilter filters={filters} onTasteChange={handleTaste} />
             )}
             <FilteredMenuList items={filteredList} />
+            <div className='flex flex-row-reverse justify-start pr-8'>
+              <TooltipWrapper />
+            </div>
           </div>
         </div>
-      </div>
-      <div className='fixed bottom-2 left-20 w-full flex items-center'>
-        <TooltipWrapper />
       </div>
     </div>
   );

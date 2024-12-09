@@ -2,7 +2,7 @@ import { MenuItem } from "./menu.interface";
 
 export interface OrderInfo {
   isTakeOut: boolean;
-  orderItem: MenuItem;
+  orderItem: MenuItem[];
   isTableService: boolean;
   payMethod: string;
 }
