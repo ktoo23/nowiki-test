@@ -23,7 +23,6 @@ const MenuSelect = () => {
 
   const handleAddShoppingCart = () => {
     setCurrentCart([...currentCart, menu]);
-    setItemToOrderInfo(menu);
 
     // if (!setItemToOrderInfo(menu)) {
     //   alert("예상치 못한 오류로 인해\n 첫화면으로 넘어갑니다");
@@ -33,10 +32,14 @@ const MenuSelect = () => {
   };
 
   const handleViewOrderHistory = () => {
+    setItemToOrderInfo(menu);
     navigate("/order-history", { state: menuData });
   };
 
   const handleOrderCancel = () => {
+    if (currentCart.length > 0) {
+      setItemToOrderInfo(menu);
+    }
     navigate("/menus");
   };
 
