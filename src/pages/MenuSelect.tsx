@@ -22,7 +22,7 @@ const MenuSelect = () => {
     };
 
     const handleViewOrderHistory = () => {
-        navigate("/order-history", { state: menu });
+        navigate("/order-history", { state: menuData });
     };
 
     const handleOrderCancel = () => {
