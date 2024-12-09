@@ -7,7 +7,9 @@ const MenuSelect = () => {
     const navigate = useNavigate();
     console.log(data.menu_items.map((item) => item));
 
-    const handleAddShoppingCart = () => {};
+    const handleAddShoppingCart = () => {
+        alert("장바구니에 추가되었습니다.");
+    };
 
     const handleViewOrderHistory = () => {
         navigate("/order-history");
