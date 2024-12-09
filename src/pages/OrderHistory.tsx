@@ -7,6 +7,7 @@ import {
     TooltipProvider,
     TooltipTrigger
 } from "@/components/ui/tooltip";
+import { setItemToOrderInfo } from "@/feat/order";
 
 const OrderHistory = () => {
     const { state } = useLocation();
@@ -32,6 +33,7 @@ const OrderHistory = () => {
     };
 
     const goToFoodOffer = () => {
+        setItemToOrderInfo(state);
         navigate("/food-offer");
     };
 

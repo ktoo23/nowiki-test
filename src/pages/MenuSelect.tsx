@@ -4,6 +4,8 @@ import QuickPayButton from "@/component/QuickPayButton";
 import CancelButton from "@/component/CancelButton";
 import TooltipWrapper from "@/components/tooltip/TooltipWrapper";
 import { menu_items } from "../assets/data/menu.json";
+
+import { setItemToOrderInfo } from "@/feat/order";
 import { Button } from "@/components/ui/button";
 
 const MenuSelect = () => {
@@ -13,13 +15,19 @@ const MenuSelect = () => {
 
     const handleAddShoppingCart = () => {
         alert("장바구니에 추가되었습니다.");
+        setItemToOrderInfo(menu);
     };
+
     const handleViewOrderHistory = () => {
         navigate("/order-history", { state: menu });
     };
+  
     const handleOrderCancel = () => {
         navigate("/menus");
     };
+
+
+    const handleOrderCancel = () => { };
 
     return (
         <div className="container mx-auto px-4 py-8">

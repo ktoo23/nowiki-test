@@ -1,3 +1,4 @@
+import { MenuItem } from "@/types/menu.interface";
 import { OrderInfo } from "../types/order.interface";
 
 // 로컬 스토리지 키
@@ -27,8 +28,18 @@ export const setOrderInfo = <K extends keyof OrderInfo>(
   saveOrderInfo(key, value); // 로컬 스토리지에 저장
 };
 
+export const setItemToOrderInfo = (item: MenuItem) => {
+  const { orderItem } = JSON.parse(localStorage.getItem("orderInfo") as string);
+
+  if (orderItem) {
+    return setOrderInfo("orderItem", [...orderItem, item]);
+  }
+
+  setOrderInfo("orderItem", [item]);
+};
+
 // 주문 완료 시 데이터 조합 후 전송
-export const completeOrder = (): void => {
+export const completeOrder = (): boolean => {
   const finalOrder = getOrderInfo();
   if (
     finalOrder.isTakeOut !== undefined &&
@@ -38,7 +49,8 @@ export const completeOrder = (): void => {
   ) {
     // 주문 데이터를 서버로 전송
     // 예외처리 추후 고민
-    return console.log("Sending order to server:", finalOrder);
+    return true;
   }
   console.error("Order information is incomplete!");
+  return false;
 };
