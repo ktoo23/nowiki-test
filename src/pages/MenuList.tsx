@@ -53,9 +53,8 @@ const MenuList = () => {
     <div>
       <div className="max-w-screen-sm relative sm:m-auto text-mc_black ">
         <div className="flex">
-          <div className="w-[120px] sm:w-[180px] bg-slate-400">
-            <img src="" alt="" />
-            {/* logo img */}
+          <div className="w-[120px] sm:w-[150px]">
+            <img src="/image/wiki.png" alt="로고 이미지" />
           </div>
           <Header
             name={
@@ -84,7 +83,7 @@ const MenuList = () => {
               <TasteFilter filters={filters} onTasteChange={handleTaste} />
             )}
             <FilteredMenuList items={filteredList} />
-            <div className="flex flex-row-reverse justify-start pr-8">
+            <div className="flex flex-row-reverse justify-center">
               <TooltipWrapper />
             </div>
           </div>
