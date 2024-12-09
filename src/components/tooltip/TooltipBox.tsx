@@ -9,12 +9,12 @@ const TooltipBox = () => {
 
   const makeBoxString = () => {
     let boxString = '';
-    switch (pathname) {
-      case '/food-offer':
+    switch (pathname.split("/")[1]) {
+      case 'food-offer':
         boxString = "자리에 앉아있어! 주문한 메뉴가져다 줄게";
         break
 
-      case '/menu-select':
+      case 'menu-select':
         boxString = "라지세트는 감자튀김과 음료수\n크기가 커지는거야!";
         break
 

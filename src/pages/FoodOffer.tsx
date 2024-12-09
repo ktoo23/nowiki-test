@@ -41,7 +41,7 @@ const FoodOffer = () => {
           </Button>
         </div>
       </div>
-      <div className="fixed bottom-96">
+      <div className="fixed bottom-10">
         <TooltipWrapper />
       </div>
     </section>

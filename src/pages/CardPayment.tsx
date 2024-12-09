@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import CardPaymentImage from "../assets/image/card-payment.png";
 import { Button } from "@/components/ui/button";
+import { completeOrder } from "@/feat/order";
 
 const CardPayment = () => {
   const naviate = useNavigate();
@@ -10,6 +11,10 @@ const CardPayment = () => {
   };
 
   const navigateToPaymentResult = () => {
+    const result = completeOrder();
+    if (!result) {
+      alert("주문에 오류가 발생했습니다")
+    }
     naviate("/payment-result");
   };
 
