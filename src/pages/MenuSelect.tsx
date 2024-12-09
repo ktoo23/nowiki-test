@@ -21,13 +21,10 @@ const MenuSelect = () => {
     const handleViewOrderHistory = () => {
         navigate("/order-history", { state: menu });
     };
-  
+
     const handleOrderCancel = () => {
         navigate("/menus");
     };
-
-
-    const handleOrderCancel = () => { };
 
     return (
         <div className="container mx-auto px-4 py-8">
