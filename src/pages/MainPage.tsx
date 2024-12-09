@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
-import { WIKI_FAIRY_URL } from '@/types/constants'
 
 type CustomerType = 'regular' | 'newbie'
 
@@ -24,19 +23,19 @@ const MainPage: React.FC = () => {
             <div className='h-[30%] flex flex-col gap-5 justify-center items-center'>
                 <Button
                     variant='outline'
-                    className='w-[80%] h-20 bg-mc_yellow'
+                    className='w-[80%] h-20 bg-mc_yellow text-lg'
                     onClick={() => navigateToDiningChoice()}
                 >
                     주문 시작하기
                 </Button>
                 <Button
                     variant='outline'
-                    className='w-[80%] h-10 bg-help_bg'
+                    className='w-[80%] h-20 bg-help_bg relative text-lg'
                     onClick={() => navigateToDiningChoice('newbie')}
                 >
                     키오스크가 처음이라면 저를 눌러주세요
-                    <Avatar>
-                        <AvatarImage src={WIKI_FAIRY_URL} />
+                    <Avatar className='absolute bottom-2 left-6 size-[90px] transform scale-x-[-1]'>
+                        <AvatarImage src="/image/wiki.png" />
                     </Avatar>
                 </Button>
             </div>
