@@ -7,6 +7,7 @@ import QuickPayButton from "@/component/QuickPayButton";
 import CancelButton from "@/component/CancelButton";
 import TooltipWrapper from "@/components/tooltip/TooltipWrapper";
 import { menu_items } from "../assets/data/menu.json";
+import { setItemToOrderInfo } from "@/feat/order";
 
 const MenuSelect = () => {
     const navigate = useNavigate();
@@ -14,13 +15,15 @@ const MenuSelect = () => {
 
     const [menu] = menu_items.filter((item) => item.id === params.id);
 
-    const handleAddShoppingCart = () => {};
+    const handleAddShoppingCart = () => {
+        setItemToOrderInfo(menu);
+    };
 
     const handleViewOrderHistory = () => {
         navigate("/order-history", { state: menu });
     };
 
-    const handleOrderCancel = () => {};
+    const handleOrderCancel = () => { };
     return (
         <div>
             <section>

@@ -5,11 +5,13 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { setOrderInfo } from "@/feat/order";
 
 const PaymentSelect = () => {
   const naviate = useNavigate();
 
   const navigateToCardPayment = () => {
+    setOrderInfo("payMethod", "creditCard");
     naviate("/card-payment");
   };
 

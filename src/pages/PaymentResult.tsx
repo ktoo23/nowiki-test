@@ -8,6 +8,7 @@ const PaymentResult = () => {
   const isTableService = getOrderInfo()?.isTableService;
 
   const navigateToMain = () => {
+    localStorage.clear();
     naviate("/");
   };
 
