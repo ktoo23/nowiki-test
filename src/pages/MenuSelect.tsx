@@ -1,90 +1,63 @@
 import { useNavigate, useParams } from "react-router-dom";
-import data from "../assets/data/menu.json";
-import { Fragment } from "react/jsx-runtime";
-import { MenuItem } from "../types/menu.interface";
 import AddShoppingCartButton from "@/component/AddShoppingCartButton";
 import QuickPayButton from "@/component/QuickPayButton";
 import CancelButton from "@/component/CancelButton";
 import TooltipWrapper from "@/components/tooltip/TooltipWrapper";
 import { menu_items } from "../assets/data/menu.json";
+import { Button } from "@/components/ui/button";
 
 const MenuSelect = () => {
     const navigate = useNavigate();
     const params = useParams();
-
     const [menu] = menu_items.filter((item) => item.id === params.id);
 
     const handleAddShoppingCart = () => {};
-
     const handleViewOrderHistory = () => {
         navigate("/order-history", { state: menu });
     };
+    const handleOrderCancel = () => {
+        navigate("/menus");
+    };
 
-    const handleOrderCancel = () => {};
     return (
-        <div>
-            <section>
-                <div>
-                    <section className="flex flex-col items-center relative top-12">
-                        <strong className="text-5xl mb-4">세트</strong>
-                        <div className="text-3xl">{menu.name}</div>
-                        <div className="text-3xl">{menu.price}원</div>
-                    </section>
-                    <div className="flex justify-evenly items-center mt-24">
-                        {data.menu_items.slice(0, 1).map((meal: MenuItem) => (
-                            <Fragment key={meal.id}>
-                                <img
-                                    src={menu.image_url}
-                                    alt="menu-image"
-                                    className="flex w-48 rounded-xl cursor-pointer border-2"
-                                />
-                            </Fragment>
-                        ))}
-                        {/* <div className="relative top-6">
-                            {data.menu_items
-                                .slice(0, 1)
-                                .map((meal: MenuItem) => (
-                                    <Fragment key={meal.id}>
-                                        <img
-                                            src={meal.image_url}
-                                            alt="menu-image"
-                                            className="flex w-48 rounded-xl cursor-pointer border-2"
-                                        />
-                                    </Fragment>
-                                ))}
-                            <Button className="mt-2">변경하기</Button>
-                        </div>
-                        <div className="relative top-6">
-                            {data.menu_items
-                                .slice(0, 1)
-                                .map((meal: MenuItem) => (
-                                    <Fragment key={meal.id}>
-                                        <img
-                                            src={meal.image_url}
-                                            alt="menu-image"
-                                            className="flex w-48 rounded-xl cursor-pointer border-2"
-                                        />
-                                    </Fragment>
-                                ))}
-                            <Button className="mt-2">변경하기</Button>
-                        </div> */}
-                    </div>
-                    <div className="flex justify-center mt-12">
-                        <TooltipWrapper />
-                    </div>
-                    <div className="flex justify-center space-x-4 mt-20">
-                        <div className="flex flex-col space-y-1">
-                            <AddShoppingCartButton
-                                handleAddShoppingCart={handleAddShoppingCart}
-                            />
-                            <CancelButton
-                                handleOrderCancel={handleOrderCancel}
-                            />
-                        </div>
-                        <QuickPayButton
-                            handleViewOrderHistory={handleViewOrderHistory}
+        <div className="container mx-auto px-4 py-8">
+            <section className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
+                <header className="text-center mb-8">
+                    <h1 className="text-4xl font-bold mb-2">세트</h1>
+                    <p className="text-2xl mb-2">{menu.name}</p>
+                    <p className="text-2xl text-primary">
+                        <span className="font-bold">{menu.price}</span>원
+                    </p>
+                </header>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div className="flex flex-col items-center">
+                        <img
+                            src={menu.image_url}
+                            alt="메인 메뉴"
+                            className="w-48 h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
                         />
+                        <Button variant="outline" className="mt-3">
+                            변경하기
+                        </Button>
                     </div>
+                </div>
+
+                <div className="mb-8">
+                    <TooltipWrapper />
+                </div>
+
+                <div className="flex flex-col md:flex-row sm:flex-col sm:items-center justify-center gap-4">
+                    <div className="flex flex-col gap-3">
+                        <AddShoppingCartButton
+                            handleAddShoppingCart={handleAddShoppingCart}
+                        />
+                        <CancelButton handleOrderCancel={handleOrderCancel} />
+                    </div>
+
+                    <QuickPayButton
+                        handleViewOrderHistory={handleViewOrderHistory}
+                    />
                 </div>
             </section>
         </div>
