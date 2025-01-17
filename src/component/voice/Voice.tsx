@@ -97,7 +97,12 @@ const Voice = () => {
     };
 
     const getSeachText = (str: string) => {
-        return josa(str, "으로/로");
+        return (
+					<>
+						<span className="font-bold">{str}</span>
+						{josa(str, "으로/로").slice(str.length)}
+					</>
+					)
     };
 
     return (
