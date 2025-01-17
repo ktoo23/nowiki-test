@@ -9,8 +9,8 @@ import CardPayment from '../pages/CardPayment'
 import PaymentSelect from '../pages/PaymentSelect'
 import MainPage from '@/pages/MainPage'
 import DiningSelection from '@/pages/DiningSelection'
-import VoiceTest from '@/pages/VoiceTest'
 import PaymentResult from '@/pages/PaymentResult'
+import Voice from '@/component/voice/Voice'
 
 const routes = createBrowserRouter([
     {
@@ -55,7 +55,7 @@ const routes = createBrowserRouter([
     },
     {
         path: '/voice-test',
-        element: <VoiceTest />,
+        element: <Voice />,
     },
     {
         path: '/payment-result',
