@@ -86,8 +86,14 @@ const Voice = () => {
     };
 
     const handleQuickOrder = () => {
-        selectedMenuItems.forEach((item) => setItemToOrderInfo(item));
+        if(selectedMenuItems.length !== 0){
+					selectedMenuItems.forEach((item) => setItemToOrderInfo(item));
         navigate("/order-history");
+				}
+				else {
+					alert("메뉴를 선택해주세요.")
+					return
+				}
     };
 
     const getSeachText = (str: string) => {
@@ -117,7 +123,7 @@ const Voice = () => {
             </button>
             <p
                 className={`mt-4 font-bold ${
-                    listening ? "bg-[#4caf50]" : "bg-[#333]"
+                    listening ? "text-[#4caf50]" : "text-[#333]"
                 }`}
             >
                 {listening ? "음성인식 중..." : "음성인식 시작"}
