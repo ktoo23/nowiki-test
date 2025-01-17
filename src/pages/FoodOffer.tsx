@@ -1,7 +1,7 @@
-import TooltipWrapper from "@/components/tooltip/TooltipWrapper";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { setOrderInfo } from "../feat/order";
+import GuidePopup from "@/components/GuidePopup";
 
 const FoodOffer = () => {
   const navigate = useNavigate();
@@ -41,9 +41,7 @@ const FoodOffer = () => {
           </Button>
         </div>
       </div>
-      <div className="fixed bottom-10">
-        <TooltipWrapper />
-      </div>
+      <GuidePopup />
     </section>
   );
 };

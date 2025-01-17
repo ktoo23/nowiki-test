@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import useGuidePopupStore from "@/store/useGuidePopupStore";
 
 type CustomerType = "regular" | "newbie";
 
 const MainPage: React.FC = () => {
   const naviate = useNavigate();
+  const { setIsGuideActive } = useGuidePopupStore((state) => state);
 
   const navigateToDiningChoice = (type: CustomerType = "regular") => {
     localStorage.setItem("customerType", type);
@@ -24,14 +26,20 @@ const MainPage: React.FC = () => {
         <Button
           variant="outline"
           className="w-[80%] h-20 bg-mc_yellow text-lg"
-          onClick={() => navigateToDiningChoice()}
+          onClick={() => {
+            setIsGuideActive(false);
+            navigateToDiningChoice();
+          }}
         >
           주문 시작하기
         </Button>
         <Button
           variant="outline"
           className="w-[80%] h-20 bg-help_bg relative text-lg"
-          onClick={() => navigateToDiningChoice("newbie")}
+          onClick={() => {
+            setIsGuideActive(true);
+            navigateToDiningChoice("newbie");
+          }}
         >
           키오스크가 처음이라면 저를 눌러주세요
           <Avatar className="absolute bottom-2 left-6 size-[90px] transform scale-x-[-1]">

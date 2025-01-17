@@ -2,12 +2,12 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import AddShoppingCartButton from "@/component/AddShoppingCartButton";
 import QuickPayButton from "@/component/QuickPayButton";
 import CancelButton from "@/component/CancelButton";
-import TooltipWrapper from "@/components/tooltip/TooltipWrapper";
 import { menu_items } from "../assets/data/menu.json";
 
 import { getOrderInfo, setItemToOrderInfo } from "@/feat/order";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import GuidePopup from "@/components/GuidePopup";
 
 const MenuSelect = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const MenuSelect = () => {
   const [menu] = menu_items.filter((item) => item.id === params.id);
 
   const [currentCart, setCurrentCart]: any = useState(
-    getOrderInfo().orderItem || []
+    getOrderInfo().orderItem || [],
   );
 
   const handleAddShoppingCart = () => {
@@ -40,6 +40,7 @@ const MenuSelect = () => {
     if (currentCart.length > 0) {
       setItemToOrderInfo(menu);
     }
+
     navigate("/menus");
   };
 
@@ -74,11 +75,7 @@ const MenuSelect = () => {
           </div>
         </div>
 
-        <div className="mb-8">
-          <TooltipWrapper />
-        </div>
-
-        <div className="flex flex-col md:flex-row sm:flex-col sm:items-center justify-center gap-4">
+        <div className="flex flex-col mt-5 md:flex-row sm:flex-col sm:items-center justify-center gap-4">
           <div className="flex flex-col gap-3">
             <AddShoppingCartButton
               handleAddShoppingCart={handleAddShoppingCart}
@@ -101,6 +98,8 @@ const MenuSelect = () => {
             <QuickPayButton handleViewOrderHistory={handleViewOrderHistory} />
           )}
         </div>
+
+        <GuidePopup className="-bottom-2" />
       </section>
     </div>
   );
