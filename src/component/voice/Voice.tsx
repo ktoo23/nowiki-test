@@ -81,7 +81,6 @@ const Voice = () => {
 
     const handleAddShoppingCart = () => {
         selectedMenuItems.forEach((item) => setItemToOrderInfo(item));
-
         alert("장바구니에 추가되었습니다.");
     };
 
@@ -99,7 +98,7 @@ const Voice = () => {
     const getSeachText = (str: string) => {
         return (
 					<>
-						<span className="font-bold">{str}</span>
+						<strong className="font-bold">{str}</strong>
 						{josa(str, "으로/로").slice(str.length)}
 					</>
 					)
