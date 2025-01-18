@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 
 import { menu_items, meals } from "../assets/data/menu.json";
 import { MenuItem } from "@/types/menu.interface";
-import GuidePopupStore from "@/store/useGuidePopupStore";
 
 type MenuItemWithOutCategoryAndTaste = Omit<
   MenuItem,
