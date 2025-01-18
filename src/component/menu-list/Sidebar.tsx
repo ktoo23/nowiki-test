@@ -8,14 +8,20 @@ import useGuidePopupStore from "@/store/useGuidePopupStore";
 type Props = {
   categories: MenuCategory[];
   onCategoryChange: (category: MenuCategory) => void;
+  onUpdateMessages: (messages: string[]) => void;
   filters: {
     categoryId: string;
     tasteId: string;
   };
 };
 
-const Sidebar = ({ categories, onCategoryChange, filters }: Props) => {
-  const { isGuideActive, setMessage } = useGuidePopupStore((state) => state);
+const Sidebar = ({
+  categories,
+  onCategoryChange,
+  onUpdateMessages,
+  filters,
+}: Props) => {
+  const { isGuideActive } = useGuidePopupStore((state) => state);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const showMessage = (value: string) => {
@@ -31,16 +37,16 @@ const Sidebar = ({ categories, onCategoryChange, filters }: Props) => {
         message =
           "햄버거만 먹으면 출출하다구. . \n오, 해시브라운도 있네! 다진 감자 튀김이라고 생각하면 돼~";
     }
-    setMessage(message);
+    onUpdateMessages([message]);
 
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
 
     timeoutRef.current = setTimeout(() => {
-      setMessage(
+      onUpdateMessages([
         "화면에 손가락을 대고 위, 아래로 움직여봐. \n 숨어있던 메뉴들이 보이네!",
-      );
+      ]);
     }, 4000);
   };
 

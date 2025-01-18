@@ -1,18 +1,19 @@
 import useGuidePopupStore from "@/store/useGuidePopupStore";
 import React from "react";
 import { cn } from "@/lib/utils";
+import useGuideMessages from "@/hooks/useGuideMessages";
 
 interface GuidePopupProps {
+  messages: string[];
   className?: string;
 }
-const GuidePopup = ({ className }: GuidePopupProps) => {
-  const { isGuideActive, message, messages, currentIndex, nextMessage } =
-    useGuidePopupStore((state) => state);
+const GuidePopup = ({ className, messages }: GuidePopupProps) => {
+  const { isGuideActive } = useGuidePopupStore((state) => state);
 
-  if (!isGuideActive) return null;
-  const currentMessage = messages[currentIndex] || message || "";
+  const { currentMessage, nextMessage, hasMoreMessages } =
+    useGuideMessages(messages);
 
-  if (currentMessage === "" || currentMessage === undefined) return null;
+  if (!isGuideActive || !currentMessage) return null;
 
   return (
     <div className={cn("relative -bottom-10", className)}>
@@ -29,7 +30,7 @@ const GuidePopup = ({ className }: GuidePopupProps) => {
           ))}
         </span>
       </div>
-      {messages.length - 1 > currentIndex && (
+      {hasMoreMessages && (
         <button
           onClick={nextMessage}
           className="animate-bounce absolute -bottom-2 left-1/2 -translate-x-1/2 size-0 border-[20px] border-b-0 border-solid border-transparent border-t-[#e5b300] cursor-pointer rounded-full"

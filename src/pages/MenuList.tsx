@@ -20,7 +20,9 @@ const MenuList = () => {
     tasteId: "",
   });
 
-  const { isGuideActive, setMessages } = useGuidePopupStore((state) => state);
+  const [messages, setMessages] = useState<string[]>([]);
+
+  const { isGuideActive } = useGuidePopupStore((state) => state);
 
   useEffect(() => {
     if (isGuideActive) {
@@ -43,6 +45,10 @@ const MenuList = () => {
   const menuCategory = menu_categories.find(
     (menu) => menu.id === filters.categoryId,
   );
+
+  const handleUpdateMessages = (newMessages: string[]) => {
+    setMessages(newMessages);
+  };
 
   const handleCategory = (category: MenuCategory) => {
     setFilters((prev) => ({
@@ -88,6 +94,7 @@ const MenuList = () => {
           <Sidebar
             categories={menu_categories}
             onCategoryChange={handleCategory}
+            onUpdateMessages={handleUpdateMessages}
             filters={filters}
           />
           <div className="grow pt-5">
@@ -95,7 +102,7 @@ const MenuList = () => {
               <TasteFilter filters={filters} onTasteChange={handleTaste} />
             )}
             <FilteredMenuList items={filteredList} />
-            <GuidePopup />
+            <GuidePopup messages={messages} />
           </div>
         </div>
       </div>

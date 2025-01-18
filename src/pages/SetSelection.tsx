@@ -16,9 +16,6 @@ const SetSelection = () => {
   const params = useParams();
   const id = params.itemId;
   const [menu] = menu_items.filter((item) => item.id === id);
-  const { isGuideActive, setMessage, setMessages } = GuidePopupStore(
-    (state) => state,
-  );
 
   const setMenu =
     meals.filter((meal) => meal.items.includes(menu.id))[0] || null;
@@ -46,10 +43,6 @@ const SetSelection = () => {
           title={menu.name}
           classname="bg-white border border-solid border-mc_yellow hover:bg-inherit"
           onNavigate={() => {
-            isGuideActive &&
-              setMessage(
-                "더 추가할 음식이 있다면 장바구니에 넣기, \n 바로 결제하려면 주문하기를 눌러!",
-              );
             handleNavigate(`/menu-select/${menu.id}`, menu);
           }}
         />
@@ -60,11 +53,6 @@ const SetSelection = () => {
             description="(버거 + 사이드 + 음료)"
             classname="bg-mc_yellow hover:bg-mc_yellow"
             onNavigate={() => {
-              isGuideActive &&
-                setMessages([
-                  "라지 세트는 음료수와 감자튀김의 사이즈가 커져! \n 아래 화살표를 눌러줄래?",
-                  "만약 구성품을 변경하고 싶으면, 메뉴 사진 아래 변경하기를 누르면 돼!",
-                ]);
               handleNavigate(`/menu-select/${setMenu.id}`, setMenu);
             }}
           />

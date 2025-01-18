@@ -14,11 +14,9 @@ import {
   deleteItemFromOrderInfo,
 } from "@/feat/order";
 import { MenuItemWithCount } from "@/types/menu.interface";
-import GuidePopupStore from "@/store/useGuidePopupStore";
 
 const OrderHistory = () => {
   const navigate = useNavigate();
-  const { setMessage, isGuideActive } = GuidePopupStore((state) => state);
   const [orderItemData, setOrderItemData] = useState(
     getOrderInfo().orderItem || [],
   );
@@ -49,10 +47,6 @@ const OrderHistory = () => {
     // }
 
     if (orderItemData.length > 0) {
-      isGuideActive &&
-        setMessage(
-          "테이블 서비스를 이용해봐! \n 자리에 앉아있으면 주문한 음식을 가져다줄게!",
-        );
       navigate("/food-offer");
     } else {
       alert("장바구니가 비어있습니다.");

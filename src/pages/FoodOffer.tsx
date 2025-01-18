@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { setOrderInfo } from "../feat/order";
 import GuidePopup from "@/components/GuidePopup";
+import useGuidePopupStore from "@/store/useGuidePopupStore";
 
 const FoodOffer = () => {
   const navigate = useNavigate();
+  const { isGuideActive } = useGuidePopupStore((state) => state);
 
   const navigatePaymentMethod = () => {
     navigate("/payment-select");
@@ -41,7 +43,13 @@ const FoodOffer = () => {
           </Button>
         </div>
       </div>
-      <GuidePopup />
+      {isGuideActive && (
+        <GuidePopup
+          messages={[
+            "테이블 서비스를 이용해봐! \n 자리에 앉아있으면 주문한 음식을 가져다줄게!",
+          ]}
+        />
+      )}
     </section>
   );
 };
