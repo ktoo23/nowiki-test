@@ -9,31 +9,13 @@ import {
 } from "@/components/ui/tooltip";
 import {
   getOrderInfo,
-  setItemToOrderInfo,
-  modifyItemFromOrderInfo,
-  deleteItemFromOrderInfo,
 } from "@/feat/order";
-import { MenuItemWithCount } from "@/types/menu.interface";
+import OrderItemInCart from "@/component/OrderItemInCart";
 
 const OrderHistory = () => {
   const navigate = useNavigate();
-  const [orderItemData, setOrderItemData] = useState(
-    getOrderInfo().orderItem || [],
-  );
+  const [orderItemData, setOrderItemData] = useState(getOrderInfo().orderItem || []);
 
-  const modifyCount = (type: string, item: MenuItemWithCount) => {
-    if (type === "increase") {
-      setItemToOrderInfo(item);
-    } else {
-      modifyItemFromOrderInfo(item);
-    }
-    setOrderItemData(getOrderInfo().orderItem || []);
-  };
-
-  const resetMenu = (item: MenuItemWithCount) => {
-    deleteItemFromOrderInfo(item);
-    setOrderItemData(getOrderInfo().orderItem || []);
-  };
 
   const openPointVerificationPage = () => {
     navigate("/point-collection");
@@ -69,38 +51,8 @@ const OrderHistory = () => {
       <div className="p-3 rounded-lg mb-4">
         {orderItemData.length === 0 && <div>주문한 메뉴가 없습니다.</div>}
         {orderItemData.map((item) => (
-          <div key={item.id} className="flex justify-center items-center gap-2">
-            <img
-              src={item.image_url}
-              alt="메뉴"
-              className="w-36 h-36 object-cover"
-            />
-            <div className="w-[60%]">
-              <p className="text-2xl font-bold">{item.name}</p>
-              <p className="font-semibold text-2xl mb-2">{item.price}원</p>
-              <div className="flex justify-center items-center gap-2">
-                <button
-                  onClick={() => modifyCount("decrease", item)}
-                  disabled={item.count === 1}
-                  className="w-8 h-8 flex items-center justify-center bg-white rounded-full border border-gray-300"
-                >
-                  -
-                </button>
-                <span>{item.count}</span>
-                <button
-                  onClick={() => modifyCount("increase", item)}
-                  className="w-8 h-8 flex items-center justify-center bg-white rounded-full border border-gray-300"
-                >
-                  +
-                </button>
-                <Button
-                  onClick={() => resetMenu(item)}
-                  className="text-lg text-black ml-2 bg-mc_red px-4 py-2 rounded-md"
-                >
-                  취소
-                </Button>
-              </div>
-            </div>
+          <div key={item.id}>
+            <OrderItemInCart item={item} setOrderItemCount={setOrderItemData} />
           </div>
         ))}
       </div>
@@ -109,8 +61,8 @@ const OrderHistory = () => {
         <div className="flex justify-center gap-4">
           <div className="flex flex-col space-y-1">
             {/* <div className="bg-yellow-100 text-yellow-800 font-semibold text-lg rounded-md text-center absolute left-[33%] top-1 px-4">
-                            결제 전 필수
-                        </div> */}
+                      결제 전 필수
+                </div> */}
             <TooltipProvider>
               <Tooltip delayDuration={0}>
                 <TooltipTrigger asChild>
