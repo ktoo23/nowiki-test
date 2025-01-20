@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { modifyItemFromOrderInfo, setItemToOrderInfo, getOrderInfo, deleteItemFromOrderInfo } from "@/feat/order";
 import { useState } from "react";
 
-type Props = {
+type OrderItemInCartProps = {
   item: MenuItemWithCount
   setOrderItemCount: (items: MenuItemWithCount[]) => boolean | void
 }
 
-const OrderItemInCart = ({ item, setOrderItemCount }: Props) => {
+const OrderItemInCart = ({ item, setOrderItemCount }: OrderItemInCartProps) => {
   const [itemCost, setItemCost] = useState(item.price * item.count);
 
   const modifyCount = (type: string, item: MenuItemWithCount) => {
