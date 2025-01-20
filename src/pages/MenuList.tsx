@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { menu_items } from "../assets/data/menu.json";
 import { menu_categories } from "../assets/data/category.json";
@@ -7,9 +7,10 @@ import Header from "@/component/menu-list/Header";
 import Sidebar from "@/component/menu-list/Sidebar";
 import TasteFilter from "@/component/menu-list/TasteFilter";
 import FilteredMenuList from "@/component/menu-list/FilteredMenuList";
-import TooltipWrapper from "@/components/tooltip/TooltipWrapper";
 import VoiceBtn from "@/component/voice/VoiceBtn";
 import CartButton from "@/component/CartButton";
+import GuidePopup from "@/components/GuidePopup";
+import useGuidePopupStore from "@/store/useGuidePopupStore";
 
 const defaultCategoryId = menu_categories[0].id;
 
@@ -18,6 +19,19 @@ const MenuList = () => {
     categoryId: defaultCategoryId,
     tasteId: "",
   });
+
+  const [messages, setMessages] = useState<string[]>([]);
+
+  const { isGuideActive } = useGuidePopupStore((state) => state);
+
+  useEffect(() => {
+    if (isGuideActive) {
+      setMessages([
+        "안녕! 내 이름은 위키야! ! \n 아래 화살표를 눌러줄래?",
+        "음성으로도 주문할 수 있어! \n필요하면 오른쪽 상단의 음성 주문하기 버튼을 눌러봐~",
+      ]);
+    }
+  }, [isGuideActive]);
 
   const filteredList = useMemo(() => {
     return menu_items.filter((item) => {
@@ -29,8 +43,12 @@ const MenuList = () => {
   }, [filters, menu_items]);
 
   const menuCategory = menu_categories.find(
-    (menu) => menu.id === filters.categoryId
+    (menu) => menu.id === filters.categoryId,
   );
+
+  const handleUpdateMessages = (newMessages: string[]) => {
+    setMessages(newMessages);
+  };
 
   const handleCategory = (category: MenuCategory) => {
     setFilters((prev) => ({
@@ -76,6 +94,7 @@ const MenuList = () => {
           <Sidebar
             categories={menu_categories}
             onCategoryChange={handleCategory}
+            onUpdateMessages={handleUpdateMessages}
             filters={filters}
           />
           <div className="grow pt-5">
@@ -83,9 +102,7 @@ const MenuList = () => {
               <TasteFilter filters={filters} onTasteChange={handleTaste} />
             )}
             <FilteredMenuList items={filteredList} />
-            <div className="flex flex-row-reverse justify-center">
-              <TooltipWrapper />
-            </div>
+            <GuidePopup messages={messages} />
           </div>
         </div>
       </div>

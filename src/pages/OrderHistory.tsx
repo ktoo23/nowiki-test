@@ -16,6 +16,7 @@ const OrderHistory = () => {
   const navigate = useNavigate();
   const [orderItemData, setOrderItemData] = useState(getOrderInfo().orderItem || []);
 
+
   const openPointVerificationPage = () => {
     navigate("/point-collection");
   };

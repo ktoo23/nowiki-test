@@ -8,6 +8,7 @@ import VoiceSearchedMenuList from "./VoiceSearchedMenuList";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { setItemToOrderInfo } from "@/feat/order";
+import { josa } from "es-hangul";
 
 interface FuzeItem {
     item: MenuItem;
@@ -80,40 +81,53 @@ const Voice = () => {
 
     const handleAddShoppingCart = () => {
         selectedMenuItems.forEach((item) => setItemToOrderInfo(item));
-
         alert("장바구니에 추가되었습니다.");
     };
 
     const handleQuickOrder = () => {
-        selectedMenuItems.forEach((item) => setItemToOrderInfo(item));
+        if(selectedMenuItems.length !== 0){
+					selectedMenuItems.forEach((item) => setItemToOrderInfo(item));
         navigate("/order-history");
+				}
+				else {
+					alert("메뉴를 선택해주세요.")
+					return
+				}
+    };
+
+    const getSeachText = (str: string) => {
+        return (
+					<>
+						<strong className="font-bold">{str}</strong>
+						{josa(str, "으로/로").slice(str.length)}
+					</>
+					)
     };
 
     return (
-        <div className="flex flex-col items-center p-8 max-w-[600px] my-0 mx-auto pb-40 relative">
-            <h1 className="mb-4 font-bold">말해서 메뉴 찾기</h1>
-            <p style={{ textAlign: "center", marginBottom: "2rem" }}>
+        <div className="flex flex-col items-center p-8 max-w-[600px] mx-auto my-0 pb-40 relative">
+            <h1 className="mb-4 font-semibold">말해서 메뉴 찾기</h1>
+            <p className="text-center mb-8">
                 마이크 버튼을 클릭하고 검색하려는 메뉴의 이름을 말해주세요.
             </p>
             <button
                 onClick={onClickVoiceButton}
                 className={`flex justify-center items-center w-[100px] h-[100px] border-none rounded-[50%] ${
-                    listening ? "bg-[#4CAF50]" : "bg-[#f0f0f0]"
-                } shadow-default transition-all cursor-pointer`}
+                    listening ? "bg-[#4caf50]" : "bg-[#f0f0f0]"
+                } cursor-pointer`}
             >
                 <img
                     src={MicImage}
                     alt="마이크 이미지"
-                    // style={{
-                    //     height: "50px",
-                    //     filter: listening ? "brightness(0) invert(1)" : "none"
-                    // }}
-                    className="h-[50px] filter"
+                    style={{
+                        height: "50px",
+                        filter: listening ? "brightness(0) invert(1)" : "none"
+                    }}
                 />
             </button>
             <p
                 className={`mt-4 font-bold ${
-                    listening ? "text-[#4CAF50}]" : "text-[#333]"
+                    listening ? "text-[#4caf50]" : "text-[#333]"
                 }`}
             >
                 {listening ? "음성인식 중..." : "음성인식 시작"}
@@ -121,11 +135,7 @@ const Voice = () => {
             {transcript && !listening && (
                 <div>
                     <div className="flex mt-4 justify-center items-center">
-                        <p style={{ fontWeight: "700", fontSize: "1.2rem" }}>
-                            {" "}
-                            {transcript}
-                        </p>
-                        <p>로 검색중이예요</p>
+                        <p>{getSeachText(transcript)}</p>
                         <div className="flex space-x-1 ml-2">
                             <span className="animate-pulse w-1 h-1 bg-gray-500 rounded-full inline-block"></span>
                             <span
@@ -154,7 +164,7 @@ const Voice = () => {
                     ) : (
                         <div>
                             <p className="mt-8 text-center font-bold">
-                                검색 결과가 없습니다. 이런 메뉴는 어때요??
+                                검색 결과가 없습니다. 이런 메뉴는 어때요?
                             </p>
                             <VoiceSearchedMenuList
                                 items={recommendedMenu.map(
