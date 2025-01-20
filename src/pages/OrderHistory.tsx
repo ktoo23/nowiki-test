@@ -18,7 +18,7 @@ import { MenuItemWithCount } from "@/types/menu.interface";
 const OrderHistory = () => {
   const navigate = useNavigate();
   const [orderItemData, setOrderItemData] = useState(
-    getOrderInfo().orderItem || []
+    getOrderInfo().orderItem || [],
   );
 
   const modifyCount = (type: string, item: MenuItemWithCount) => {
