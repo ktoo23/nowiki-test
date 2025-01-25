@@ -1,12 +1,12 @@
 import { MenuItem } from '@/types/menu.interface'
 
-type Props = {
-    items: MenuItem[]
-    onClick: (item: MenuItem) => void
-    selectedItems: MenuItem[]
+type VoiceSearchedMenuListProps = {
+	items:MenuItem[]
+	onClick: (item: MenuItem) => void
+	selectedItems: MenuItem[]
 }
 
-const VoiceSearchedMenuList = ({ items, onClick, selectedItems }: Props) => {
+const VoiceSearchedMenuList = ({ items, onClick, selectedItems }: VoiceSearchedMenuListProps) => {
     return (
         <ul className='grid grid-cols-2 gap-4 sm:gap-6'>
             {items.map((item) => {
