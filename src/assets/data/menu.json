@@ -7,7 +7,16 @@
       "price": 7790,
       "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
       "taste_ids": ["2b3c4d5e"],
-      "image_url": "/image/menu/burger__bigmac.png"
+      "image_url": "/image/menu/burger__bigmac.png",
+      "ingredients": [
+        "/image/ingredients/pickle.png",
+        "/image/ingredients/big-Mac-Sauce.png",
+        "/image/ingredients/shredded-Lettuce.png",
+        "/image/ingredients/beef-patty.png",
+        "/image/ingredients/recon.png",
+        "/image/ingredients/slice-of-CheeseYellow.png"
+      ],
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
     },
     {
       "id": "12c01d36-7c94-44fc-b5e4-3e7896b3c313",

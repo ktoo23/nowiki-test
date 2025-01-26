@@ -6,6 +6,8 @@ export interface MenuItem {
   category_id: string;
   taste_ids: string[];
   image_url: string;
+  ingredients?: string[];
+  allergens?: string[];
 }
 export interface MenuItemWithCount {
   id: string;
