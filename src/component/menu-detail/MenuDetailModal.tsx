@@ -19,47 +19,64 @@ type Props = {
 };
 
 const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
-  console.log(item);
   const naviate = useNavigate();
 
   if (open === false) {
     return null;
   }
-  // TODO: 1. 데이터 채우기 (칼로리, 버거일 때만 주 구성품 재료.. 영양정보, 알레르기 정보)
-  // TODO: 2. CSS
 
   return (
     <Dialog open={open} onOpenChange={() => setIsOpen(false)}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] sm:h-[80vh] md:h-[70vh] overflow-hidden overflow-y-auto scrollbar-hide">
         <DialogHeader className="flex-col justify-center items-center">
-          <DialogTitle className="text-center">{item.name}</DialogTitle>
+          <DialogTitle className="text-center text-2xl">
+            {item.name}
+          </DialogTitle>
           <div className="w-[200px] h-auto">
             <img src={item.image_url} alt="메뉴 대표 사진" />
           </div>
-          <DialogDescription>{item.description}</DialogDescription>
+          {item.description.split("\n").map((line, index) => (
+            <span key={index} className="text-[#808080]">
+              {line}
+              <br />
+            </span>
+          ))}
         </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div>{item.name} 구성품</div>
-          <div className="flex gap-1">
-            {item.ingredients?.map((ingredient, index) => (
-              <div>
-                <p key={index} className="size-12">
-                  <img
-                    src={ingredient.image_url}
-                    className="block size-full object-cover"
-                  />
-                </p>
-                <span>{ingredient.name}</span>
+        <div className="grid gap-4">
+          {item.ingredients && (
+            <>
+              <strong className="text-[#292929] text-xl">재료</strong>
+              <div className="flex gap-1 flex-wrap justify-center">
+                {item.ingredients?.map((ingredient, index) => (
+                  <div className="flex flex-col items-center justify-center">
+                    <p key={index} className="size-[100px]">
+                      {ingredient.image_url ? (
+                        <img
+                          alt="재료 사진"
+                          src={ingredient.image_url}
+                          className="block size-full object-cover"
+                        />
+                      ) : (
+                        <p className="size-full flex items-center justify-center text-[#808080]">
+                          이미지 준비중
+                        </p>
+                      )}
+                    </p>
+                    <span className="text-[#808080]">{ingredient.name}</span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
           <div>
-            <div>알레르기 정보</div>
-            <p>
+            <strong className="block text-[#292929] text-xl">
+              알레르기 정보
+            </strong>
+            <p className="mb-4 text-[#808080] text-sm">
               * 일부 튀김류 제품은 새우 패티와 같은 조리기구를 사용하고
               있습니다.
             </p>
-            <ol className="flex gap-1">
+            <ol className="flex gap-2 flex-wrap">
               {item.allergens?.map((allergen, index) => (
                 <li key={index}>
                   {index + 1}. {allergen}
