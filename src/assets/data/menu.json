@@ -465,7 +465,8 @@
       "price": 4890,
       "category_id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
       "taste_ids": [],
-      "image_url": "/image/menu/chicken__tender.png"
+      "image_url": "/image/menu/chicken__tender.png",
+      "allergens": ["대두", "밀", "닭고기"]
     },
     {
       "id": "8ebf3274-cfa9-44cd-81de-5e7c8b672a27",
@@ -474,7 +475,8 @@
       "price": 3290,
       "category_id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
       "taste_ids": [],
-      "image_url": "/image/menu/chicken__nugget-six.png"
+      "image_url": "/image/menu/chicken__nugget-six.png",
+      "allergens": ["대두", "밀", "닭고기"]
     },
     {
       "id": "9ebf3274-cba9-44cd-8ade-5e7c8b672a28",
@@ -483,7 +485,8 @@
       "price": 3290,
       "category_id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
       "taste_ids": [],
-      "image_url": "/image/menu/chicken__snack-wrap.png"
+      "image_url": "/image/menu/chicken__snack-wrap.png",
+      "allergens": ["난류", "대두", "밀", "돼지고기", "닭고기"]
     },
     {
       "id": "e60348ec-934f-442e-9af9-3ecf8928ce5e",
@@ -492,7 +495,8 @@
       "price": 1990,
       "category_id": "e6034d80-d89f-463e-85a9-4c31e5af6ad4",
       "taste_ids": [],
-      "image_url": "/image/menu/side__hash-brown.png"
+      "image_url": "/image/menu/side__hash-brown.png",
+      "allergens": ["대두"]
     },
     {
       "id": "f8437de9-48c6-46a7-97ed-5ebce48e7aef",
@@ -501,7 +505,8 @@
       "price": 2990,
       "category_id": "e6034d80-d89f-463e-85a9-4c31e5af6ad4",
       "taste_ids": [],
-      "image_url": "/image/menu/side__cheese-stick.png"
+      "image_url": "/image/menu/side__cheese-stick.png",
+      "allergens": ["우유", "대두", "밀"]
     },
     {
       "id": "9832fae7-c86b-4e3b-b27a-37be2ebd2d5f",
@@ -510,7 +515,8 @@
       "price": 3490,
       "category_id": "e6034d80-d89f-463e-85a9-4c31e5af6ad4",
       "taste_ids": [],
-      "image_url": "/image/menu/side__fries.png"
+      "image_url": "/image/menu/side__fries.png",
+      "allergens": ["대두"]
     },
     {
       "id": "4fb2c8e9-6f0e-4c8d-95ba-8febe7b6c2a4",
@@ -537,7 +543,8 @@
       "price": 3290,
       "category_id": "2a117e63-ecfd-4d59-b320-8772f61b4db8",
       "taste_ids": [],
-      "image_url": "/image/menu/drink__vanilla-shake.png"
+      "image_url": "/image/menu/drink__vanilla-shake.png",
+      "allergens": ["우유"]
     },
     {
       "id": "49d7e6c3-38cf-4b82-97f2-937e8fb2a3cd",
@@ -546,7 +553,8 @@
       "price": 4590,
       "category_id": "8aef483e-4b7e-4a9c-8c87-dfbf54564299",
       "taste_ids": [],
-      "image_url": "/image/menu/dessert__mcFlurry.png"
+      "image_url": "/image/menu/dessert__mcFlurry.png",
+      "allergens": ["우유", "대두", "밀"]
     },
     {
       "id": "9a8e3f6c-18d9-467d-b27e-37c8e9b274a7",
@@ -555,7 +563,8 @@
       "price": 1100,
       "category_id": "8aef483e-4b7e-4a9c-8c87-dfbf54564299",
       "taste_ids": [],
-      "image_url": "/image/menu/dessert__icecream.png"
+      "image_url": "/image/menu/dessert__icecream.png",
+      "allergens": ["우유", "밀"]
     },
     {
       "id": "6a5fb3f6-fae3-4922-87b2-b0e4382f6386",
