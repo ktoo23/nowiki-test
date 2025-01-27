@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/dialog";
 import { Dispatch } from "react";
 import { useNavigate } from "react-router-dom";
+import IngredientList from "./IngredientList";
+import AllergenList from "./AllergenList";
 
 type Props = {
   item: MenuItem;
@@ -35,54 +37,31 @@ const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
           <div className="w-[200px] h-auto">
             <img src={item.image_url} alt="메뉴 대표 사진" />
           </div>
-          {item.description.split("\n").map((line, index) => (
-            <span key={index} className="text-[#808080]">
-              {line}
-              <br />
-            </span>
-          ))}
+          <DialogDescription className="flex flex-col items-center text-base">
+            {item.description.split("\n").map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+              </span>
+            ))}
+          </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4">
           {item.ingredients && (
             <>
               <strong className="text-[#292929] text-xl">재료</strong>
-              <div className="flex gap-1 flex-wrap justify-center">
-                {item.ingredients?.map((ingredient, index) => (
-                  <div className="flex flex-col items-center justify-center">
-                    <p key={index} className="size-[100px]">
-                      {ingredient.image_url ? (
-                        <img
-                          alt="재료 사진"
-                          src={ingredient.image_url}
-                          className="block size-full object-cover"
-                        />
-                      ) : (
-                        <p className="size-full flex items-center justify-center text-[#808080]">
-                          이미지 준비중
-                        </p>
-                      )}
-                    </p>
-                    <span className="text-[#808080]">{ingredient.name}</span>
-                  </div>
-                ))}
-              </div>
+              <IngredientList ingredients={item.ingredients} />
             </>
           )}
           <div>
             <strong className="block text-[#292929] text-xl">
               알레르기 정보
             </strong>
-            <p className="mb-4 text-[#808080] text-sm">
-              * 일부 튀김류 제품은 새우 패티와 같은 조리기구를 사용하고
-              있습니다.
-            </p>
-            <ol className="flex gap-2 flex-wrap">
-              {item.allergens?.map((allergen, index) => (
-                <li key={index}>
-                  {index + 1}. {allergen}
-                </li>
-              ))}
-            </ol>
+            {item.allergens ? (
+              <AllergenList allergens={item.allergens} />
+            ) : (
+              <p>-</p>
+            )}
           </div>
         </div>
         <DialogFooter>
