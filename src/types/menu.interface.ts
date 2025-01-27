@@ -1,3 +1,7 @@
+export interface ingredientsType {
+  image_url: string;
+  name: string;
+}
 export interface MenuItem {
   id: string;
   name: string;
@@ -6,7 +10,7 @@ export interface MenuItem {
   category_id: string;
   taste_ids: string[];
   image_url: string;
-  ingredients?: string[];
+  ingredients?: ingredientsType[];
   allergens?: string[];
 }
 export interface MenuItemWithCount {

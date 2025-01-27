@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
 import { MenuItem } from "@/types/menu.interface";
 import { useEffect, useRef, useState } from "react";
 import FilteredMenuItem from "./FilteredMenuItem";
@@ -13,8 +11,6 @@ const FilteredMenuList = ({ items }: Props) => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const [heightClass, setHeightClass] = useState("");
-
-  const naviate = useNavigate();
 
   //스크롤 감지하는 useEffect
   useEffect(() => {

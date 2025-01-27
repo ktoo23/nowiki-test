@@ -3,97 +3,465 @@
     {
       "id": "f50cdd10-206b-4ec8-bf1a-9c7b3f3f0b5d",
       "name": "빅맥",
-      "description": "100% 순쇠고기 패티 두 장, 특별 소스, 양상추, 치즈, 피클, 양파를 곁들인 참깨빵.",
+      "description": "100% 순 쇠고기 패티 두 장에 빅맥®만의 특별한 소스.\n입안에서 살살 녹는 치즈와 신선한 양상추, 양파, 그리고 피클까지.\n50년 넘게 전 세계인의 입맛을 사로 잡은 버거의 대명사.",
       "price": 7790,
       "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
       "taste_ids": ["2b3c4d5e"],
       "image_url": "/image/menu/burger__bigmac.png",
       "ingredients": [
-        "/image/ingredients/pickle.png",
-        "/image/ingredients/big-Mac-Sauce.png",
-        "/image/ingredients/shredded-Lettuce.png",
-        "/image/ingredients/beef-patty.png",
-        "/image/ingredients/recon.png",
-        "/image/ingredients/slice-of-CheeseYellow.png"
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "쇠고기 패티"
+        },
+        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
+        {
+          "image_url": "/image/ingredients/bigMacSauce.jpg",
+          "name": "빅맥 소스"
+        },
+        {
+          "image_url": "/image/ingredients/iceburgLettuce.jpg",
+          "name": "양상추"
+        },
+        {
+          "image_url": "/image/ingredients/choppedOnions.jpg",
+          "name": "다진 양파"
+        },
+        {
+          "image_url": "/image/ingredients/cheeseSlice.jpg",
+          "name": "슬라이스 치즈"
+        }
+      ],
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+    },
+    {
+      "id": "12c02e36-7c94-44fc-b5e4-3e7896b3c313",
+      "name": "트리플 치즈버거",
+      "description": "부드러운 치즈와 풍부한 육즙의 패티를\n세배 더 진하게 즐길 수 있는 트리플 치즈버거",
+      "price": 5900,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["2b3c4d5e"],
+      "image_url": "/image/menu/burger__triple-cheese.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "쇠고기 패티"
+        },
+        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
+        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
+        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
+        {
+          "image_url": "/image/ingredients/choppedOnions.jpg",
+          "name": "다진 양파"
+        },
+        {
+          "image_url": "/image/ingredients/cheeseSlice.jpg",
+          "name": "슬라이스 치즈"
+        }
+      ],
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+    },
+    {
+      "id": "12c01e36-7c94-44fc-b5e4-3e7896b3c313",
+      "name": "더블 치즈버거",
+      "description": "고소하고 부드러운 치즈와\n100% 순 쇠고기 패티가 두개\n맥도날드만의 더블 치즈버거!!",
+      "price": 5500,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["2b3c4d5e"],
+      "image_url": "/image/menu/burger__double-cheese.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "쇠고기 패티"
+        },
+        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
+        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
+        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
+        {
+          "image_url": "/image/ingredients/choppedOnions.jpg",
+          "name": "다진 양파"
+        },
+        {
+          "image_url": "/image/ingredients/cheeseSlice.jpg",
+          "name": "슬라이스 치즈"
+        }
       ],
       "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
     },
     {
       "id": "12c01d36-7c94-44fc-b5e4-3e7896b3c313",
       "name": "치즈버거",
-      "description": "치즈, 양파, 피클이 포함된 육즙 가득한 버거.",
+      "description": "고소하고 부드러운 치즈와 100% 순 쇠고기 패티,\n맥도날드만의 심플한 클래식 치즈버거.",
       "price": 3890,
       "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
       "taste_ids": ["2b3c4d5e"],
-      "image_url": "/image/menu/burger__cheese.png"
+      "image_url": "/image/menu/burger__cheese.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "쇠고기 패티"
+        },
+        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
+        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
+        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
+        {
+          "image_url": "/image/ingredients/choppedOnions.jpg",
+          "name": "다진 양파"
+        },
+        {
+          "image_url": "/image/ingredients/cheeseSlice.jpg",
+          "name": "슬라이스 치즈"
+        }
+      ],
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
     },
     {
       "id": "ab12ef34-5678-4c90-babc-d123ef4567ab",
-      "name": "더블 쿼터파운더 치즈버거",
-      "description": "치즈와 100% 쇠고기 패티 두 장이 들어간 든든한 버거.",
+      "name": "더블 쿼터파운더 치즈",
+      "description": "좋아하는건 더 많이 즐기시라고,\n두 배 이상 커진 1/4 파운드\n비프 패티가 두 장 (226그램)!\n육즙이 풍부한 고기 맛을\n그대로 살린 100% 순 쇠고기 패티 두 장과\n치즈 두 장이 입안 가득 완벽하게 조화되는 놀라운 맛",
       "price": 9090,
       "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
       "taste_ids": ["2b3c4d5e"],
-      "image_url": "/image/menu/burger__double-quarter.png"
+      "image_url": "/image/menu/burger__double-quarter.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "쇠고기 패티"
+        },
+        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
+        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
+        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
+        {
+          "image_url": "/image/ingredients/sliveredOnions.jpg",
+          "name": "양파"
+        },
+        {
+          "image_url": "/image/ingredients/cheeseSlice.jpg",
+          "name": "슬라이스 치즈"
+        }
+      ],
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+    },
+    {
+      "id": "ab12ef84-5678-4c90-babc-d123ef4567ab",
+      "name": "쿼터파운더 치즈",
+      "description": "쿼터파운더라는 이름에서 알 수 있듯이\n두 배 이상 커진 1/4파운드(113그램) 비프와\n부드러운 치즈 두 장의 환상궁합!\n두툼한 순 쇠고기 패티와 신선한 치즈의\n풍부한 맛으로 세계적으로 사랑받고 있는\n맥도날드의 대표적인 프리미엄 버거",
+      "price": 5500,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["2b3c4d5e"],
+      "image_url": "/image/menu/burger__quarter.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "쇠고기 패티"
+        },
+        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
+        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
+        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
+        {
+          "image_url": "/image/ingredients/sliveredOnions.jpg",
+          "name": "양파"
+        },
+        {
+          "image_url": "/image/ingredients/cheeseSlice.jpg",
+          "name": "슬라이스 치즈"
+        }
+      ],
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
     },
     {
       "id": "cd56ef78-90ab-4cde-bbcd-e6789f12cd45",
       "name": "베이컨 토마토 디럭스",
-      "description": "바삭한 베이컨과 치즈가 들어간 풍미 가득한 버거.",
+      "description": "두 장의 100% 순 쇠고기 패티에 그릴에 구워\n더욱 고소한 1장의 베이컨을 얹고,\n신선한 토마토와 양상추,\n매콤달콤한 스위트 칠리 소스, 치즈, 마요네즈를 더해\n더욱 풍부하고 신선한 맛의 프리미엄 버거.",
       "price": 7140,
       "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
       "taste_ids": ["2b3c4d5e"],
-      "image_url": "/image/menu/burger__bacon-tomato-deluxe.png"
+      "image_url": "/image/menu/burger__bacon-tomato-deluxe.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "쇠고기 패티"
+        },
+
+        {
+          "image_url": "/image/ingredients/bacon.jpg",
+          "name": "베이컨"
+        },
+        {
+          "image_url": "/image/ingredients/cheeseSlice.jpg",
+          "name": "슬라이스 치즈"
+        },
+        {
+          "image_url": "/image/ingredients/iceburgLettuce.jpg",
+          "name": "양상추"
+        },
+        {
+          "image_url": "/image/ingredients/tomatoSlice.jpg",
+          "name": "토마토"
+        },
+        {
+          "image_url": "/image/ingredients/choppedOnions.jpg",
+          "name": "다진 양파"
+        },
+        {
+          "image_url": "/image/ingredients/vegansandwichsauce.jpg",
+          "name": "마요네즈"
+        },
+        {
+          "image_url": "/image/ingredients/spicyRelish.jpg",
+          "name": "스위트 칠리"
+        }
+      ],
+      "allergens": [
+        "난류",
+        "우유",
+        "대두",
+        "밀",
+        "돼지고기",
+        "토마토",
+        "쇠고기"
+      ]
     },
     {
       "id": "ef12cd34-5678-4cde-aabc-d456ef7890cd",
       "name": "불고기 버거",
-      "description": "달콤하고 짭짤한 불고기 소스로 맛을 낸 한국식 버거.",
+      "description": "한국인의 입맛에 딱 맞는 불고기 소스에\n잘 재운 패티와 고소한 마요네즈,\n신선한 양상추의 맛있는 조합.",
       "price": 4540,
       "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
       "taste_ids": ["1a2b3c4d", "2b3c4d5e"],
-      "image_url": "/image/menu/burger__bulgogi.png"
+      "image_url": "/image/menu/burger__bulgogi.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "돼지지고기 패티"
+        },
+        {
+          "image_url": "/image/ingredients/vegansandwichsauce.jpg",
+          "name": "마요네즈"
+        },
+        {
+          "image_url": "/image/ingredients/BBQSauce.jpg",
+          "name": "불고기 소스"
+        },
+        {
+          "image_url": "/image/ingredients/iceburgLettuce.jpg",
+          "name": "양상추"
+        },
+        {
+          "image_url": "/image/ingredients/sliveredOnions.jpg",
+          "name": "양파"
+        }
+      ],
+      "allergens": ["난류", "대두", "밀", "돼지고기", "조개", "굴"]
     },
     {
       "id": "2458c6ed-2b34-4ff1-9203-4b587c229ea8",
       "name": "트리플 치즈버거",
-      "description": "치즈 세 장과 패티 세 장으로 구성된 풍부한 맛의 버거.",
+      "description": "부드러운 치즈와 풍부한 육즙의 패티를\n세배 더 진하게 즐길 수 있는 트리플 치즈버거",
       "price": 10600,
       "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
       "taste_ids": ["2b3c4d5e"],
-      "image_url": "/image/menu/burger__triple-cheese.png"
+      "image_url": "/image/menu/burger__triple-cheese.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "쇠고기 패티"
+        },
+
+        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
+        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
+        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
+        {
+          "image_url": "/image/ingredients/choppedOnions.jpg",
+          "name": "다진 양파"
+        },
+        {
+          "image_url": "/image/ingredients/cheeseSlice.jpg",
+          "name": "슬라이스 치즈"
+        }
+      ],
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
     },
     {
       "id": "7c8f5e1d-98b7-4bd1-ae78-2c1473e1eabe",
       "name": "더블 불고기 버거",
-      "description": "불고기 소스가 듬뿍 들어간 패티 두 장 버거.",
+      "description": "진한 불고기 소스의 패티가 두 장!\n여기에 고소한 치즈와 마요네즈,신선한 양상추를 곁들인 깊고 풍부한 맛.",
       "price": 6890,
       "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
       "taste_ids": ["1a2b3c4d", "2b3c4d5e"],
-      "image_url": "/image/menu/burger__double-bulgogi.png"
+      "image_url": "/image/menu/burger__double-bulgogi.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "돼지지고기 패티"
+        },
+        {
+          "image_url": "/image/ingredients/vegansandwichsauce.jpg",
+          "name": "마요네즈"
+        },
+        {
+          "image_url": "/image/ingredients/BBQSauce.jpg",
+          "name": "불고기 소스"
+        },
+        {
+          "image_url": "/image/ingredients/iceburgLettuce.jpg",
+          "name": "양상추"
+        },
+        {
+          "image_url": "/image/ingredients/sliveredOnions.jpg",
+          "name": "양파"
+        }
+      ],
+      "allergens": ["난류", "대두", "밀", "돼지고기", "조개", "굴"]
     },
     {
       "id": "1dbf2734-5ba7-4e12-90b5-ec92e9ae3eb8",
       "name": "상하이 스파이시 치킨버거",
-      "description": "매콤한 소스로 맛을 낸 바삭한 치킨 버거.",
+      "description": "쌀가루가 더해져 더 바삭해진 100% 닭가슴살 패티에\n아삭아삭한 양상추와 신선한 토마토까지!\n더 바삭하고 맛있어진 NEW 맥스파이시 상하이 버거로\n입맛도 기분도 화끈하게!",
       "price": 5250,
       "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
       "taste_ids": ["3c4d5e6f"],
-      "image_url": "/image/menu/burger__shanghai.png"
+      "image_url": "/image/menu/burger__shanghai.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/mcspicy-patty.jpg",
+          "name": "상하이 치킨 패티"
+        },
+        {
+          "image_url": "/image/ingredients/vegansandwichsauce.jpg",
+          "name": "마요네즈"
+        },
+        {
+          "image_url": "/image/ingredients/iceburgLettuce.jpg",
+          "name": "양상추"
+        },
+        {
+          "image_url": "/image/ingredients/tomatoSlice.jpg",
+          "name": "토마토"
+        }
+      ],
+      "allergens": ["난류", "대두", "밀", "토마토", "닭고기"]
+    },
+    {
+      "id": "1dqf2734-5ba7-4e12-90b5-ec92e9ae3eb8",
+      "name": "슈슈 버거",
+      "description": "탱~글한 통새우살 가득~ 슈슈 버거!",
+      "price": 4700,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["3c4d5e6f"],
+      "image_url": "/image/menu/burger__shushu-burger.png",
+      "ingredients": [
+        {
+          "image_url": "",
+          "name": "새우패티"
+        },
+        {
+          "image_url": "/image/ingredients/iceburgLettuce.jpg",
+          "name": "양상추"
+        },
+        {
+          "image_url": "/image/ingredients/tomatoSlice.jpg",
+          "name": "토마토"
+        },
+        {
+          "image_url": "/image/ingredients/spicy-hot-sauce.png",
+          "name": "매콤 소스"
+        }
+      ],
+      "allergens": ["난류", "우유", "대두", "밀", "토마토", "새우", "굴"]
+    },
+    {
+      "id": "1dqf2735-5ba7-4e12-90b5-ec92e9ae3eb8",
+      "name": "슈비 버거",
+      "description": "탱~글한 통새우살에 비프 패티를 더해 푸짐하게~\n슈비 버거",
+      "price": 4700,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["3c4d5e6f"],
+      "image_url": "/image/menu/burger__shubeef.png",
+      "ingredients": [
+        {
+          "image_url": "",
+          "name": "새우패티"
+        },
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "쇠고기 패티"
+        },
+        {
+          "image_url": "/image/ingredients/iceburgLettuce.jpg",
+          "name": "양상추"
+        },
+        {
+          "image_url": "/image/ingredients/tomatoSlice.jpg",
+          "name": "토마토"
+        },
+        {
+          "image_url": "/image/ingredients/spicy-hot-sauce.png",
+          "name": "매콤 소스"
+        }
+      ],
+      "allergens": [
+        "난류",
+        "우유",
+        "대두",
+        "밀",
+        "토마토",
+        "쇠고기",
+        "새우",
+        "굴"
+      ]
     },
     {
       "id": "bc1372d6-79b4-43fa-91e7-e4d34e25738f",
       "name": "맥치킨",
-      "description": "바삭한 치킨 패티와 신선한 양상추가 들어간 버거.",
+      "description": "바삭한 치킨 패티, 고소한 화이트 마요 소스와\n아삭한 양상추가 함께!\n더 업그레이드된 맛으로 돌아온 맥치킨",
       "price": 6190,
       "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
       "taste_ids": [],
-      "image_url": "/image/menu/burger__chicken.png"
+      "image_url": "/image/menu/burger__chicken.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/mcChickenSandwichPatty.jpg",
+          "name": "맥치킨 패티"
+        },
+
+        {
+          "image_url": "/image/ingredients/vegansandwichsauce.jpg",
+          "name": "마요네즈"
+        },
+        {
+          "image_url": "/image/ingredients/iceburgLettuce.jpg",
+          "name": "양상추"
+        }
+      ],
+      "allergens": ["난류", "대두", "밀", "닭고기"]
+    },
+    {
+      "id": "16c01d36-7c94-44fc-b5e4-3e7896b3c313",
+      "name": "햄버거",
+      "description": "100% 순 쇠고기 패티에 상큼한 피클과 양파,\n기본에 충실한 맥도날드 햄버거.",
+      "price": 3890,
+      "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+      "taste_ids": ["2b3c4d5e"],
+      "image_url": "/image/menu/burger__hamburger.png",
+      "ingredients": [
+        {
+          "image_url": "/image/ingredients/beef-patty.jpg",
+          "name": "쇠고기 패티"
+        },
+        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
+        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
+        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
+        {
+          "image_url": "/image/ingredients/choppedOnions.jpg",
+          "name": "다진 양파"
+        }
+      ],
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
     },
     {
       "id": "7f6b3d7b-f013-41cf-b7e2-5fbab5e8d31f",
       "name": "맥스파이시 치킨 텐더",
-      "description": "매콤한 소스로 바삭하게 튀겨낸 치킨 텐더.",
+      "description": "부드러운 100% 닭안심살을 스파이시 시즈닝으로\n매콤 바삭하게 튀겨낸 치킨 텐더!\n2가지 소스로 입맛에 맞게 즐겨보세요!",
       "price": 4890,
       "category_id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
       "taste_ids": [],
@@ -102,7 +470,7 @@
     {
       "id": "8ebf3274-cfa9-44cd-81de-5e7c8b672a27",
       "name": "맥너겟 (6조각)",
-      "description": "바삭하고 촉촉한 닭가슴살 너겟.",
+      "description": "바삭하고 촉촉한 치킨이 한 입에 쏙!\n다양한 소스로 입맛에 맞게 즐겨보세요!",
       "price": 3290,
       "category_id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
       "taste_ids": [],
@@ -111,7 +479,7 @@
     {
       "id": "9ebf3274-cba9-44cd-8ade-5e7c8b672a28",
       "name": "상하이 치킨 스낵랩",
-      "description": "매콤한 치킨에 달콤한 화이트 마요 소스로 매콤달콤하게!",
+      "description": "매콤한 치킨에 달콤한 화이트 마요 소스로 매콤달콤하게!\n베이컨에 양상추, 또띠아까지 어우러져\n씹는 맛까지 즐겁다!",
       "price": 3290,
       "category_id": "73f33e48-cd89-4e5b-81d2-f3406f6342b7",
       "taste_ids": [],
@@ -120,7 +488,7 @@
     {
       "id": "e60348ec-934f-442e-9af9-3ecf8928ce5e",
       "name": "해시브라운",
-      "description": "바삭한 강판 감자 해시브라운.",
+      "description": "씹으면 바삭바삭,\n속은 부드러운 감자의 고소함.",
       "price": 1990,
       "category_id": "e6034d80-d89f-463e-85a9-4c31e5af6ad4",
       "taste_ids": [],
@@ -138,7 +506,7 @@
     {
       "id": "9832fae7-c86b-4e3b-b27a-37be2ebd2d5f",
       "name": "감자튀김",
-      "description": "고소하고 바삭한 감자튀김.",
+      "description": "통으로 썰어낸 감자를 맥도날드만의 노하우로 튀겨낸 남다른 맛과 바삭함!\n맥도날드의 역사가 담긴 월드 클래스 후렌치 후라이",
       "price": 3490,
       "category_id": "e6034d80-d89f-463e-85a9-4c31e5af6ad4",
       "taste_ids": [],
@@ -174,7 +542,7 @@
     {
       "id": "49d7e6c3-38cf-4b82-97f2-937e8fb2a3cd",
       "name": "오레오 맥플러리",
-      "description": "달콤한 아이스크림과 바삭한 오레오 조각의 조합.",
+      "description": "우유 듬뿍 신선한 아이스크림에\n아삭아삭 오레오 쿠키가 가득!",
       "price": 4590,
       "category_id": "8aef483e-4b7e-4a9c-8c87-dfbf54564299",
       "taste_ids": [],

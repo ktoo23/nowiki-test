@@ -25,6 +25,8 @@ const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
   if (open === false) {
     return null;
   }
+  // TODO: 1. 데이터 채우기 (칼로리, 버거일 때만 주 구성품 재료.. 영양정보, 알레르기 정보)
+  // TODO: 2. CSS
 
   return (
     <Dialog open={open} onOpenChange={() => setIsOpen(false)}>
@@ -40,12 +42,15 @@ const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
           <div>{item.name} 구성품</div>
           <div className="flex gap-1">
             {item.ingredients?.map((ingredient, index) => (
-              <p key={index} className="size-12">
-                <img
-                  src={ingredient}
-                  className="block size-full object-cover"
-                />
-              </p>
+              <div>
+                <p key={index} className="size-12">
+                  <img
+                    src={ingredient.image_url}
+                    className="block size-full object-cover"
+                  />
+                </p>
+                <span>{ingredient.name}</span>
+              </div>
             ))}
           </div>
           <div>
