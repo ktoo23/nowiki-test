@@ -25,8 +25,10 @@ const OrderItemInCart = ({ item, setOrderItemCount }: OrderItemInCartProps) => {
   };
 
   const resetMenu = (item: MenuItemWithCount) => {
-    deleteItemFromOrderInfo(item);
-    setOrderItemCount(getOrderInfo().orderItem || []);
+		if(window.confirm('정말로 삭제하시겠습니까?')){
+			deleteItemFromOrderInfo(item);
+			setOrderItemCount(getOrderInfo().orderItem || []);
+		}
   };
 
   return (
@@ -56,7 +58,7 @@ const OrderItemInCart = ({ item, setOrderItemCount }: OrderItemInCartProps) => {
           </button>
           <Button
             onClick={() => resetMenu(item)}
-            className="text-lg text-black ml-2 bg-mc_red px-4 py-2 rounded-md"
+            className="text-lg text-black ml-2 bg-mc_red hover:bg-mc_red/90 px-4 py-2 rounded-md"
           >
             취소
           </Button>
