@@ -2,8 +2,10 @@ import { useNavigate } from "react-router-dom";
 import CardPaymentImage from "../assets/image/card-payment.png";
 import { Button } from "@/components/ui/button";
 import { completeOrder } from "@/feat/order";
+import useSpeechFeedback from "@/hooks/useSppechFeedback";
 
 const CardPayment = () => {
+	const { speak }=useSpeechFeedback()
   const naviate = useNavigate();
 
   const navigateToPaymentSelect = () => {
@@ -15,6 +17,7 @@ const CardPayment = () => {
     if (!result) {
       alert("주문에 오류가 발생했습니다")
     }
+		speak("결제가 완료되었습니다.")
     naviate("/payment-result");
   };
 
