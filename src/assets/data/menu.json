@@ -31,7 +31,24 @@
           "name": "슬라이스 치즈"
         }
       ],
-      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"],
+      "nutrition_facts": {
+        "weight_g": "223g",
+        "weight_ml": null,
+        "calories": "582kcal",
+        "sugar": "8g",
+        "protein": "27g",
+        "saturated_fat": "11g",
+        "sodium": "902mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "8%",
+        "protein": "49%",
+        "saturated_fat": "71%",
+        "sodium": "45%",
+        "caffeine": null
+      }
     },
     {
       "id": "12c02e36-7c94-44fc-b5e4-3e7896b3c313",
@@ -58,7 +75,24 @@
           "name": "슬라이스 치즈"
         }
       ],
-      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"],
+      "nutrition_facts": {
+        "weight_g": "219g",
+        "weight_ml": null,
+        "calories": "620kcal",
+        "sugar": "9g",
+        "protein": "36g",
+        "saturated_fat": "17g",
+        "sodium": "1230mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "9%",
+        "protein": "65%",
+        "saturated_fat": "115%",
+        "sodium": "61%",
+        "caffeine": null
+      }
     },
     {
       "id": "12c01e36-7c94-44fc-b5e4-3e7896b3c313",
@@ -85,7 +119,24 @@
           "name": "슬라이스 치즈"
         }
       ],
-      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"],
+      "nutrition_facts": {
+        "weight_g": "167g",
+        "weight_ml": null,
+        "calories": "479kcal",
+        "sugar": "8g",
+        "protein": "27g",
+        "saturated_fat": "23g",
+        "sodium": "896mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "8%",
+        "protein": "49%",
+        "saturated_fat": "78%",
+        "sodium": "45%",
+        "caffeine": null
+      }
     },
     {
       "id": "12c01d36-7c94-44fc-b5e4-3e7896b3c313",
@@ -112,7 +163,24 @@
           "name": "슬라이스 치즈"
         }
       ],
-      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"],
+      "nutrition_facts": {
+        "weight_g": "115g",
+        "weight_ml": null,
+        "calories": "318kcal",
+        "sugar": "7g",
+        "protein": "16g",
+        "saturated_fat": "6g",
+        "sodium": "612mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "7%",
+        "protein": "29%",
+        "saturated_fat": "40%",
+        "sodium": "31%",
+        "caffeine": null
+      }
     },
     {
       "id": "ab12ef34-5678-4c90-babc-d123ef4567ab",
@@ -139,7 +207,24 @@
           "name": "슬라이스 치즈"
         }
       ],
-      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"],
+      "nutrition_facts": {
+        "weight_g": "275g",
+        "weight_ml": null,
+        "calories": "770kcal",
+        "sugar": "10g",
+        "protein": "50g",
+        "saturated_fat": "20g",
+        "sodium": "1151mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "10%",
+        "protein": "91%",
+        "saturated_fat": "136%",
+        "sodium": "58%",
+        "caffeine": null
+      }
     },
     {
       "id": "ab12ef84-5678-4c90-babc-d123ef4567ab",
@@ -166,7 +251,24 @@
           "name": "슬라이스 치즈"
         }
       ],
-      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"],
+      "nutrition_facts": {
+        "weight_g": "198g",
+        "weight_ml": null,
+        "calories": "536kcal",
+        "sugar": "10g",
+        "protein": "31g",
+        "saturated_fat": "13g",
+        "sodium": "966mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "10%",
+        "protein": "56%",
+        "saturated_fat": "86%",
+        "sodium": "48%",
+        "caffeine": null
+      }
     },
     {
       "id": "cd56ef78-90ab-4cde-bbcd-e6789f12cd45",
@@ -219,7 +321,24 @@
         "돼지고기",
         "토마토",
         "쇠고기"
-      ]
+      ],
+      "nutrition_facts": {
+        "weight_g": "247g",
+        "weight_ml": null,
+        "calories": "570kcal",
+        "sugar": "14g",
+        "protein": "29g",
+        "saturated_fat": "11g",
+        "sodium": "933mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "14%",
+        "protein": "52%",
+        "saturated_fat": "72%",
+        "sodium": "47%",
+        "caffeine": null
+      }
     },
     {
       "id": "ef12cd34-5678-4cde-aabc-d456ef7890cd",
@@ -251,7 +370,24 @@
           "name": "양파"
         }
       ],
-      "allergens": ["난류", "대두", "밀", "돼지고기", "조개", "굴"]
+      "allergens": ["난류", "대두", "밀", "돼지고기", "조개", "굴"],
+      "nutrition_facts": {
+        "weight_g": "167g",
+        "weight_ml": null,
+        "calories": "409kcal",
+        "sugar": "14g",
+        "protein": "14g",
+        "saturated_fat": "6g",
+        "sodium": "670mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "14%",
+        "protein": "26%",
+        "saturated_fat": "37%",
+        "sodium": "33%",
+        "caffeine": null
+      }
     },
     {
       "id": "2458c6ed-2b34-4ff1-9203-4b587c229ea8",
@@ -279,7 +415,24 @@
           "name": "슬라이스 치즈"
         }
       ],
-      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"],
+      "nutrition_facts": {
+        "weight_g": "219g",
+        "weight_ml": null,
+        "calories": "620kcal",
+        "sugar": "9g",
+        "protein": "36g",
+        "saturated_fat": "17g",
+        "sodium": "1230mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "9%",
+        "protein": "65%",
+        "saturated_fat": "115%",
+        "sodium": "61%",
+        "caffeine": null
+      }
     },
     {
       "id": "7c8f5e1d-98b7-4bd1-ae78-2c1473e1eabe",
@@ -311,7 +464,24 @@
           "name": "양파"
         }
       ],
-      "allergens": ["난류", "대두", "밀", "돼지고기", "조개", "굴"]
+      "allergens": ["난류", "대두", "밀", "돼지고기", "조개", "굴"],
+      "nutrition_facts": {
+        "weight_g": "237g",
+        "weight_ml": null,
+        "calories": "635kcal",
+        "sugar": "15g",
+        "protein": "26g",
+        "saturated_fat": "13g",
+        "sodium": "997mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "15%",
+        "protein": "48%",
+        "saturated_fat": "86%",
+        "sodium": "50%",
+        "caffeine": null
+      }
     },
     {
       "id": "1dbf2734-5ba7-4e12-90b5-ec92e9ae3eb8",
@@ -339,7 +509,24 @@
           "name": "토마토"
         }
       ],
-      "allergens": ["난류", "대두", "밀", "토마토", "닭고기"]
+      "allergens": ["난류", "대두", "밀", "토마토", "닭고기"],
+      "nutrition_facts": {
+        "weight_g": "246g",
+        "weight_ml": null,
+        "calories": "501kcal",
+        "sugar": "9g",
+        "protein": "24g",
+        "saturated_fat": "3g",
+        "sodium": "1102mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "9%",
+        "protein": "44%",
+        "saturated_fat": "17%",
+        "sodium": "55%",
+        "caffeine": null
+      }
     },
     {
       "id": "1dqf2734-5ba7-4e12-90b5-ec92e9ae3eb8",
@@ -367,7 +554,24 @@
           "name": "매콤 소스"
         }
       ],
-      "allergens": ["난류", "우유", "대두", "밀", "토마토", "새우", "굴"]
+      "allergens": ["난류", "우유", "대두", "밀", "토마토", "새우", "굴"],
+      "nutrition_facts": {
+        "weight_g": "224g",
+        "weight_ml": null,
+        "calories": "409kcal",
+        "sugar": "13g",
+        "protein": "12g",
+        "saturated_fat": "1.7g",
+        "sodium": "808mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "13%",
+        "protein": "22%",
+        "saturated_fat": "12%",
+        "sodium": "40%",
+        "caffeine": null
+      }
     },
     {
       "id": "1dqf2735-5ba7-4e12-90b5-ec92e9ae3eb8",
@@ -408,7 +612,24 @@
         "쇠고기",
         "새우",
         "굴"
-      ]
+      ],
+      "nutrition_facts": {
+        "weight_g": "269g",
+        "weight_ml": null,
+        "calories": "540kcal",
+        "sugar": "15g",
+        "protein": "20g",
+        "saturated_fat": "5g",
+        "sodium": "1001mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "15%",
+        "protein": "36%",
+        "saturated_fat": "35%",
+        "sodium": "50%",
+        "caffeine": null
+      }
     },
     {
       "id": "bc1372d6-79b4-43fa-91e7-e4d34e25738f",
@@ -433,7 +654,24 @@
           "name": "양상추"
         }
       ],
-      "allergens": ["난류", "대두", "밀", "닭고기"]
+      "allergens": ["난류", "대두", "밀", "닭고기"],
+      "nutrition_facts": {
+        "weight_g": "206g",
+        "weight_ml": null,
+        "calories": "523kcal",
+        "sugar": "7g",
+        "protein": "21g",
+        "saturated_fat": "3g",
+        "sodium": "1084mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "7%",
+        "protein": "38%",
+        "saturated_fat": "21%",
+        "sodium": "54%",
+        "caffeine": null
+      }
     },
     {
       "id": "16c01d36-7c94-44fc-b5e4-3e7896b3c313",
@@ -456,7 +694,24 @@
           "name": "다진 양파"
         }
       ],
-      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"]
+      "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"],
+      "nutrition_facts": {
+        "weight_g": "101g",
+        "weight_ml": null,
+        "calories": "266kcal",
+        "sugar": "7g",
+        "protein": "13g",
+        "saturated_fat": "3g",
+        "sodium": "450mg",
+        "caffeine": null
+      },
+      "nutrition_daily_value": {
+        "sugar": "7%",
+        "protein": "24%",
+        "saturated_fat": "23%",
+        "sodium": "22%",
+        "caffeine": null
+      }
     },
     {
       "id": "7f6b3d7b-f013-41cf-b7e2-5fbab5e8d31f",

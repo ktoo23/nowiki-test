@@ -13,6 +13,7 @@ import { Dispatch } from "react";
 import { useNavigate } from "react-router-dom";
 import IngredientList from "./IngredientList";
 import AllergenList from "./AllergenList";
+import NutritionList from "./NutritionList";
 
 type Props = {
   item: MenuItem;
@@ -59,6 +60,17 @@ const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
             </strong>
             {item.allergens ? (
               <AllergenList allergens={item.allergens} />
+            ) : (
+              <p>-</p>
+            )}
+          </div>
+          <div>
+            <strong className="block text-[#292929] text-xl">영양정보</strong>
+            {item.nutrition_facts ? (
+              <NutritionList
+                nutritionFacts={item.nutrition_facts!}
+                nutritionDailyValue={item.nutrition_daily_value!}
+              />
             ) : (
               <p>-</p>
             )}
