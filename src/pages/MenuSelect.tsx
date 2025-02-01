@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import useGuidePopupStore from "@/store/useGuidePopupStore";
 import GuidePopup from "@/components/GuidePopup";
-import useSpeechFeedback from "@/hooks/useSppechFeedback";
+import useSpeechFeedback from "@/hooks/useSpeechFeedback";
 
 const MenuSelect = () => {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ const MenuSelect = () => {
     getOrderInfo().orderItem || [],
   );
 
-	const { speak } = useSpeechFeedback();
+  const { speak } = useSpeechFeedback();
 
   const handleAddShoppingCart = () => {
     setCurrentCart([...currentCart, menu]);
@@ -34,7 +34,7 @@ const MenuSelect = () => {
     //   return navigate("/");
     // }
 
-		speak("장바구니에 추가되었습니다.");
+    speak("장바구니에 추가되었습니다.");
     alert("장바구니에 추가되었습니다.");
   };
 
