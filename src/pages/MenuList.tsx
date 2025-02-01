@@ -11,6 +11,7 @@ import VoiceBtn from "@/components/voice/VoiceBtn";
 import CartButton from "@/components/CartButton";
 import GuidePopup from "@/components/GuidePopup";
 import useGuidePopupStore from "@/store/useGuidePopupStore";
+import { MenuItem } from "@/types/menu.interface";
 
 const defaultCategoryId = menu_categories[0].id;
 
@@ -34,10 +35,10 @@ const MenuList = () => {
   }, [isGuideActive]);
 
   const filteredList = useMemo(() => {
-    return menu_items.filter((item) => {
+    return menu_items.filter((item: MenuItem) => {
       const matchesCategory = item.category_id === filters.categoryId;
       const matchesTaste =
-        filters.tasteId === "" || item.taste_ids.includes(filters.tasteId);
+        filters.tasteId === "" || item.taste_ids?.includes(filters.tasteId);
       return matchesCategory && matchesTaste;
     });
   }, [filters, menu_items]);

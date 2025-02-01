@@ -1,7 +1,6 @@
-import { useNavigate } from "react-router-dom";
-
 import { MenuItem } from "@/types/menu.interface";
 import { useEffect, useRef, useState } from "react";
+import FilteredMenuItem from "./FilteredMenuItem";
 
 type Props = {
   items: MenuItem[];
@@ -12,8 +11,6 @@ const FilteredMenuList = ({ items }: Props) => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const [heightClass, setHeightClass] = useState("");
-
-  const naviate = useNavigate();
 
   //스크롤 감지하는 useEffect
   useEffect(() => {
@@ -36,30 +33,16 @@ const FilteredMenuList = ({ items }: Props) => {
   }, [scrollPosition]);
 
   return (
-    <ul
-      ref={scrollableRef}
-      className={`${heightClass} overflow-scroll grid grid-cols-2 gap-4 sm:gap-6`}
-    >
-      {items.map((item) => (
-        <li
-          key={item.id}
-          className="sm:max-h-[220px] bg-[#F8F8F8] rounded-[10px] text-center cursor-pointer"
-          onClick={() => naviate(`/set-choice/${item.id}`)}
-        >
-          <div className="mb-2">
-            <img
-              src={item.image_url}
-              alt=""
-              className="block size-full rounded-[10px] rounded-b-none"
-            />
-          </div>
-          <strong className="mb-2 text-md sm:text-lg">{item.name}</strong>
-          <p className="mb-2 sm:text-lg">
-            {Intl.NumberFormat().format(item.price)}원
-          </p>
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul
+        ref={scrollableRef}
+        className={`${heightClass} overflow-scroll grid grid-cols-2 gap-4 sm:gap-6`}
+      >
+        {items.map((item) => (
+          <FilteredMenuItem key={item.id} item={item} />
+        ))}
+      </ul>
+    </>
   );
 };
 
