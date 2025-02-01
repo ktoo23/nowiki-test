@@ -1,4 +1,5 @@
 type Ingredient = {
+  id: string;
   name: string;
   image_url: string;
 };
@@ -10,8 +11,11 @@ type Props = {
 const IngredientList = ({ ingredients }: Props) => {
   return (
     <div className="flex gap-1 flex-wrap justify-center">
-      {ingredients.map((ingredient, index) => (
-        <div key={index} className="flex flex-col items-center justify-center">
+      {ingredients.map((ingredient) => (
+        <div
+          key={ingredient.id}
+          className="flex flex-col items-center justify-center"
+        >
           <p className="size-[100px]">
             {ingredient.image_url ? (
               <img

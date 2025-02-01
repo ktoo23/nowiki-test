@@ -1,4 +1,5 @@
 export interface IngredientsType {
+  id: string;
   image_url: string;
   name: string;
 }

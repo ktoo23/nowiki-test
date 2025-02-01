@@ -10,23 +10,32 @@
       "image_url": "/image/menu/burger__bigmac.png",
       "ingredients": [
         {
+          "id": "7358183e-839c-4d47-8ac2-d390e6666652",
           "image_url": "/image/ingredients/beef-patty.jpg",
           "name": "쇠고기 패티"
         },
-        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
         {
+          "id": "1bc3a906-b37a-4554-92a7-4d101ebafc81",
+          "image_url": "/image/ingredients/pickles.jpg",
+          "name": "피클"
+        },
+        {
+          "id": "1qc3b908-b37a-4684-92a7-4d101ebafc81",
           "image_url": "/image/ingredients/bigMacSauce.jpg",
           "name": "빅맥 소스"
         },
         {
+          "id": "880a99ce-d7f4-4a24-aa6c-6cd241b4b02f",
           "image_url": "/image/ingredients/iceburgLettuce.jpg",
           "name": "양상추"
         },
         {
+          "id": "732fa85d-bbf3-4f84-ac12-040c87901786",
           "image_url": "/image/ingredients/choppedOnions.jpg",
           "name": "다진 양파"
         },
         {
+          "id": "03bd6783-2409-4702-9fca-20fac6ff0870",
           "image_url": "/image/ingredients/cheeseSlice.jpg",
           "name": "슬라이스 치즈"
         }
@@ -60,17 +69,32 @@
       "image_url": "/image/menu/burger__triple-cheese.png",
       "ingredients": [
         {
+          "id": "7358183e-839c-4d47-8ac2-d390e6666652",
           "image_url": "/image/ingredients/beef-patty.jpg",
           "name": "쇠고기 패티"
         },
-        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
-        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
-        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
         {
+          "id": "1bc3a906-b37a-4554-92a7-4d101ebafc81",
+          "image_url": "/image/ingredients/pickles.jpg",
+          "name": "피클"
+        },
+        {
+          "id": "9e0eed03-3ccb-4025-bfb5-b41e85ac077c",
+          "image_url": "/image/ingredients/ketchup.jpg",
+          "name": "케찹"
+        },
+        {
+          "id": "c1588877-ee7b-4541-b376-86d439dd10e1",
+          "image_url": "/image/ingredients/mustard.jpg",
+          "name": "머스타드"
+        },
+        {
+          "id": "732fa85d-bbf3-4f84-ac12-040c87901786",
           "image_url": "/image/ingredients/choppedOnions.jpg",
           "name": "다진 양파"
         },
         {
+          "id": "03bd6783-2409-4702-9fca-20fac6ff0870",
           "image_url": "/image/ingredients/cheeseSlice.jpg",
           "name": "슬라이스 치즈"
         }
@@ -104,17 +128,32 @@
       "image_url": "/image/menu/burger__double-cheese.png",
       "ingredients": [
         {
+          "id": "7358183e-839c-4d47-8ac2-d390e6666652",
           "image_url": "/image/ingredients/beef-patty.jpg",
           "name": "쇠고기 패티"
         },
-        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
-        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
-        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
         {
+          "id": "1bc3a906-b37a-4554-92a7-4d101ebafc81",
+          "image_url": "/image/ingredients/pickles.jpg",
+          "name": "피클"
+        },
+        {
+          "id": "9e0eed03-3ccb-4025-bfb5-b41e85ac077c",
+          "image_url": "/image/ingredients/ketchup.jpg",
+          "name": "케찹"
+        },
+        {
+          "id": "c1588877-ee7b-4541-b376-86d439dd10e1",
+          "image_url": "/image/ingredients/mustard.jpg",
+          "name": "머스타드"
+        },
+        {
+          "id": "732fa85d-bbf3-4f84-ac12-040c87901786",
           "image_url": "/image/ingredients/choppedOnions.jpg",
           "name": "다진 양파"
         },
         {
+          "id": "03bd6783-2409-4702-9fca-20fac6ff0870",
           "image_url": "/image/ingredients/cheeseSlice.jpg",
           "name": "슬라이스 치즈"
         }
@@ -148,17 +187,32 @@
       "image_url": "/image/menu/burger__cheese.png",
       "ingredients": [
         {
+          "id": "7358183e-839c-4d47-8ac2-d390e6666652",
           "image_url": "/image/ingredients/beef-patty.jpg",
           "name": "쇠고기 패티"
         },
-        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
-        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
-        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
         {
+          "id": "1bc3a906-b37a-4554-92a7-4d101ebafc81",
+          "image_url": "/image/ingredients/pickles.jpg",
+          "name": "피클"
+        },
+        {
+          "id": "9e0eed03-3ccb-4025-bfb5-b41e85ac077c",
+          "image_url": "/image/ingredients/ketchup.jpg",
+          "name": "케찹"
+        },
+        {
+          "id": "c1588877-ee7b-4541-b376-86d439dd10e1",
+          "image_url": "/image/ingredients/mustard.jpg",
+          "name": "머스타드"
+        },
+        {
+          "id": "732fa85d-bbf3-4f84-ac12-040c87901786",
           "image_url": "/image/ingredients/choppedOnions.jpg",
           "name": "다진 양파"
         },
         {
+          "id": "03bd6783-2409-4702-9fca-20fac6ff0870",
           "image_url": "/image/ingredients/cheeseSlice.jpg",
           "name": "슬라이스 치즈"
         }
@@ -192,17 +246,32 @@
       "image_url": "/image/menu/burger__double-quarter.png",
       "ingredients": [
         {
+          "id": "7358183e-839c-4d47-8ac2-d390e6666652",
           "image_url": "/image/ingredients/beef-patty.jpg",
           "name": "쇠고기 패티"
         },
-        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
-        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
-        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
         {
+          "id": "1bc3a906-b37a-4554-92a7-4d101ebafc81",
+          "image_url": "/image/ingredients/pickles.jpg",
+          "name": "피클"
+        },
+        {
+          "id": "9e0eed03-3ccb-4025-bfb5-b41e85ac077c",
+          "image_url": "/image/ingredients/ketchup.jpg",
+          "name": "케찹"
+        },
+        {
+          "id": "c1588877-ee7b-4541-b376-86d439dd10e1",
+          "image_url": "/image/ingredients/mustard.jpg",
+          "name": "머스타드"
+        },
+        {
+          "id": "16009a05-80f4-4dad-bce3-87307d981213",
           "image_url": "/image/ingredients/sliveredOnions.jpg",
           "name": "양파"
         },
         {
+          "id": "03bd6783-2409-4702-9fca-20fac6ff0870",
           "image_url": "/image/ingredients/cheeseSlice.jpg",
           "name": "슬라이스 치즈"
         }
@@ -236,17 +305,32 @@
       "image_url": "/image/menu/burger__quarter.png",
       "ingredients": [
         {
+          "id": "7358183e-839c-4d47-8ac2-d390e6666652",
           "image_url": "/image/ingredients/beef-patty.jpg",
           "name": "쇠고기 패티"
         },
-        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
-        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
-        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
         {
+          "id": "1bc3a906-b37a-4554-92a7-4d101ebafc81",
+          "image_url": "/image/ingredients/pickles.jpg",
+          "name": "피클"
+        },
+        {
+          "id": "9e0eed03-3ccb-4025-bfb5-b41e85ac077c",
+          "image_url": "/image/ingredients/ketchup.jpg",
+          "name": "케찹"
+        },
+        {
+          "id": "c1588877-ee7b-4541-b376-86d439dd10e1",
+          "image_url": "/image/ingredients/mustard.jpg",
+          "name": "머스타드"
+        },
+        {
+          "id": "16009a05-80f4-4dad-bce3-87307d981213",
           "image_url": "/image/ingredients/sliveredOnions.jpg",
           "name": "양파"
         },
         {
+          "id": "03bd6783-2409-4702-9fca-20fac6ff0870",
           "image_url": "/image/ingredients/cheeseSlice.jpg",
           "name": "슬라이스 치즈"
         }
@@ -280,35 +364,43 @@
       "image_url": "/image/menu/burger__bacon-tomato-deluxe.png",
       "ingredients": [
         {
+          "id": "7358183e-839c-4d47-8ac2-d390e6666652",
           "image_url": "/image/ingredients/beef-patty.jpg",
           "name": "쇠고기 패티"
         },
 
         {
+          "id": "752be158-ee11-43c5-9280-1c73de50d916",
           "image_url": "/image/ingredients/bacon.jpg",
           "name": "베이컨"
         },
         {
+          "id": "03bd6783-2409-4702-9fca-20fac6ff0870",
           "image_url": "/image/ingredients/cheeseSlice.jpg",
           "name": "슬라이스 치즈"
         },
         {
+          "id": "880a99ce-d7f4-4a24-aa6c-6cd241b4b02f",
           "image_url": "/image/ingredients/iceburgLettuce.jpg",
           "name": "양상추"
         },
         {
+          "id": "ce2ea2eb-30cb-47d1-a001-8ac35a721450",
           "image_url": "/image/ingredients/tomatoSlice.jpg",
           "name": "토마토"
         },
         {
+          "id": "732fa85d-bbf3-4f84-ac12-040c87901786",
           "image_url": "/image/ingredients/choppedOnions.jpg",
           "name": "다진 양파"
         },
         {
+          "id": "15cfb691-f7ab-4d38-9b3c-fbb0ab3bd683",
           "image_url": "/image/ingredients/vegansandwichsauce.jpg",
           "name": "마요네즈"
         },
         {
+          "id": "1d275c42-8dd4-4df5-9ced-beb6811d5a76",
           "image_url": "/image/ingredients/spicyRelish.jpg",
           "name": "스위트 칠리"
         }
@@ -350,22 +442,27 @@
       "image_url": "/image/menu/burger__bulgogi.png",
       "ingredients": [
         {
+          "id": "58e013b1-7e3f-4f7e-b740-7a63f11a2739",
           "image_url": "/image/ingredients/beef-patty.jpg",
-          "name": "돼지지고기 패티"
+          "name": "돼지고기 패티"
         },
         {
+          "id": "15cfb691-f7ab-4d38-9b3c-fbb0ab3bd683",
           "image_url": "/image/ingredients/vegansandwichsauce.jpg",
           "name": "마요네즈"
         },
         {
+          "id": "eecb6e89-9d84-4b63-97ac-6bc55fd5379d",
           "image_url": "/image/ingredients/BBQSauce.jpg",
           "name": "불고기 소스"
         },
         {
+          "id": "880a99ce-d7f4-4a24-aa6c-6cd241b4b02f",
           "image_url": "/image/ingredients/iceburgLettuce.jpg",
           "name": "양상추"
         },
         {
+          "id": "16009a05-80f4-4dad-bce3-87307d981213",
           "image_url": "/image/ingredients/sliveredOnions.jpg",
           "name": "양파"
         }
@@ -399,18 +496,33 @@
       "image_url": "/image/menu/burger__triple-cheese.png",
       "ingredients": [
         {
+          "id": "7358183e-839c-4d47-8ac2-d390e6666652",
           "image_url": "/image/ingredients/beef-patty.jpg",
           "name": "쇠고기 패티"
         },
 
-        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
-        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
-        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
         {
+          "id": "1bc3a906-b37a-4554-92a7-4d101ebafc81",
+          "image_url": "/image/ingredients/pickles.jpg",
+          "name": "피클"
+        },
+        {
+          "id": "9e0eed03-3ccb-4025-bfb5-b41e85ac077c",
+          "image_url": "/image/ingredients/ketchup.jpg",
+          "name": "케찹"
+        },
+        {
+          "id": "c1588877-ee7b-4541-b376-86d439dd10e1",
+          "image_url": "/image/ingredients/mustard.jpg",
+          "name": "머스타드"
+        },
+        {
+          "id": "732fa85d-bbf3-4f84-ac12-040c87901786",
           "image_url": "/image/ingredients/choppedOnions.jpg",
           "name": "다진 양파"
         },
         {
+          "id": "03bd6783-2409-4702-9fca-20fac6ff0870",
           "image_url": "/image/ingredients/cheeseSlice.jpg",
           "name": "슬라이스 치즈"
         }
@@ -444,22 +556,27 @@
       "image_url": "/image/menu/burger__double-bulgogi.png",
       "ingredients": [
         {
+          "id": "58e013b1-7e3f-4f7e-b740-7a63f11a2739",
           "image_url": "/image/ingredients/beef-patty.jpg",
-          "name": "돼지지고기 패티"
+          "name": "돼지고기 패티"
         },
         {
+          "id": "15cfb691-f7ab-4d38-9b3c-fbb0ab3bd683",
           "image_url": "/image/ingredients/vegansandwichsauce.jpg",
           "name": "마요네즈"
         },
         {
+          "id": "eecb6e89-9d84-4b63-97ac-6bc55fd5379d",
           "image_url": "/image/ingredients/BBQSauce.jpg",
           "name": "불고기 소스"
         },
         {
+          "id": "880a99ce-d7f4-4a24-aa6c-6cd241b4b02f",
           "image_url": "/image/ingredients/iceburgLettuce.jpg",
           "name": "양상추"
         },
         {
+          "id": "16009a05-80f4-4dad-bce3-87307d981213",
           "image_url": "/image/ingredients/sliveredOnions.jpg",
           "name": "양파"
         }
@@ -493,18 +610,22 @@
       "image_url": "/image/menu/burger__shanghai.png",
       "ingredients": [
         {
+          "id": "ecb78cde-ab35-4b5f-95b0-ba3888ff617d",
           "image_url": "/image/ingredients/mcspicy-patty.jpg",
           "name": "상하이 치킨 패티"
         },
         {
+          "id": "15cfb691-f7ab-4d38-9b3c-fbb0ab3bd683",
           "image_url": "/image/ingredients/vegansandwichsauce.jpg",
           "name": "마요네즈"
         },
         {
+          "id": "880a99ce-d7f4-4a24-aa6c-6cd241b4b02f",
           "image_url": "/image/ingredients/iceburgLettuce.jpg",
           "name": "양상추"
         },
         {
+          "id": "ce2ea2eb-30cb-47d1-a001-8ac35a721450",
           "image_url": "/image/ingredients/tomatoSlice.jpg",
           "name": "토마토"
         }
@@ -538,18 +659,22 @@
       "image_url": "/image/menu/burger__shushu-burger.png",
       "ingredients": [
         {
+          "id": "ada0e55e-5fda-4d2c-9321-1416581ae1a1",
           "image_url": "",
           "name": "새우패티"
         },
         {
+          "id": "880a99ce-d7f4-4a24-aa6c-6cd241b4b02f",
           "image_url": "/image/ingredients/iceburgLettuce.jpg",
           "name": "양상추"
         },
         {
+          "id": "ce2ea2eb-30cb-47d1-a001-8ac35a721450",
           "image_url": "/image/ingredients/tomatoSlice.jpg",
           "name": "토마토"
         },
         {
+          "id": "45a19e62-0ee9-4cb3-9f6e-4d46ab4f16b5",
           "image_url": "",
           "name": "매콤 소스"
         }
@@ -583,22 +708,27 @@
       "image_url": "/image/menu/burger__shubeef.png",
       "ingredients": [
         {
+          "id": "ada0e55e-5fda-4d2c-9321-1416581ae1a1",
           "image_url": "",
           "name": "새우패티"
         },
         {
+          "id": "7358183e-839c-4d47-8ac2-d390e6666652",
           "image_url": "/image/ingredients/beef-patty.jpg",
           "name": "쇠고기 패티"
         },
         {
+          "id": "880a99ce-d7f4-4a24-aa6c-6cd241b4b02f",
           "image_url": "/image/ingredients/iceburgLettuce.jpg",
           "name": "양상추"
         },
         {
+          "id": "ce2ea2eb-30cb-47d1-a001-8ac35a721450",
           "image_url": "/image/ingredients/tomatoSlice.jpg",
           "name": "토마토"
         },
         {
+          "id": "45a19e62-0ee9-4cb3-9f6e-4d46ab4f16b5",
           "image_url": "",
           "name": "매콤 소스"
         }
@@ -641,15 +771,18 @@
       "image_url": "/image/menu/burger__chicken.png",
       "ingredients": [
         {
+          "id": "c4c418b4-82f1-43b8-a66c-55558bbcaf37",
           "image_url": "/image/ingredients/mcChickenSandwichPatty.jpg",
           "name": "맥치킨 패티"
         },
 
         {
+          "id": "15cfb691-f7ab-4d38-9b3c-fbb0ab3bd683",
           "image_url": "/image/ingredients/vegansandwichsauce.jpg",
           "name": "마요네즈"
         },
         {
+          "id": "880a99ce-d7f4-4a24-aa6c-6cd241b4b02f",
           "image_url": "/image/ingredients/iceburgLettuce.jpg",
           "name": "양상추"
         }
@@ -683,13 +816,27 @@
       "image_url": "/image/menu/burger__hamburger.png",
       "ingredients": [
         {
+          "id": "7358183e-839c-4d47-8ac2-d390e6666652",
           "image_url": "/image/ingredients/beef-patty.jpg",
           "name": "쇠고기 패티"
         },
-        { "image_url": "/image/ingredients/pickles.jpg", "name": "피클" },
-        { "image_url": "/image/ingredients/ketchup.jpg", "name": "케찹" },
-        { "image_url": "/image/ingredients/mustard.jpg", "name": "머스타드" },
         {
+          "id": "1bc3a906-b37a-4554-92a7-4d101ebafc81",
+          "image_url": "/image/ingredients/pickles.jpg",
+          "name": "피클"
+        },
+        {
+          "id": "9e0eed03-3ccb-4025-bfb5-b41e85ac077c",
+          "image_url": "/image/ingredients/ketchup.jpg",
+          "name": "케찹"
+        },
+        {
+          "id": "c1588877-ee7b-4541-b376-86d439dd10e1",
+          "image_url": "/image/ingredients/mustard.jpg",
+          "name": "머스타드"
+        },
+        {
+          "id": "732fa85d-bbf3-4f84-ac12-040c87901786",
           "image_url": "/image/ingredients/choppedOnions.jpg",
           "name": "다진 양파"
         }

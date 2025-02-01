@@ -39,9 +39,9 @@ const NutritionList = ({ nutritionFacts, nutritionDailyValue }: Props) => {
     <>
       <div className="mb-[13px] mt-[7px]">
         <ul className="grid grid-cols-2 gap-2 text-center text-[#3a3a3a]">
-          {nutritionData.map((item, index) => (
+          {nutritionData.map((item) => (
             <NutritionItem
-              key={index}
+              key={item.label}
               value={item.value}
               label={item.label}
               dailyValue={item.dailyValue}
