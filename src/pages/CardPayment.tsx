@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import CardPaymentImage from "../assets/image/card-payment.png";
 import { Button } from "@/components/ui/button";
+
 import { completeOrder, setOrderInfo } from "@/feat/order";
 
 const CardPayment = () => {

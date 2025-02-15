@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import {
   getOrderInfo,
 } from "@/feat/order";
-import OrderItemInCart from "@/component/OrderItemInCart";
+import OrderItemInCart from "@/components/OrderItemInCart";
 
 const OrderHistory = () => {
   const navigate = useNavigate();
