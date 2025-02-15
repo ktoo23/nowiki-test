@@ -1,6 +1,6 @@
 import { MenuItem, MenuItemWithCount } from "@/types/menu.interface";
 import { OrderInfo } from "../types/order.interface";
-import useSpeechFeedback from "@/hooks/useSppechFeedback";
+import useSpeechFeedback from "@/hooks/useSpeechFeedback";
 
 // 로컬 스토리지 키
 const LOCAL_STORAGE_KEY = "orderInfo";
