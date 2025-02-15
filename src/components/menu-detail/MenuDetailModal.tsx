@@ -9,11 +9,12 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Dispatch } from "react";
+import { Dispatch, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import IngredientList from "./IngredientList";
 import AllergenList from "./AllergenList";
 import NutritionList from "./NutritionList";
+import { ChevronDown } from "lucide-react";
 
 type Props = {
   item: MenuItem;
@@ -23,6 +24,8 @@ type Props = {
 
 const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
   const naviate = useNavigate();
+  const [isAllergenOpen, setIsAllergenOpen] = useState(false);
+  const [isIngredientMenuOpen, setIsIngredientMenuOpen] = useState(false);
 
   if (open === false) {
     return null;
@@ -55,25 +58,59 @@ const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
             </>
           )}
           <div>
-            <strong className="block text-[#292929] text-xl">
-              알레르기 정보
-            </strong>
-            {item.allergens ? (
-              <AllergenList allergens={item.allergens} />
-            ) : (
-              <p>-</p>
-            )}
+            <div className="flex justify-between">
+              <strong className="block text-[#292929] text-xl">
+                알레르기 정보
+              </strong>
+              <ChevronDown
+                className={`transition-transform duration-300 ${
+                  isAllergenOpen ? "rotate-180" : "rotate-0"
+                }`}
+                onClick={() => setIsAllergenOpen((prevState) => !prevState)}
+              />
+            </div>
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                isAllergenOpen
+                  ? "max-h-[80px] opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              {item.allergens ? (
+                <AllergenList allergens={item.allergens} />
+              ) : (
+                <p>-</p>
+              )}
+            </div>
           </div>
           <div>
-            <strong className="block text-[#292929] text-xl">영양정보</strong>
-            {item.nutrition_facts ? (
-              <NutritionList
-                nutritionFacts={item.nutrition_facts!}
-                nutritionDailyValue={item.nutrition_daily_value!}
+            <div className="flex justify-between">
+              <strong className="block text-[#292929] text-xl">영양정보</strong>
+              <ChevronDown
+                className={`transition-transform duration-300 ${
+                  isIngredientMenuOpen ? "rotate-180" : "rotate-0"
+                }`}
+                onClick={() =>
+                  setIsIngredientMenuOpen((prevState) => !prevState)
+                }
               />
-            ) : (
-              <p>-</p>
-            )}
+            </div>
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                isIngredientMenuOpen
+                  ? "max-h-[190px] opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              {item.nutrition_facts ? (
+                <NutritionList
+                  nutritionFacts={item.nutrition_facts!}
+                  nutritionDailyValue={item.nutrition_daily_value!}
+                />
+              ) : (
+                <p>-</p>
+              )}
+            </div>
           </div>
         </div>
         <DialogFooter>
