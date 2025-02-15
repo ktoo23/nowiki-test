@@ -1,17 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { completeOrder, getOrderInfo, setOrderInfo } from "@/feat/order";
 
 const PointCollection = () => {
   const navigate = useNavigate();
   const [phoneNumber, setPhoneNumber] = useState("");
 
+  const getValidateItemPrice = () => {
+    const { orderItem } = getOrderInfo();
+    if (!orderItem) {
+      alert("예상하지 못한 에러가 발생했습니다. \n초기화면으로 이동합니다");
+      return navigate("/");
+    }
+    const totalPrice = orderItem.
+      map(item => item.price).
+      reduce((prev, cur) => prev + cur) as number;
+      
+    return totalPrice
+  }
+
+  const savePointInOrderInfo = () => {
+    const isValidateItemPrice = getValidateItemPrice() as number;
+    if (isValidateItemPrice > 0) {
+      setOrderInfo("point", isValidateItemPrice * 0.1);
+      backOrderHistory()
+    }
+  }
+
   const backOrderHistory = () => {
     alert(`휴대폰 번호 ${phoneNumber}로 포인트가 적립됩니다.`);
-    navigate("/order-history");
-  };
+    completeOrder();
+    navigate("/payment-result");
+  };    
 
-  const handleMenuSelectPage = () => {
+  const canclePointEarn = () => {
     navigate(-1);
   };
 
@@ -31,13 +54,13 @@ const PointCollection = () => {
       <div className="fixed bottom-32 w-full max-w-md px-4">
         <div className="flex justify-around">
           <Button
-            onClick={handleMenuSelectPage}
+            onClick={canclePointEarn}
             className="w-32 h-16 bg-white text-black border border-gray-300"
           >
             취소
           </Button>
           <Button
-            onClick={backOrderHistory}
+            onClick={savePointInOrderInfo}
             className="w-32 h-16 bg-yellow-400 hover:bg-yellow-500 text-black"
           >
             완료

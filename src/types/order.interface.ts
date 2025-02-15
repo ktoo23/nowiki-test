@@ -5,4 +5,5 @@ export interface OrderInfo {
   orderItem: MenuItemWithCount[];
   isTableService: boolean;
   payMethod: string;
+  point:number
 }

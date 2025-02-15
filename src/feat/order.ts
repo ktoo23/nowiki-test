@@ -1,5 +1,6 @@
 import { MenuItem, MenuItemWithCount } from "@/types/menu.interface";
 import { OrderInfo } from "../types/order.interface";
+import useSpeechFeedback from "@/hooks/useSpeechFeedback";
 
 // 로컬 스토리지 키
 const LOCAL_STORAGE_KEY = "orderInfo";
@@ -101,18 +102,19 @@ export const deleteItemFromOrderInfo = (item: MenuItem) => {
 };
 
 // 주문 완료 시 데이터 조합 후 전송
-export const completeOrder = (): boolean => {
+export const completeOrder = () => {
+  const { speak } = useSpeechFeedback();
   const finalOrder = getOrderInfo();
-  if (
-    finalOrder.isTakeOut !== undefined &&
-    finalOrder.orderItem !== undefined &&
-    finalOrder.isTableService !== undefined &&
-    finalOrder.payMethod !== undefined
-  ) {
+  if (checkValidateOrderForm(finalOrder as OrderInfo)) {
     // 주문 데이터를 서버로 전송
     // 예외처리 추후 고민
-    return true;
+    speak("결제가 완료되었습니다.");
+    return
   }
-  console.error("Order information is incomplete!");
-  return false;
+  alert("주문에 오류가 발생했습니다");
 };
+
+const checkValidateOrderForm = (form: OrderInfo) => {
+  const orderFormArr = Object.values(form);
+  return orderFormArr.every((orderValue) => orderValue !== undefined);
+}
