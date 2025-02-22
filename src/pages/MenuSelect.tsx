@@ -72,13 +72,15 @@ const MenuSelect = () => {
               alt="메인 메뉴"
               className="w-48 h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
             />
-            <Button
-              variant="outline"
-              className="mt-3"
-              onClick={alertModifingMenu}
-            >
-              변경하기
-            </Button>
+            {menuData?.items && (
+              <Button
+                variant="outline"
+                className="mt-3"
+                onClick={alertModifingMenu}
+              >
+                변경하기
+              </Button>
+            )}
           </div>
         </div>
 
@@ -122,7 +124,6 @@ const MenuSelect = () => {
             ]}
           />
         )}
-        {/* <GuidePopup className="-bottom-2" /> */}
       </section>
     </div>
   );

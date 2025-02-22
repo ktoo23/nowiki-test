@@ -12,35 +12,39 @@ const DiningSelection: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col max-w-[640px] content-center h-dvh ">
-      <div className="mt-[10%] h-[30%] content-center">
-        <h1 className="text-5xl">
-          <span className="text-mc_red">식사 장소</span>를 <br /> 선택해주세요
-        </h1>
-      </div>
+    <section className="flex flex-col max-w-[640px] content-center h-dvh">
+      <div className="flex h-full w-full justify-around px-8 items-center">
+        <Button
+          variant="outline"
+          className="h-[400px] w-[250px] bg-mc_yellow hover:bg-mc_yellow/80 flex flex-col"
+          onClick={() => confirmDiningType(false)}
+        >
+          <div className="size-[150px]">
+            <img
+              src="image/eat-in.webp"
+              alt="매장 식사 이미지"
+              className="size-full block"
+            />
+          </div>
+          <p className="text-3xl font-semibold">매장</p>
+          <p className="text-white text-lg">매장에서 먹고 가요</p>
+        </Button>
 
-      <div className="grow flex justify-center items-center">
-        <div className="w-[50%] eat-in flex flex-col items-center">
-          <div className="w-[40%] h-20 bg-center bg-no-repeat bg-contain bg-[url('@/assets/image/eat-in.png')]"></div>
-          <Button
-            variant="outline"
-            className="w-[80%] h-20 bg-mc_yellow"
-            onClick={() => confirmDiningType(false)}
-          >
-            매장 식사
-          </Button>
-        </div>
-
-        <div className="w-[50%] takeaway flex flex-col items-center">
-          <div className="w-[40%] h-20 bg-center bg-no-repeat bg-contain bg-[url('@/assets/image/takeaway.png')]"></div>
-          <Button
-            variant="outline"
-            className="w-[80%] h-20 bg-mc_yellow"
-            onClick={() => confirmDiningType(true)}
-          >
-            포장
-          </Button>
-        </div>
+        <Button
+          variant="outline"
+          className="h-[400px] w-[250px] bg-mc_yellow hover:bg-mc_yellow/80 flex flex-col"
+          onClick={() => confirmDiningType(true)}
+        >
+          <div className="size-[150px]">
+            <img
+              src="image/take-away.webp"
+              alt="포장 이미지"
+              className="size-full block"
+            />
+          </div>
+          <p className="text-3xl font-semibold">포장</p>
+          <p className="text-white text-lg">포장해서 가져가요</p>
+        </Button>
       </div>
     </section>
   );

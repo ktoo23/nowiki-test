@@ -20,12 +20,11 @@ const MainPage: React.FC = () => {
   }, []);
 
   return (
-    <section className="flex flex-col max-w-[640px] content-center h-dvh bg-main_bg">
-      <div className="grow bg-center bg-no-repeat	bg-contain bg-[url('@/assets/image/kiosk_main.jpg')]"></div>
-      <div className="h-[30%] flex flex-col gap-5 justify-center items-center">
+    <section className="flex flex-col max-w-[640px] content-center h-dvh">
+      <div className="flex h-full w-full justify-around px-8 items-center">
         <Button
           variant="outline"
-          className="w-[80%] h-20 bg-mc_yellow text-lg"
+          className="h-[400px] w-[250px] bg-mc_yellow hover:bg-mc_yellow/80 text-2xl shadow-md"
           onClick={() => {
             setIsGuideActive(false);
             navigateToDiningChoice();
@@ -35,16 +34,23 @@ const MainPage: React.FC = () => {
         </Button>
         <Button
           variant="outline"
-          className="w-[80%] h-20 bg-help_bg relative text-lg"
+          className="flex flex-col h-[400px] w-[250px] bg-white relative text-2xl shadow-md"
           onClick={() => {
             setIsGuideActive(true);
             navigateToDiningChoice("newbie");
           }}
         >
-          키오스크가 처음이라면 저를 눌러주세요
-          <Avatar className="absolute bottom-2 left-6 size-[90px] transform scale-x-[-1]">
-            <AvatarImage src="/image/wiki.png" />
-          </Avatar>
+          키오스크는
+          <br />
+          처음이에요
+          <div className="absolute bottom-2 flex justify-center items-center">
+            <Avatar className="size-[90px] transform scale-x-[-1]">
+              <AvatarImage src="/image/wiki.png" />
+            </Avatar>
+            <p className="ninline-block h-fit text-base border-2 border-transparent border-b-mc_yellow">
+              위키가 도와줄게!
+            </p>
+          </div>
         </Button>
       </div>
     </section>

@@ -64,7 +64,7 @@ const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
               </strong>
               <ChevronDown
                 data-testid="allergen-toggle"
-                className={`transition-transform duration-300 ${
+                className={`transition-transform duration-300 cursor-pointer ${
                   isAllergenOpen ? "rotate-180" : "rotate-0"
                 }`}
                 onClick={() => setIsAllergenOpen((prevState) => !prevState)}
@@ -88,7 +88,7 @@ const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
             <div className="flex justify-between">
               <strong className="block text-[#292929] text-xl">영양정보</strong>
               <ChevronDown
-                className={`transition-transform duration-300 ${
+                className={`transition-transform duration-300 cursor-pointer ${
                   isIngredientMenuOpen ? "rotate-180" : "rotate-0"
                 }`}
                 onClick={() =>

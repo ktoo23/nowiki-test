@@ -27,7 +27,7 @@ const SetSelection = () => {
   };
 
   return (
-    <div className="p-[30px] pt-[60px] grid grid-rows-[auto_1fr_auto] gap-[20px] max-w-screen-sm relative h-screen sm:m-auto text-mc_black text-center">
+    <div className="max-w-[640px] content-center h-dvh text-mc_black text-center">
       <header className="mb-[20px]">
         <h2 className="mb-[10px] text-[30px] font-bold sm:text-[40px]">
           {menu.name}
@@ -36,7 +36,7 @@ const SetSelection = () => {
           {setMenu ? "세트 여부를 선택해주세요" : "이 상품은 단일 상품이에요"}
         </p>
       </header>
-      <div className="flex h-[230px] sm:h-[350px] justify-around sm:my-auto">
+      <div className="flex justify-around px-8 items-center sm:my-auto">
         <SetSelectButton
           imageUrl={menu.image_url}
           title={menu.name}
@@ -50,7 +50,7 @@ const SetSelection = () => {
             icon="🍔🍟🥤"
             title="기본 세트"
             description="(버거 + 사이드 + 음료)"
-            classname="bg-mc_yellow hover:bg-mc_yellow"
+            classname="bg-mc_yellow hover:bg-mc_yellow/80"
             onNavigate={() => {
               handleNavigate(`/menu-select/${setMenu.id}`, setMenu);
             }}
@@ -60,7 +60,7 @@ const SetSelection = () => {
       <Button
         size="lg"
         variant="secondary"
-        className="w-full sm:max-w-[450px] m-auto text-lg"
+        className="w-full sm:max-w-[450px] m-auto text-lg mt-10"
         onClick={() => handleNavigate("/menus", null)}
       >
         취소
@@ -90,7 +90,7 @@ const SetSelectButton = ({
 }: Props) => {
   return (
     <Button
-      className={cn("w-[150px] h-full sm:w-[250px] text-mc_black", classname)}
+      className={cn("h-[400px] w-[250px] text-mc_black shadow-md", classname)}
       onClick={onNavigate}
     >
       <div className="flex flex-col items-center justify-center">

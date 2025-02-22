@@ -13,7 +13,7 @@ const FilteredMenuItem = ({ item }: FilteredMenuItemProps) => {
     <>
       <li
         key={item.id}
-        className="sm:max-h-[220px] bg-[#F8F8F8] rounded-[10px] text-center cursor-pointer"
+        className="sm:max-h-[220px] bg-[#F8F8F8] rounded-[10px] text-center cursor-pointer hover:bg-[#F8F8F8]/60"
         onClick={() => setIsModalOpen((prevState) => !prevState)}
       >
         <div className="mb-2">
