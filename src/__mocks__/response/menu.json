@@ -1,0 +1,59 @@
+{
+  "id": "f50cdd10-206b-4ec8-bf1a-9c7b3f3f0b5d",
+  "name": "빅맥",
+  "description": "100% 순 쇠고기 패티 두 장에 빅맥®만의 특별한 소스.\n입안에서 살살 녹는 치즈와 신선한 양상추, 양파, 그리고 피클까지.\n50년 넘게 전 세계인의 입맛을 사로 잡은 버거의 대명사.",
+  "price": 7790,
+  "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+  "taste_ids": ["2b3c4d5e"],
+  "image_url": "/image/menu/burger__bigmac.png",
+  "ingredients": [
+    {
+      "id": "7358183e-839c-4d47-8ac2-d390e6666652",
+      "image_url": "/image/ingredients/beef-patty.jpg",
+      "name": "쇠고기 패티"
+    },
+    {
+      "id": "1bc3a906-b37a-4554-92a7-4d101ebafc81",
+      "image_url": "/image/ingredients/pickles.jpg",
+      "name": "피클"
+    },
+    {
+      "id": "1qc3b908-b37a-4684-92a7-4d101ebafc81",
+      "image_url": "/image/ingredients/bigMacSauce.jpg",
+      "name": "빅맥 소스"
+    },
+    {
+      "id": "880a99ce-d7f4-4a24-aa6c-6cd241b4b02f",
+      "image_url": "/image/ingredients/iceburgLettuce.jpg",
+      "name": "양상추"
+    },
+    {
+      "id": "732fa85d-bbf3-4f84-ac12-040c87901786",
+      "image_url": "/image/ingredients/choppedOnions.jpg",
+      "name": "다진 양파"
+    },
+    {
+      "id": "03bd6783-2409-4702-9fca-20fac6ff0870",
+      "image_url": "/image/ingredients/cheeseSlice.jpg",
+      "name": "슬라이스 치즈"
+    }
+  ],
+  "allergens": ["우유", "대두", "밀", "토마토", "쇠고기"],
+  "nutrition_facts": {
+    "weight_g": "223g",
+    "weight_ml": null,
+    "calories": "582kcal",
+    "sugar": "8g",
+    "protein": "27g",
+    "saturated_fat": "11g",
+    "sodium": "902mg",
+    "caffeine": null
+  },
+  "nutrition_daily_value": {
+    "sugar": "8%",
+    "protein": "49%",
+    "saturated_fat": "71%",
+    "sodium": "45%",
+    "caffeine": null
+  }
+}

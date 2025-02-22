@@ -63,6 +63,7 @@ const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
                 알레르기 정보
               </strong>
               <ChevronDown
+                data-testid="allergen-toggle"
                 className={`transition-transform duration-300 ${
                   isAllergenOpen ? "rotate-180" : "rotate-0"
                 }`}
@@ -76,7 +77,7 @@ const MenuDetailModal = ({ item, open, setIsOpen }: Props) => {
                   : "max-h-0 opacity-0"
               }`}
             >
-              {item.allergens ? (
+              {isAllergenOpen && item.allergens ? (
                 <AllergenList allergens={item.allergens} />
               ) : (
                 <p>-</p>
