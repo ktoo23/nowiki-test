@@ -7,7 +7,6 @@ import { menu_items } from "../assets/data/menu.json";
 import { getOrderInfo, setItemToOrderInfo } from "@/feat/order";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import useGuidePopupStore from "@/store/useGuidePopupStore";
 import GuidePopup from "@/components/GuidePopup";
 import useSpeechFeedback from "@/hooks/useSpeechFeedback";
 
@@ -16,8 +15,6 @@ const MenuSelect = () => {
   const params = useParams();
   const { state } = useLocation();
   const menuData = state?.menu;
-  const { isGuideActive } = useGuidePopupStore((state) => state);
-
   const [menu] = menu_items.filter((item) => item.id === params.id);
 
   const [currentCart, setCurrentCart]: any = useState(
@@ -108,22 +105,19 @@ const MenuSelect = () => {
           )}
         </div>
 
-        {isGuideActive && state.menu.items ? (
-          <GuidePopup
-            className="-bottom-2"
-            messages={[
-              "라지 세트는 음료수와 감자튀김의 사이즈가 커져! \n 아래 화살표를 눌러줄래?",
-              "만약 구성품을 변경하고 싶으면, 메뉴 사진 아래 변경하기를 누르면 돼!",
-            ]}
-          />
-        ) : (
-          <GuidePopup
-            className="-bottom-2"
-            messages={[
-              "더 추가할 음식이 있다면 장바구니에 넣기, \n 바로 결제하려면 주문하기를 눌러!",
-            ]}
-          />
-        )}
+        <GuidePopup
+          className="-bottom-2"
+          messages={
+            state.menu.items
+              ? [
+                  "라지 세트는 음료수와 감자튀김의 사이즈가 커져! \n 아래 화살표를 눌러줄래?",
+                  "만약 구성품을 변경하고 싶으면, 메뉴 사진 아래 변경하기를 누르면 돼!",
+                ]
+              : [
+                  "더 추가할 음식이 있다면 장바구니에 넣기, \n 바로 결제하려면 주문하기를 눌러!",
+                ]
+          }
+        />
       </section>
     </div>
   );

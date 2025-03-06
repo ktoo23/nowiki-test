@@ -10,10 +10,14 @@ import FilteredMenuList from "@/components/menu-list/FilteredMenuList";
 import VoiceBtn from "@/components/voice/VoiceBtn";
 import CartButton from "@/components/CartButton";
 import GuidePopup from "@/components/GuidePopup";
-import useGuidePopupStore from "@/store/useGuidePopupStore";
 import { MenuItem } from "@/types/menu.interface";
 
 const defaultCategoryId = menu_categories[0].id;
+
+const WELCOME_MESSAGES = [
+  "안녕! 내 이름은 위키야! ! \n 아래 화살표를 눌러줄래?",
+  "음성으로도 주문할 수 있어! \n필요하면 오른쪽 상단의 음성 주문하기 버튼을 눌러봐~",
+];
 
 const MenuList = () => {
   const [filters, setFilters] = useState({
@@ -21,18 +25,7 @@ const MenuList = () => {
     tasteId: "",
   });
 
-  const [messages, setMessages] = useState<string[]>([]);
-
-  const { isGuideActive } = useGuidePopupStore((state) => state);
-
-  useEffect(() => {
-    if (isGuideActive) {
-      setMessages([
-        "안녕! 내 이름은 위키야! ! \n 아래 화살표를 눌러줄래?",
-        "음성으로도 주문할 수 있어! \n필요하면 오른쪽 상단의 음성 주문하기 버튼을 눌러봐~",
-      ]);
-    }
-  }, [isGuideActive]);
+  const [guideMessages, setGuideMessages] = useState(WELCOME_MESSAGES);
 
   const filteredList = useMemo(() => {
     return menu_items.filter((item: MenuItem) => {
@@ -47,8 +40,9 @@ const MenuList = () => {
     (menu) => menu.id === filters.categoryId,
   );
 
-  const handleUpdateMessages = (newMessages: string[]) => {
-    setMessages(newMessages);
+  // 사이드바에서 카테고리 변경 시 메시지 업데이트 핸들러
+  const handleUpdateMessages = (messages: string[]) => {
+    setGuideMessages(messages);
   };
 
   const handleCategory = (category: MenuCategory) => {
@@ -103,7 +97,7 @@ const MenuList = () => {
               <TasteFilter filters={filters} onTasteChange={handleTaste} />
             )}
             <FilteredMenuList items={filteredList} />
-            <GuidePopup messages={messages} />
+            <GuidePopup messages={guideMessages} />
           </div>
         </div>
       </div>

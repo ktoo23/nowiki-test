@@ -1,5 +1,4 @@
 import { MenuItem } from "@/types/menu.interface";
-import { useEffect, useRef, useState } from "react";
 import FilteredMenuItem from "./FilteredMenuItem";
 
 type Props = {

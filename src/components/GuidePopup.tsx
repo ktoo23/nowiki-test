@@ -1,17 +1,28 @@
 import useGuidePopupStore from "@/store/useGuidePopupStore";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import useGuideMessages from "@/hooks/useGuideMessages";
 
 interface GuidePopupProps {
   messages: string[];
   className?: string;
 }
-const GuidePopup = ({ className, messages }: GuidePopupProps) => {
-  const { isGuideActive } = useGuidePopupStore((state) => state);
+const GuidePopup = ({ messages, className }: GuidePopupProps) => {
+  const { isGuideActive } = useGuidePopupStore();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const { currentMessage, nextMessage, hasMoreMessages } =
-    useGuideMessages(messages);
+  // messages prop이 변경되면 인덱스 초기화
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [messages]);
+
+  const currentMessage = messages[currentIndex] || "";
+  const hasMoreMessages = currentIndex < messages.length - 1;
+
+  const nextMessage = () => {
+    if (hasMoreMessages) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
+  };
 
   if (!isGuideActive || !currentMessage) return null;
 
