@@ -3,7 +3,8 @@
   "name": "빅맥",
   "description": "100% 순 쇠고기 패티 두 장에 빅맥®만의 특별한 소스.\n입안에서 살살 녹는 치즈와 신선한 양상추, 양파, 그리고 피클까지.\n50년 넘게 전 세계인의 입맛을 사로 잡은 버거의 대명사.",
   "price": 7790,
-  "category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+  "main_category_id": "3fefc837-88f7-4d53-a8b8-5a8c45c06b84",
+  "sub_category_id": "b2c3d4e5-f6g7-58h9-i0j1-k2l3m4n5o6p7",
   "taste_ids": ["2b3c4d5e"],
   "image_url": "/image/menu/burger__bigmac.png",
   "ingredients": [
