@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import {
-  getOrderInfo,
-} from "@/feat/order";
+import { getOrderInfo } from "@/feat/order";
 import OrderItemInCart from "@/components/OrderItemInCart";
 
 const OrderHistory = () => {
   const navigate = useNavigate();
-  const [orderItemData, setOrderItemData] = useState(getOrderInfo().orderItem || []);
-
+  const [orderItemData, setOrderItemData] = useState(
+    getOrderInfo().orderItem || [],
+  );
 
   const goToFoodOffer = () => {
     // const setResult = setItemToOrderInfo(state);
@@ -52,7 +51,7 @@ const OrderHistory = () => {
           <div className="flex flex-col space-y-1">
             <Button
               onClick={handleMenuList}
-              className="w-full px-10 py-8 bg-white text-black border text-xl w-32 h-22 border-gray-300"
+              className="px-10 py-8 bg-white text-black border text-xl w-32 h-22 border-gray-300"
             >
               더 추가하기
             </Button>
