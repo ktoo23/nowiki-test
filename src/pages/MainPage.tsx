@@ -34,7 +34,7 @@ const MainPage: React.FC = () => {
         </Button>
         <Button
           variant="outline"
-          className="flex flex-col h-[400px] w-[250px] bg-white relative text-2xl shadow-md"
+          className="flex flex-col h-[400px] w-[250px] relative text-2xl bg-gray-50 shadow-md border-2 border-gray-100 hover:border-mc_yellow hover:bg-gray-50 transition-all"
           onClick={() => {
             setIsGuideActive(true);
             navigateToDiningChoice("newbie");
@@ -47,7 +47,7 @@ const MainPage: React.FC = () => {
             <Avatar className="size-[90px] transform scale-x-[-1]">
               <AvatarImage src="/image/wiki.png" />
             </Avatar>
-            <p className="ninline-block h-fit text-base border-2 border-transparent border-b-mc_yellow">
+            <p className="inline-block h-fit text-base border-2 border-transparent border-b-mc_yellow">
               위키가 도와줄게!
             </p>
           </div>

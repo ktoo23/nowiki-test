@@ -39,8 +39,8 @@ const SetSelection = () => {
       <div className="flex justify-around px-8 items-center sm:my-auto">
         <SetSelectButton
           imageUrl={menu.image_url}
-          title={menu.name}
-          classname="bg-white border border-solid border-mc_yellow hover:bg-inherit"
+          title="단품"
+          classname="bg-gray-50 shadow-md border-2 border-gray-100 hover:border-mc_yellow hover:bg-gray-50 transition-all"
           onNavigate={() => {
             handleNavigate(`/menu-select/${menu.id}`, menu);
           }}

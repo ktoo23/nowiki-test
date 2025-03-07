@@ -1,8 +1,7 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import AddShoppingCartButton from "@/components/AddShoppingCartButton";
 import QuickPayButton from "@/components/QuickPayButton";
 import CancelButton from "@/components/CancelButton";
-import { menu_items } from "../assets/data/menu.json";
 
 import { getOrderInfo, setItemToOrderInfo } from "@/feat/order";
 import { Button } from "@/components/ui/button";
@@ -12,10 +11,8 @@ import useSpeechFeedback from "@/hooks/useSpeechFeedback";
 
 const MenuSelect = () => {
   const navigate = useNavigate();
-  const params = useParams();
   const { state } = useLocation();
   const menuData = state?.menu;
-  const [menu] = menu_items.filter((item) => item.id === params.id);
 
   const [currentCart, setCurrentCart]: any = useState(
     getOrderInfo().orderItem || [],
@@ -24,25 +21,20 @@ const MenuSelect = () => {
   const { speak } = useSpeechFeedback();
 
   const handleAddShoppingCart = () => {
-    setCurrentCart([...currentCart, menu]);
-
-    // if (!setItemToOrderInfo(menu)) {
-    //   alert("예상치 못한 오류로 인해\n 첫화면으로 넘어갑니다");
-    //   return navigate("/");
-    // }
+    setCurrentCart([...currentCart, menuData]);
 
     speak("장바구니에 추가되었습니다.");
     alert("장바구니에 추가되었습니다.");
   };
 
   const handleViewOrderHistory = () => {
-    setItemToOrderInfo(menu);
+    setItemToOrderInfo(menuData);
     navigate("/order-history", { state: menuData });
   };
 
   const handleOrderCancel = () => {
     if (currentCart.length > 0) {
-      setItemToOrderInfo(menu);
+      setItemToOrderInfo(menuData);
     }
 
     navigate("/menus");
@@ -58,7 +50,10 @@ const MenuSelect = () => {
         <header className="text-center mb-8">
           <p className="text-2xl mb-2">{menuData.name}</p>
           <p className="text-2xl text-primary">
-            <span className="font-bold">{menuData.price}</span>원
+            <span className="font-bold">
+              {Intl.NumberFormat().format(menuData.price)}
+            </span>
+            원
           </p>
         </header>
 

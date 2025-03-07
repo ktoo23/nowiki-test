@@ -26,7 +26,7 @@ const FoodOffer = () => {
         <div className="flex space-x-2 mt-12">
           <Button
             variant="outline"
-            className="w-[50%] text-xl px-12 py-4 h-20 bg-mc_yellow"
+            className="w-[50%] text-xl px-12 py-4 h-20 bg-mc_yellow hover:bg-mc_yellow/80"
             onClick={() => confirmFoodOffer(true)}
           >
             테이블 서비스
