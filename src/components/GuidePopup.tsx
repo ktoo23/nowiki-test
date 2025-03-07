@@ -32,17 +32,23 @@ const GuidePopup = ({ messages, className }: GuidePopupProps) => {
         <span className="text-[#54200c] font-bold">위키</span>
       </div>
       <div className="py-5 px-8 bg-[#fff9e4] rounded-full flex items-center text-left">
-        <span className="text-lg text-[#7e693a] tracking-widest font-semibold">
-          {currentMessage.split("\n").map((line, index) => (
-            <React.Fragment key={index}>
-              {line}
-              <br />
-            </React.Fragment>
-          ))}
+        <span
+          data-testid="line"
+          className="text-lg text-[#7e693a] tracking-widest font-semibold"
+        >
+          {currentMessage.includes("\n")
+            ? currentMessage.split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))
+            : currentMessage}
         </span>
       </div>
       {hasMoreMessages && (
         <button
+          data-testid="next-button"
           onClick={nextMessage}
           className="animate-bounce absolute -bottom-2 left-1/2 -translate-x-1/2 size-0 border-[20px] border-b-0 border-solid border-transparent border-t-[#e5b300] cursor-pointer rounded-full"
         ></button>

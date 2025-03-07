@@ -1,3 +1,5 @@
+/// <reference types="vitest/globals" />
+
 import "@testing-library/jest-dom";
 import { afterEach, afterAll, vi } from "vitest";
 
@@ -9,7 +11,9 @@ afterEach(() => {
 afterAll(() => {
   vi.resetAllMocks();
 });
-console.log("여기 실행???");
+
+vi.mock("zustand");
+
 // https://github.com/vitest-dev/vitest/issues/821
 Object.defineProperty(window, "matchMedia", {
   writable: true,
