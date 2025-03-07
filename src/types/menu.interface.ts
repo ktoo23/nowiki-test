@@ -26,23 +26,25 @@ export interface MenuItem {
   name: string;
   description: string;
   price: number;
-  category_id: string;
+  main_category_id: string;
   taste_ids: string[];
   image_url: string;
   nutrition_facts?: NutritionFactsType;
   nutrition_daily_value?: NutritionDailyValueType;
   ingredients?: IngredientsType[];
   allergens?: string[];
+  sub_category_id?: string;
 }
 export interface MenuItemWithCount {
   id: string;
   name: string;
   description: string;
   price: number;
-  category_id: string;
+  main_category_id: string;
   taste_ids: string[];
   image_url: string;
   count: number;
+  sub_category_id?: string;
 }
 
 export interface Meal {

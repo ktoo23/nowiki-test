@@ -7,7 +7,7 @@ import { MenuItem } from "@/types/menu.interface";
 
 type MenuItemWithOutCategoryAndTaste = Omit<
   MenuItem,
-  "category_id" | "taste_ids"
+  "main_category_id" | "taste_ids"
 >;
 
 const SetSelection = () => {
@@ -17,7 +17,7 @@ const SetSelection = () => {
   const [menu] = menu_items.filter((item) => item.id === id);
 
   const setMenu =
-    meals.filter((meal) => meal.items.includes(menu.id))[0] || null;
+    meals.filter((meal) => meal.items[0].includes(menu.id))[0] || null;
 
   const handleNavigate = (
     path: string,

@@ -1,8 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 import { menu_items } from "../assets/data/menu.json";
-import { menu_categories } from "../assets/data/category.json";
-import { MenuCategory } from "../types/category.interface";
+import {
+  menu_categories,
+  burger_categories,
+} from "../assets/data/category.json";
+import { BurgerCategory, MenuCategory } from "../types/category.interface";
 import Header from "@/components/menu-list/Header";
 import Sidebar from "@/components/menu-list/Sidebar";
 import TasteFilter from "@/components/menu-list/TasteFilter";
@@ -11,8 +14,10 @@ import VoiceBtn from "@/components/voice/VoiceBtn";
 import CartButton from "@/components/CartButton";
 import GuidePopup from "@/components/GuidePopup";
 import { MenuItem } from "@/types/menu.interface";
+import BurgerFilter from "@/components/menu-list/BurgerFilter";
 
-const defaultCategoryId = menu_categories[0].id;
+const defaultMainCategoryId = menu_categories[0].id; // 버거
+const defaultSubCategoryId = burger_categories[0].id; // 비프
 
 const WELCOME_MESSAGES = [
   "안녕! 내 이름은 위키야! ! \n 아래 화살표를 눌러줄래?",
@@ -21,7 +26,8 @@ const WELCOME_MESSAGES = [
 
 const MenuList = () => {
   const [filters, setFilters] = useState({
-    categoryId: defaultCategoryId,
+    mainCategoryId: defaultMainCategoryId,
+    subCategoryId: defaultSubCategoryId,
     tasteId: "",
   });
 
@@ -29,15 +35,19 @@ const MenuList = () => {
 
   const filteredList = useMemo(() => {
     return menu_items.filter((item: MenuItem) => {
-      const matchesCategory = item.category_id === filters.categoryId;
+      const matchesMainCategory =
+        item.main_category_id === filters.mainCategoryId;
+      const matchesSubCategory =
+        filters.subCategoryId === "" ||
+        item.sub_category_id === filters.subCategoryId;
       const matchesTaste =
         filters.tasteId === "" || item.taste_ids?.includes(filters.tasteId);
-      return matchesCategory && matchesTaste;
+      return matchesMainCategory && matchesSubCategory && matchesTaste;
     });
   }, [filters, menu_items]);
 
   const menuCategory = menu_categories.find(
-    (menu) => menu.id === filters.categoryId,
+    (menu) => menu.id === filters.mainCategoryId,
   );
 
   // 사이드바에서 카테고리 변경 시 메시지 업데이트 핸들러
@@ -45,10 +55,28 @@ const MenuList = () => {
     setGuideMessages(messages);
   };
 
-  const handleCategory = (category: MenuCategory) => {
+  const handleMainCategory = (category: MenuCategory) => {
+    if (category.name === "버거") {
+      setFilters((prev) => ({
+        ...prev,
+        mainCategoryId: defaultMainCategoryId,
+        subCategoryId: defaultSubCategoryId,
+        tasteId: "",
+      }));
+    } else {
+      setFilters((prev) => ({
+        ...prev,
+        mainCategoryId: category.id,
+        subCategoryId: "",
+        tasteId: "",
+      }));
+    }
+  };
+
+  const handleSubCategory = (category: BurgerCategory) => {
     setFilters((prev) => ({
       ...prev,
-      categoryId: category.id,
+      subCategoryId: category.id,
       tasteId: "",
     }));
   };
@@ -88,13 +116,19 @@ const MenuList = () => {
         <div className="flex">
           <Sidebar
             categories={menu_categories}
-            onCategoryChange={handleCategory}
+            onCategoryChange={handleMainCategory}
             onUpdateMessages={handleUpdateMessages}
             filters={filters}
           />
-          <div className="grow pt-5">
+          <div className="grow">
             {menuCategory?.name === "버거" && (
-              <TasteFilter filters={filters} onTasteChange={handleTaste} />
+              <>
+                <BurgerFilter
+                  filters={filters}
+                  onBurgerChange={handleSubCategory}
+                />
+                <TasteFilter filters={filters} onTasteChange={handleTaste} />
+              </>
             )}
             <FilteredMenuList items={filteredList} />
             <GuidePopup messages={guideMessages} />

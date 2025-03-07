@@ -1,37 +1,32 @@
-import { getTasteLabel, LabelType } from '@/utils/taste';
-import { tastes } from '../../assets/data/category.json';
+import { getTasteLabel, LabelType } from "@/utils/taste";
+import { tastes } from "../../assets/data/category.json";
 
 type Props = {
   filters: {
-    categoryId: string;
+    mainCategoryId: string;
+    subCategoryId: string;
     tasteId: string;
-  },
+  };
   onTasteChange: (tasteId: string) => void;
-}
+};
 
-const TasteFilter = ({ filters, onTasteChange}: Props) => {
+const TasteFilter = ({ filters, onTasteChange }: Props) => {
   return (
     <nav className="flex justify-around h-10 text-lg">
-      <h2 className='hidden'>햄버거 맛 카테고리</h2>
+      <h2 className="hidden">햄버거 맛 카테고리</h2>
       <div
         className={
           filters.tasteId === "" ? "text-mc_yellow font-bold" : undefined
         }
       >
-        <button
-          onClick={() =>
-           onTasteChange("")
-          }
-        >
-          전체
-        </button>
+        <button onClick={() => onTasteChange("")}>전체</button>
       </div>
       {tastes.map((taste) => (
         <div
           key={taste.id}
           className={
             filters.tasteId === taste.id
-              ? "text-mc_yellow font-bold"
+              ? "text-mc_yellow font-bold "
               : undefined
           }
         >
@@ -41,7 +36,7 @@ const TasteFilter = ({ filters, onTasteChange}: Props) => {
         </div>
       ))}
     </nav>
-  )
-}
+  );
+};
 
 export default TasteFilter;

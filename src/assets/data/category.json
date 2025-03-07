@@ -31,6 +31,25 @@
       "image_url": "/image/category/cate__dessert.png"
     }
   ],
+  "burger_categories": [
+    {
+      "id": "b2c3d4e5-f6g7-58h9-i0j1-k2l3m4n5o6p7",
+      "name": "비프"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-47g8-h9i0-j1k2l3m4n5o6",
+      "name": "치킨"
+    },
+
+    {
+      "id": "c3d4e5f6-g7h8-69i0-j1k2-l3m4n5o6p7q8",
+      "name": "불고기"
+    },
+    {
+      "id": "d4e5f6g7-h8i9-70j1-k2l3-m4n5o6p7q8r9",
+      "name": "해물"
+    }
+  ],
   "tastes": [
     {
       "id": "1a2b3c4d",
