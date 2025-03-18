@@ -25,165 +25,29 @@
 
 ## 🔮 주요 기능 소개
 
-- 주문 페이지 접근 분리: 일반 주문 / 키오스크 사용이 미숙한 사람을 위한 주문
-- 각 페이지마다 기능 설명을 도와주는 말풍선과 길잡이 캐릭터 위키 제공
+### 주문 페이지 접근 분리
+- 일반 주문 / 키오스크 사용이 미숙한 사람을 위한 주문
+
+### 🍔 메뉴 카테고리 시스템
+- 메인 카테고리(버거, 치킨, 사이드, 음료)와 서브 카테고리로 체계적 분류
+- 맛 기반 필터링(달달, 짭짤, 매콤)으로 개인 취향에 맞는 메뉴 선택 지원
+- 이미지와 텍스트를 병행해 직관적인 메뉴 인식 지원
+
+### 📋 메뉴 상세 정보
+- 재료 정보, 알레르기 정보, 영양 정보를 한눈에 볼 수 있는 레이아웃
+- 이미지 기반 햄버거 구성품 시각화
+- 큰 글씨와 명확한 색상 대비로 가독성 향상
+  
+### 💬 가이드 메시지 시스템
+- 사용자의 단계별 안내를 위한 실시간 가이드 메시지
+- 생소한 용어나 기능에 대한 친절한 설명 제공
+- Zustand를 활용한 효율적인 상태 관리
+
+### 🎙️ 음성을 통한 메뉴 검색 
 - 시각적 메뉴뿐 아니라 음성 인식으로 메뉴를 찾을 수 있는 검색 기능
+  
 - 기타 키오스크 기본 기능
 - 장바구니 기능
-
-## 페이지 별 기능 소개
-<h3>[ 홈 페이지 ]</h3>
-<ul>
-  <li>키오스크가 처음이면- 버튼을 클릭하면 사용법을 도와주는 말풍선을 제공합니다.</li>
-</ul>
-<table>
-  <tr>
-    <td>홈 페이지</td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/d396beba-d0c9-4b4b-bd99-bf586ed78bdf" width="400" height="400"/></td>
-  </tr>
-</table>
-<br />
-
-<h3>[ 음성 인식 화면 ]</h3>
-<ul>
-  <li>메뉴 리스트에서 음성으로 주문버튼을 클릭 시 나오는 화면입니다.</li>
-  <li>사용자가 음성 이미지를 클릭하면 음성 인식이 시작됩니다. </li>
-  <li>사용자가 메뉴를 말했을 때,</li>
-    - 메뉴가 존재한다면 해당 메뉴들을 보여줍니다.<br/>
-    - 만약 메뉴에 없다면 추천 메뉴 리스트를 대신 보여줍니다.
-  <li>메뉴들은 복수 선택이 가능합니다.</li>
-  <li>장바구니 넣기 버튼을 클릭하면 고른 메뉴들을 장바구니에 넣을 수 있습니다.</li>
-  <li>바로 결제하기 버튼을 클릭하면 주문 내역 확인 페이지로 이동합니다.</li>
-</ul>
-<table>
-  <tr>
-    <td>음성 인식 화면</td>
-  </tr>
-  <tr>
-    <td>
-     <img src="https://github.com/user-attachments/assets/dfcae8d2-dab6-4578-bc35-c5d6b02739df" width="400" height="400"/>
-    </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td>음성 인식 화면 - 결과 도출</td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://github.com/user-attachments/assets/532830d1-08f8-455d-9dfe-ff387a609c00" width="400" height="400"/>
-    </td>
-  </tr>
-</table>
-<br />
-
-<h3>[ 식사 장소 선택 화면 ]</h3>
-<li>매장 식사 혹은 포장 선택을 하실 수 있습니다.</li>
-<table>
-  <tr>
-    <td>식사 장소 선택</td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/4c6f5e0f-5a86-40c2-8b50-bc2acf89d270" width="400" height="400"/></td>
-  </tr>
-</table>
-<br />
-
-
-<h3>[ 메뉴 리스트 화면 ]</h3>
-<ul>
-  <li>주문이 처음이라면 버튼 클릭시 설명 요정 위키가 안내 말풍선을 제공합니다.</li>
-  <li>기존 카테고리의 작은 글씨와 이미지의 크기 수정했습니다.</li>
-  <li>버거 메뉴는 맛 별로 카테고리화하여 선택을 쉽게 했습니다.</li>
-
-</ul>
-<table>
-  <tr>
-    <td>메뉴 리스트 화면</td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/86e09c49-e065-409e-9b29-a4d8ec36d5d4" width="400" height="400"/></td>
-  </tr>
-</table>
-<br />
-
-<h3>[ 말풍선 안내 화면 ]</h3>
-<ul>
-  <li>기능 설명을 말풍선으로 안내합니다.</li>
-<li>현대인에겐 익숙한 스크롤은 저희의 타겟,<br> 노인들에겐 익숙하지 않을 수 있어서 스크롤 도움설명을 추가했습니다.
-</li>
-<li>위치한 페이지에 따라 적절한 안내 설명 문구를 띄웁니다
-</li>
-<li>자식 혹은 손주들에게 설명 받는 느낌을 주기 위해 <br>극존칭을 사용하지 않았습니다.
-</li>
-</ul>
-<table>
-  <tr>
-    <td>카테고리 선택</td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/25bb5b10-0836-4b28-8d4d-abc5c0c53d00" width="400" height="400"/></td>
-  </tr>
-</table>
-
-<br />
-<table>
-  <tr>
-    <td>맛 별 카테고리 선택</td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/90bf213f-0140-4dfc-9b63-4bce7a5a9669" width="400" height="400"/></td>
-  </tr>
-</table>
-<br />
-
-<h3>[ 단품/세트 선택 화면 ]</h3>
-<table>
-  <tr>
-    <td>단품/세트 화면</td>
-  </tr>
-  <tr>
-    <td>
-<img src="https://github.com/user-attachments/assets/bffd3db1-7430-428c-b78b-c03dc2f0fc4c" width="400" height="400"/>
-</td>
-  </tr>
-</table>
-<br />
-
-<h3>[ 메뉴 선택 - 사이드, 음료 구성 변경 ]</h3>
-<ul>
-  <li>사이드와 음료를 변경할 수 있습니다. - 미기능 구현</li>
-  <li>사용자는 선택을 마친 뒤 장바구니에 고른 메뉴를 추가할 수 있습니다. - 미기능 구현</li>
-  <li>취소 버튼을 클릭 시 메뉴리스트 화면으로 이동합니다.</li>
-  <li>만약 사용자가 키오스크 안내 기능을 선택했다면 라지세트에 대한 설명이 나옵니다.</li>
-</ul>
-
-<table>
-  <tr>
-    <td>메뉴 선택 - 구성품 변경</td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://github.com/user-attachments/assets/52300890-0adc-4f43-bf71-b92f9041b81f" width="400" height="400"/>
-    </td>
-  </tr>
-</table>
-
-<br />
-<table>
-  <tr>
-    <td>주문 내역 확인</td>
-  </tr>
-  <tr>
-    <td>
-     <img src="https://github.com/user-attachments/assets/8cecedde-4ce5-4970-b032-3afd15d0047b" width="400" height="400"/>
-    </td>
-  </tr>
-</table>
-
 
 ## 💻 기술 스택
 
@@ -193,6 +57,13 @@
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+
+## 🧪 테스트
+이 프로젝트는 BDD(Behavior-Driven Development) 접근 방식으로 테스트되었습니다
+
+- 사용자 행동 중심의 테스트 케이스
+- 컴포넌트 단위 테스트 및 통합 테스트
 
 ## 📄 커밋 컨벤션
 
